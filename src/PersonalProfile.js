@@ -10,6 +10,8 @@ const content = {
     services: "Services",
     serviceList: [
       "Embedded hardware design (MB, carrier, adapter)",
+      "High reliability, mass-production–oriented design services",
+      "Custom solution integration, End-to-end hardware, software, mechanical integration",
       "Product Validation and Debugging (EMI, ESD, -40C to 85C Stability Verification and Driver Integration)",
       "ID and Mechanical Design and Production",
       "Project Management and International Communication Bridge",
@@ -47,6 +49,8 @@ const content = {
     services: "專業服務",
     serviceList: [
       "嵌入式硬體設計（主機板、載板、轉接模組）",
+      "高可靠度、量產導向設計服務",
+      "客製化方案整合，硬體、軟體、機構件一站式整合",
       "產品驗證與除錯（EMI、ESD、-40C ~85C 穩定度驗證、驅動整合）",
       "ID 與機構設計生產",
       "專案管理與國際溝通橋接",
