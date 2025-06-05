@@ -193,8 +193,8 @@ export default function PersonalProfile() {
           </h2>
           <p style={{ color: "#444", lineHeight: 1.6 }}>
             {t.email}：{" "}
-            <a href="mailto:david_h@incubed-intl.com" style={{ color: "#2956d4" }}>
-              david_h@incubed-intl.com
+            <a href="mailto:michelle@incubed-intl.com" style={{ color: "#2956d4" }}>
+              michelle@incubed-intl.com
             </a>
           </p>
           <p style={{ color: "#444", lineHeight: 1.6 }}>{t.line}: slr200k</p>
