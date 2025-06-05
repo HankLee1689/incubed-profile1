@@ -86,21 +86,20 @@ export default function PersonalProfile() {
     <div
       className="min-h-screen p-8 space-y-12 max-w-5xl mx-auto"
       style={{
-        background:
-          "linear-gradient(135deg, #090E24 0%, #23267A 50%, #3F51B5 100%)",
+        background: "linear-gradient(135deg, #090E24 0%, #23267A 50%, #3F51B5 100%)",
       }}
     >
       {/* 語言切換按鈕 */}
       <div className="flex justify-end space-x-2 mb-4">
         <button
-          className={`px-4 py-2 rounded ${lang === "en" ? "bg-blue-600 text-white" : "bg-gray-200"}`}
+          className={`px-4 py-2 rounded font-bold ${lang === "en" ? "bg-blue-600 text-white" : "bg-gray-200 text-black"}`}
           onClick={() => setLang("en")}
           disabled={lang === "en"}
         >
           EN
         </button>
         <button
-          className={`px-4 py-2 rounded ${lang === "zh" ? "bg-blue-600 text-white" : "bg-gray-200"}`}
+          className={`px-4 py-2 rounded font-bold ${lang === "zh" ? "bg-blue-600 text-white" : "bg-gray-200 text-black"}`}
           onClick={() => setLang("zh")}
           disabled={lang === "zh"}
         >
@@ -109,45 +108,45 @@ export default function PersonalProfile() {
       </div>
       {/* Hero Section */}
       <section className="text-center space-y-4">
-        <h1 className="text-4xl font-bold text-white drop-shadow">{t.hero}</h1>
+        <h1 className="text-4xl font-extrabold text-white drop-shadow">{t.hero}</h1>
         <p className="text-xl text-blue-200">{t.heroDesc}</p>
         <button className="mt-4 text-lg bg-blue-500 text-white px-6 py-2 rounded shadow">{t.contact}</button>
       </section>
       {/* About Me */}
       <section>
-        <h2 className="text-2xl font-semibold mb-4 text-white">{t.about}</h2>
-        <p className="text-blue-100">{t.aboutContent}</p>
+        <h2 className="text-2xl font-bold mb-4 text-white">{t.about}</h2>
+        <p className="text-blue-100 font-medium">{t.aboutContent}</p>
       </section>
       {/* Services */}
       <section>
-        <h2 className="text-2xl font-semibold mb-4 text-white">{t.services}</h2>
-        <ul className="list-disc list-inside space-y-2 text-blue-100">
+        <h2 className="text-2xl font-bold mb-4 text-white">{t.services}</h2>
+        <ul className="list-disc list-inside space-y-2 text-blue-100 font-medium">
           {t.serviceList.map((item, idx) => <li key={idx}>{item}</li>)}
         </ul>
       </section>
       {/* Projects */}
       <section>
-        <h2 className="text-2xl font-semibold mb-4 text-white">{t.projects}</h2>
-        <ul className="list-disc list-inside space-y-2 text-blue-100">
+        <h2 className="text-2xl font-bold mb-4 text-white">{t.projects}</h2>
+        <ul className="list-disc list-inside space-y-2 text-blue-100 font-medium">
           {t.projectList.map((item, idx) => <li key={idx}>{item}</li>)}
         </ul>
       </section>
       {/* Advantages */}
       <section>
-        <h2 className="text-2xl font-semibold mb-4 text-white">{t.advantages}</h2>
-        <ul className="list-disc list-inside space-y-2 text-blue-100">
+        <h2 className="text-2xl font-bold mb-4 text-white">{t.advantages}</h2>
+        <ul className="list-disc list-inside space-y-2 text-blue-100 font-medium">
           {t.advantageList.map((item, idx) => <li key={idx}>{item}</li>)}
         </ul>
       </section>
       {/* Contact */}
       <section className="text-center">
-        <h2 className="text-2xl font-semibold mb-4 text-white">{t.contactSection}</h2>
-        <p className="text-blue-100">
+        <h2 className="text-2xl font-bold mb-4 text-white">{t.contactSection}</h2>
+        <p className="text-blue-100 font-medium">
           {t.email}: <a href="mailto:david_h@incubed-intl.com" className="text-blue-300 underline">david_h@incubed-intl.com</a>
         </p>
-        <p className="text-blue-100">{t.line}: slr200k</p>
-        <p className="text-blue-100">{t.whatsapp}: +886937080529</p>
-        <p className="text-blue-100">{t.address}：{t.addressDetail}</p>
+        <p className="text-blue-100 font-medium">{t.line}: slr200k</p>
+        <p className="text-blue-100 font-medium">{t.whatsapp}: +886937080529</p>
+        <p className="text-blue-100 font-medium">{t.address}：{t.addressDetail}</p>
       </section>
       {/* High-tech Banner at the bottom */}
       <section className="w-full mt-10">
