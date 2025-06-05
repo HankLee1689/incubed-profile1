@@ -6,7 +6,7 @@ const content = {
     heroDesc: "Your Partner for Next-Gen Embedded Innovation",
     contact: "Contact",
     about: "About Me",
-    aboutContent: `I am the founder of IN Cubed international , former CEO & CTO of a listed company, and a motherboard design lead at SiS. Specialized in embedded systems, industrial PC, SoC integration, and cross-border project execution. Now focus on providing fast, robust embedded solutions for mass production.`,
+    aboutContent: `I am the founder of IN Cubed international , former CEO & CTO of a listed company, and In the early years at SiS, was responsible for Turnkey motherboard development, with a cumulative global production of over 20 million units.. Specialized in embedded systems, industrial PC, SoC integration, and cross-border project execution. Now focus on providing fast, robust embedded solutions for mass production.`,
     services: "Services",
     serviceList: [
       "Embedded hardware design (MB, carrier, adapter)",
@@ -42,7 +42,7 @@ const content = {
     heroDesc: "Empowering Next-Gen Embedded Design",
     contact: "聯絡我",
     about: "關於我",
-    aboutContent: `我是 IN Cubed international 的創辦人，曾任上市公司總經理與 CTO，早年於 SiS 主導主機板開發，精通嵌入式系統設計、工控產品、SoC 整合與跨國專案。現專注提供穩定高效的設計解決方案，協助客戶快速實現量產。`,
+    aboutContent: `我是 IN Cubed international 的創辦人，曾任上市公司總經理與 CTO，早年於 SiS 負責 Turnkey 主機板開發，累計全球量產超過 2000 萬片。精通嵌入式系統設計、工控產品、SoC 整合與跨國專案。現專注提供穩定高效的設計解決方案，協助客戶快速實現量產。`,
     services: "專業服務",
     serviceList: [
       "嵌入式硬體設計（主機板、載板、轉接模組）",
