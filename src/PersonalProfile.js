@@ -80,9 +80,7 @@ const content = {
 export default function PersonalProfile() {
   const [lang, setLang] = useState("en");
   const t = content[lang];
-
-  // 這裡預設先用一個示意圖網址，稍後給你AI生圖下載
-  const bannerUrl = "/circuit-banner-ai.jpg"; // 你收到圖後放 public 資料夾即可
+  const bannerUrl = "/circuit-banner-ai.jpg";
 
   return (
     <div
