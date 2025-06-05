@@ -5,13 +5,12 @@ const content = {
     hero: "Empowering Next-Gen Embedded Design",
     heroDesc: "Your Partner for Next-Gen Embedded Innovation",
     contact: "Contact",
-    about: "About Us",
-    aboutContent: `IN Cubed International Co., Ltd. is led by an experienced management team with extensive backgrounds in embedded systems, industrial PC architecture, and SoC integration. Our leadership has previously served as CEO & CTO of publicly listed companies and managed large‐scale motherboard production projects, delivering over 20 million units globally.  
-    Today, IN Cubed offers end‐to‐end embedded design services—ranging from hardware layout and firmware integration to EMI/ESD optimization—and supports clients in industrial and EV charging markets to accelerate mass‐production readiness.`,
+    about: "About Me",
+    aboutContent: `I am the founder of IN Cubed international , former CEO & CTO of a listed company, and In the early years at SiS, was responsible for Turnkey motherboard development, with a cumulative global production of over 20 million units.. Specialized in embedded systems, industrial PC, SoC integration, and cross-border project execution. Now focus on providing fast, robust embedded solutions for mass production.`,
     services: "Services",
     serviceList: [
       "Embedded hardware design (MB, carrier, adapter)",
-      "Product pre‐validation & debugging (EMI, ESD, driver)",
+      "Product pre-validation & debugging (EMI, ESD, driver)",
       "Bilingual project management & international communication",
       "Design transfer, BOM optimization, production support",
     ],
@@ -19,16 +18,16 @@ const content = {
     projectList: [
       "PLC Board – Mass production for US EV chargers",
       "Embedded motherboard system integration",
-      "USB to PHY Layer2 MAC‐to‐MAC PLC Board",
-      "Industrial HMI Octa‐core controller",
+      "USB to PHY Layer2 MAC-to-MAC PLC Board",
+      "Industrial HMI Octa-core controller",
       "Industrial 15” touch panel module",
     ],
-    advantages: "Why Work With Us",
+    advantages: "Why Work With Me",
     advantageList: [
       "Super fast lead time, prototype in 3 weeks",
       "Transparent workflow, contracts & NDA",
-      "Full‐stack know‐how: HW, FW, SW, system",
-      "Market‐savvy, Asia/US/EU seamless communication",
+      "Full-stack know-how: HW, FW, SW, system",
+      "Market-savvy, Asia/US/EU seamless communication",
       "ISO 9001, ISO 14001, ISO 13485 certified factories",
     ],
     contactSection: "Contact",
@@ -36,15 +35,14 @@ const content = {
     line: "Line ID",
     whatsapp: "WhatsApp",
     address: "Address",
-    addressDetail: "2F‐3, No.94, Baozhong Rd, Xindian Dist., New Taipei City",
+    addressDetail: "2F-3, No.94, Baozhong Rd, Xindian Dist., New Taipei City",
   },
   zh: {
     hero: "打造次世代嵌入式設計的核心夥伴",
-    heroDesc: "Your Partner for Next-Gen Embedded Design",
-    contact: "聯絡我們",
-    about: "關於我們",
-    aboutContent: `穎特力欣股份有限公司（IN Cubed International Co., Ltd.）由具備嵌入式系統、工業電腦架構及 SoC 整合豐富經驗的團隊領導。管理層曾擔任上市公司 CEO 與 CTO，並帶領主機板專案成功出貨超過 2,000 萬片。  
-    現今，穎特力欣提供從硬體布局、韌體整合到 EMI/ESD 優化的全流程嵌入式設計服務，並在工業及電動車充電領域協助客戶快速達成量產目標。`,
+    heroDesc: "Empowering Next-Gen Embedded Design",
+    contact: "聯絡我",
+    about: "關於我",
+    aboutContent: `我是 IN Cubed international 的創辦人，曾任上市公司總經理與 CTO，早年於 SiS 負責 Turnkey 主機板開發，累計全球量產超過 2000 萬片。精通嵌入式系統設計、工控產品、SoC 整合與跨國專案。現專注提供穩定高效的設計解決方案，協助客戶快速實現量產。`,
     services: "專業服務",
     serviceList: [
       "嵌入式硬體設計（主機板、載板、轉接模組）",
@@ -56,19 +54,19 @@ const content = {
     projectList: [
       "PLC Board – 已成功量產應用於美國 EV 充電設備",
       "嵌入式主機板設計整合",
-      "USB to PHY Layer2 MAC‐to‐MAC PLC Board",
-      "工業級 HMI Octa‐core 控制板",
+      "USB to PHY Layer2 MAC-to-MAC PLC Board",
+      "工業級 HMI Octa-core 控制板",
       "工業級 15 吋 Touch Panel Module",
     ],
     advantages: "合作優勢",
     advantageList: [
-      "設計交期快速，最短三週完成原型",
-      "專案流程透明，合約與保密制度完善",
-      "跨領域技術整合：硬體、韌體、軟體、系統",
-      "熟悉歐美與亞洲市場需求，溝通無障礙",
-      "擁有 ISO 9001、ISO 14001、ISO 13485 認證工廠",
+      "設計交期快速，最短三週出樣",
+      "專案流程透明，合約與保密制度",
+      "橫跨硬體、韌體、軟體、驅動與系統整合",
+      "熟悉歐美亞洲市場需求，溝通無障礙",
+      "ISO 9001、ISO 14001、ISO 13485 認證工廠",
     ],
-    contactSection: "聯絡方式",
+    contactSection: "聯絡我",
     email: "電子郵件",
     line: "Line ID",
     whatsapp: "WhatsApp",
@@ -126,35 +124,20 @@ export default function PersonalProfile() {
         {/* Hero */}
         <section style={{ textAlign: "center", margin: "40px 0 24px" }}>
           <h1 style={{ fontSize: 36, fontWeight: 700, marginBottom: 12 }}>{t.hero}</h1>
-          <p style={{ fontSize: 18, color: "#333" }}>{t.heroDesc}</p>
-          <button
-            style={{
-              marginTop: 18,
-              fontSize: 16,
-              padding: "8px 28px",
-              borderRadius: 6,
-              background: "#2956d4",
-              color: "#fff",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
+          <p style={{ fontSize: 18, color: "#555" }}>{t.heroDesc}</p>
+          <button style={{ marginTop: 18, fontSize: 16, padding: "8px 28px", borderRadius: 6, background: "#2956d4", color: "#fff", border: "none", cursor: "pointer" }}>
             {t.contact}
           </button>
         </section>
         {/* About */}
         <section>
-          <h2 style={{ fontSize: 24, fontWeight: 600, margin: "24px 0 8px", color: "#222" }}>
-            {t.about}
-          </h2>
-          <p style={{ color: "#444", lineHeight: 1.6 }}>{t.aboutContent}</p>
+          <h2 style={{ fontSize: 24, fontWeight: 600, margin: "24px 0 8px" }}>{t.about}</h2>
+          <p>{t.aboutContent}</p>
         </section>
         {/* Services */}
         <section>
-          <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px", color: "#222" }}>
-            {t.services}
-          </h2>
-          <ul style={{ margin: "0 0 0 24px", color: "#444", lineHeight: 1.6 }}>
+          <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px" }}>{t.services}</h2>
+          <ul style={{ margin: "0 0 0 24px" }}>
             {t.serviceList.map((item, idx) => (
               <li key={idx}>{item}</li>
             ))}
@@ -162,10 +145,8 @@ export default function PersonalProfile() {
         </section>
         {/* Projects */}
         <section>
-          <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px", color: "#222" }}>
-            {t.projects}
-          </h2>
-          <ul style={{ margin: "0 0 0 24px", color: "#444", lineHeight: 1.6 }}>
+          <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px" }}>{t.projects}</h2>
+          <ul style={{ margin: "0 0 0 24px" }}>
             {t.projectList.map((item, idx) => (
               <li key={idx}>{item}</li>
             ))}
@@ -173,10 +154,8 @@ export default function PersonalProfile() {
         </section>
         {/* Advantages */}
         <section>
-          <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px", color: "#222" }}>
-            {t.advantages}
-          </h2>
-          <ul style={{ margin: "0 0 0 24px", color: "#444", lineHeight: 1.6 }}>
+          <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px" }}>{t.advantages}</h2>
+          <ul style={{ margin: "0 0 0 24px" }}>
             {t.advantageList.map((item, idx) => (
               <li key={idx}>{item}</li>
             ))}
@@ -184,18 +163,16 @@ export default function PersonalProfile() {
         </section>
         {/* Contact */}
         <section style={{ textAlign: "center", margin: "40px 0 0" }}>
-          <h2 style={{ fontSize: 22, fontWeight: 600, marginBottom: 12, color: "#222" }}>
-            {t.contactSection}
-          </h2>
-          <p style={{ color: "#444", lineHeight: 1.6 }}>
-            {t.email}：{" "}
+          <h2 style={{ fontSize: 22, fontWeight: 600, marginBottom: 12 }}>{t.contactSection}</h2>
+          <p>
+            {t.email}：
             <a href="mailto:david_h@incubed-intl.com" style={{ color: "#2956d4" }}>
               david_h@incubed-intl.com
             </a>
           </p>
-          <p style={{ color: "#444", lineHeight: 1.6 }}>{t.line}: slr200k</p>
-          <p style={{ color: "#444", lineHeight: 1.6 }}>{t.whatsapp}: +886937080529</p>
-          <p style={{ color: "#444", lineHeight: 1.6 }}>
+          <p>{t.line}: slr200k</p>
+          <p>{t.whatsapp}: +886937080529</p>
+          <p>
             {t.address}：{t.addressDetail}
           </p>
         </section>

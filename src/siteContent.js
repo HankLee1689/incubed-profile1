@@ -1,5 +1,5 @@
 // siteContent.js
-// Bilingual website structure and content for IN Cubed International
+// 穎特力欣股份有限公司網站架構與雙語內容
 
 const siteContent = {
   home: {
@@ -273,5 +273,5 @@ const siteContent = {
   }
 };
 
-// Export the siteContent object for use in other modules or pages
+// 導出 siteContent，供其他模組或頁面引用
 export default siteContent;
