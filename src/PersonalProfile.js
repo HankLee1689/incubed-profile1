@@ -10,7 +10,7 @@ const content = {
     services: "Services",
     serviceList: [
       "Embedded hardware design (MB, carrier, adapter)",
-      "Product Validation and Debugging (EMI, ESD, 40C to 85C Stability Verification and Driver Integration)",
+      "Product Validation and Debugging (EMI, ESD, -40C to 85C Stability Verification and Driver Integration)",
       "ID and Mechanical Design and Production",
       "Project Management and International Communication Bridge",
       "Design transfer, BOM optimization, production support",
