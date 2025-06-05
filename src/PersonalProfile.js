@@ -6,7 +6,7 @@ const content = {
     heroDesc: "Your Partner for Next-Gen Embedded Innovation",
     contact: "Contact",
     about: "About Us",
-    aboutContent: `IN Cubed International Co Ltd is led by a team with rich experience in embedded systems industrial computer architectures and SoC integration The management has served as CEO and CTO of a publicly listed company leading motherboard projects to ship over thousands of models The founder independently designed three innovative product lines with over 20 million units produced and shipped Today IN Cubed provides full process embedded design services from hardware layout firmware integration to system optimization and assists clients in the industrial and electric vehicle charging sectors to rapidly achieve mass production goals `,
+    aboutContent: `IN Cubed International Co Ltd is led by a team with extensive experience in embedded systems industrial computer architectures and SoC integration. The founder has served as CEO and CTO of a publicly listed company leading and successfully delivering hundreds of projects into mass production. The founder independently designed three innovative products producing and three products shipping over 20 million units. Today IN Cubed provides full process embedded design services from hardware layout and firmware integration to system optimization and assists clients in the industrial and electric vehicle charging sectors to rapidly achieve mass production goals `,
     services: "Services",
     serviceList: [
       "Embedded hardware design (MB, carrier, adapter)",
@@ -43,7 +43,7 @@ const content = {
     heroDesc: "Your Partner for Next-Gen Embedded Design",
     contact: "聯絡我們",
     about: "關於我們",
-    aboutContent: `穎特力欣股份有限公司（IN Cubed International Co., Ltd.）由具備嵌入式系統、工業電腦架構及 SoC 整合豐富經驗的團隊領導。管理層曾擔任上市公司 CEO 與 CTO，並帶領主機板專案成功出貨超過數千個機種，創辦人曾獨立設計 3 個創新機種, 量產出貨超過 2,000 萬片。現今，穎特力欣提供從硬體布局、韌體整合道系統優化的全流程嵌入式設計服務，並在工業及電動車充電領域協助客戶快速達成量產目標。`,
+    aboutContent: `穎特力欣股份有限公司（IN Cubed International Co., Ltd.）由具備嵌入式系統、工業電腦架構及 SoC 整合豐富經驗的團隊領導。管理層曾擔任上市公司 CEO 與 CTO，帶領並成功將數百個專案推向量產，創辦人更曾獨立設計三條創新產品線，累計生產並出貨超過兩千萬台。現今，穎特力欣提供從硬體布局、韌體整合到系統優化的全流程嵌入式設計服務，並在工業及電動車充電領域協助客戶快速達成量產目標。`,
     services: "專業服務",
     serviceList: [
       "嵌入式硬體設計（主機板、載板、轉接模組）",
