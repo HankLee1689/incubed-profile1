@@ -36,7 +36,7 @@ const content = {
     contactSection: "Contact",
     email: "Email",
     line: "Line ID",
-    whatsapp: "WhatsApp",
+    whatsapp: "Phone No.",
     address: "Address",
     addressDetail: "2F‐3, No.94, Baozhong Rd, Xindian Dist., New Taipei City",
   },
@@ -75,7 +75,7 @@ const content = {
     contactSection: "聯絡方式",
     email: "電子郵件",
     line: "Line ID",
-    whatsapp: "WhatsApp",
+    whatsapp: "Phone No.",
     address: "地址",
     addressDetail: "新北市新店區寶中路94號2樓之3",
   },
@@ -198,7 +198,7 @@ export default function PersonalProfile() {
             </a>
           </p>
           <p style={{ color: "#444", lineHeight: 1.6 }}>{t.line}: slr200k</p>
-          <p style={{ color: "#444", lineHeight: 1.6 }}>{t.whatsapp}: +886937080529</p>
+          <p style={{ color: "#444", lineHeight: 1.6 }}>{t.whatsapp}: +886-2-87919189</p>
           <p style={{ color: "#444", lineHeight: 1.6 }}>
             {t.address}：{t.addressDetail}
           </p>
