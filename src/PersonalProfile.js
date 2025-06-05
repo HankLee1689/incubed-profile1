@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-// 雙語內容，這一大段必須放在檔案最上方！
 const content = {
   en: {
     hero: "Empowering Next-Gen Embedded Design",
@@ -29,6 +28,7 @@ const content = {
       "Transparent workflow, contracts & NDA",
       "Full-stack know-how: HW, FW, SW, system",
       "Market-savvy, Asia/US/EU seamless communication",
+      "ISO 9001, ISO 14001, ISO 13485 certified factories",
     ],
     contactSection: "Contact",
     email: "Email",
@@ -64,6 +64,7 @@ const content = {
       "專案流程透明，合約與保密制度",
       "橫跨硬體、韌體、軟體、驅動與系統整合",
       "熟悉歐美亞洲市場需求，溝通無障礙",
+      "ISO 9001、ISO 14001、ISO 13485 認證工廠",
     ],
     contactSection: "聯絡我",
     email: "電子郵件",
@@ -78,65 +79,104 @@ export default function PersonalProfile() {
   const [lang, setLang] = useState("en");
   const t = content[lang];
 
+  // 語言切換按鈕
+  const LanguageSwitcher = () => (
+    <div style={{ display: "flex", justifyContent: "flex-end", gap: 8 }}>
+      <button
+        style={{
+          padding: "4px 12px",
+          borderRadius: 4,
+          border: lang === "en" ? "2px solid #222" : "1px solid #ccc",
+          background: lang === "en" ? "#f7f7f7" : "#fff",
+          cursor: "pointer",
+        }}
+        onClick={() => setLang("en")}
+      >
+        EN
+      </button>
+      <button
+        style={{
+          padding: "4px 12px",
+          borderRadius: 4,
+          border: lang === "zh" ? "2px solid #222" : "1px solid #ccc",
+          background: lang === "zh" ? "#f7f7f7" : "#fff",
+          cursor: "pointer",
+        }}
+        onClick={() => setLang("zh")}
+      >
+        中文
+      </button>
+    </div>
+  );
+
   return (
-    <div className="p-8 space-y-12 max-w-5xl mx-auto">
-      {/* 語言切換按鈕 */}
-      <div className="flex justify-end space-x-2 mb-4">
-        <button
-          className={`px-4 py-2 rounded ${lang === "en" ? "bg-blue-600 text-white" : "bg-gray-200"}`}
-          onClick={() => setLang("en")}
-          disabled={lang === "en"}
-        >
-          EN
-        </button>
-        <button
-          className={`px-4 py-2 rounded ${lang === "zh" ? "bg-blue-600 text-white" : "bg-gray-200"}`}
-          onClick={() => setLang("zh")}
-          disabled={lang === "zh"}
-        >
-          中文
-        </button>
+    <div style={{ background: "#fff", minHeight: "100vh", fontFamily: "inherit" }}>
+      {/* Banner 圖片 */}
+      <div style={{ width: "100%", maxHeight: 300, overflow: "hidden" }}>
+        <img
+          src="/circuit-banner-ai.jpg"
+          alt="banner"
+          style={{ width: "100%", objectFit: "cover" }}
+        />
       </div>
-      {/* Hero Section */}
-      <section className="text-center space-y-4">
-        <h1 className="text-4xl font-bold">{t.hero}</h1>
-        <p className="text-xl text-gray-600">{t.heroDesc}</p>
-        <button className="mt-4 text-lg bg-blue-500 text-white px-6 py-2 rounded">{t.contact}</button>
-      </section>
-      {/* About Me */}
-      <section>
-        <h2 className="text-2xl font-semibold mb-4">{t.about}</h2>
-        <p>{t.aboutContent}</p>
-      </section>
-      {/* Services */}
-      <section>
-        <h2 className="text-2xl font-semibold mb-4">{t.services}</h2>
-        <ul className="list-disc list-inside space-y-2">
-          {t.serviceList.map((item, idx) => <li key={idx}>{item}</li>)}
-        </ul>
-      </section>
-      {/* Projects */}
-      <section>
-        <h2 className="text-2xl font-semibold mb-4">{t.projects}</h2>
-        <ul className="list-disc list-inside space-y-2">
-          {t.projectList.map((item, idx) => <li key={idx}>{item}</li>)}
-        </ul>
-      </section>
-      {/* Advantages */}
-      <section>
-        <h2 className="text-2xl font-semibold mb-4">{t.advantages}</h2>
-        <ul className="list-disc list-inside space-y-2">
-          {t.advantageList.map((item, idx) => <li key={idx}>{item}</li>)}
-        </ul>
-      </section>
-      {/* Contact */}
-      <section className="text-center">
-        <h2 className="text-2xl font-semibold mb-4">{t.contactSection}</h2>
-        <p>{t.email}: <a href="mailto:david_h@incubed-intl.com" className="text-blue-600">david_h@incubed-intl.com</a></p>
-        <p>{t.line}: slr200k</p>
-        <p>{t.whatsapp}: +886937080529</p>
-        <p>{t.address}：{t.addressDetail}</p>
-      </section>
+      <div style={{ maxWidth: 800, margin: "0 auto", padding: "32px 16px" }}>
+        <LanguageSwitcher />
+        {/* Hero */}
+        <section style={{ textAlign: "center", margin: "40px 0 24px" }}>
+          <h1 style={{ fontSize: 36, fontWeight: 700, marginBottom: 12 }}>{t.hero}</h1>
+          <p style={{ fontSize: 18, color: "#555" }}>{t.heroDesc}</p>
+          <button style={{ marginTop: 18, fontSize: 16, padding: "8px 28px", borderRadius: 6, background: "#2956d4", color: "#fff", border: "none", cursor: "pointer" }}>
+            {t.contact}
+          </button>
+        </section>
+        {/* About */}
+        <section>
+          <h2 style={{ fontSize: 24, fontWeight: 600, margin: "24px 0 8px" }}>{t.about}</h2>
+          <p>{t.aboutContent}</p>
+        </section>
+        {/* Services */}
+        <section>
+          <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px" }}>{t.services}</h2>
+          <ul style={{ margin: "0 0 0 24px" }}>
+            {t.serviceList.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
+        </section>
+        {/* Projects */}
+        <section>
+          <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px" }}>{t.projects}</h2>
+          <ul style={{ margin: "0 0 0 24px" }}>
+            {t.projectList.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
+        </section>
+        {/* Advantages */}
+        <section>
+          <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px" }}>{t.advantages}</h2>
+          <ul style={{ margin: "0 0 0 24px" }}>
+            {t.advantageList.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
+        </section>
+        {/* Contact */}
+        <section style={{ textAlign: "center", margin: "40px 0 0" }}>
+          <h2 style={{ fontSize: 22, fontWeight: 600, marginBottom: 12 }}>{t.contactSection}</h2>
+          <p>
+            {t.email}：
+            <a href="mailto:david_h@incubed-intl.com" style={{ color: "#2956d4" }}>
+              david_h@incubed-intl.com
+            </a>
+          </p>
+          <p>{t.line}: slr200k</p>
+          <p>{t.whatsapp}: +886937080529</p>
+          <p>
+            {t.address}：{t.addressDetail}
+          </p>
+        </section>
+      </div>
     </div>
   );
 }
