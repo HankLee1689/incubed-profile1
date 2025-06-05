@@ -28,7 +28,7 @@ const content = {
       "Transparent workflow, contracts & NDA",
       "Full-stack know-how: HW, FW, SW, system",
       "Market-savvy, Asia/US/EU seamless communication",
-      "**ISO 9001, ISO 14001, ISO 13485 certified factories**",
+      "ISO 9001, ISO 14001, ISO 13485 certified factories",
     ],
     contactSection: "Contact",
     email: "Email",
@@ -36,6 +36,7 @@ const content = {
     whatsapp: "WhatsApp",
     address: "Address",
     addressDetail: "2F-3, No.94, Baozhong Rd, Xindian Dist., New Taipei City",
+    bannerAlt: "Advanced circuit system design with high-tech style",
   },
   zh: {
     hero: "打造次世代嵌入式設計的核心夥伴",
@@ -72,12 +73,17 @@ const content = {
     whatsapp: "WhatsApp",
     address: "地址",
     addressDetail: "新北市新店區寶中路94號2樓之3",
+    bannerAlt: "高科技感複雜線路系統設計圖",
   },
 };
 
 export default function PersonalProfile() {
   const [lang, setLang] = useState("en");
   const t = content[lang];
+
+  // Banner 圖片，建議放 public 內的圖片或使用線上圖
+  const bannerUrl =
+    "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80"; // 高科技藍色主色複雜線路（可替換成你自己的圖）
 
   return (
     <div className="p-8 space-y-12 max-w-5xl mx-auto">
@@ -138,6 +144,22 @@ export default function PersonalProfile() {
         <p>{t.whatsapp}: +886937080529</p>
         <p>{t.address}：{t.addressDetail}</p>
       </section>
+      {/* High-tech Banner at the bottom */}
+      <section className="w-full mt-10">
+        <img
+          src={bannerUrl}
+          alt={t.bannerAlt}
+          style={{
+            width: "100%",
+            maxHeight: 260,
+            objectFit: "cover",
+            borderRadius: "2rem",
+            boxShadow: "0 8px 32px 0 rgba(44,88,160,0.3)",
+            margin: "0 auto",
+          }}
+        />
+      </section>
     </div>
   );
 }
+
