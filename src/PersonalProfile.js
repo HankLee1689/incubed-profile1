@@ -36,6 +36,7 @@ const content = {
     whatsapp: "WhatsApp",
     address: "Address",
     addressDetail: "2F-3, No.94, Baozhong Rd, Xindian Dist., New Taipei City",
+    bannerAlt: "Advanced circuit system design with high-tech style",
   },
   zh: {
     hero: "打造次世代嵌入式設計的核心夥伴",
@@ -72,6 +73,7 @@ const content = {
     whatsapp: "WhatsApp",
     address: "地址",
     addressDetail: "新北市新店區寶中路94號2樓之3",
+    bannerAlt: "高科技感複雜線路系統設計圖",
   },
 };
 
@@ -79,8 +81,17 @@ export default function PersonalProfile() {
   const [lang, setLang] = useState("en");
   const t = content[lang];
 
+  // 這裡預設先用一個示意圖網址，稍後給你AI生圖下載
+  const bannerUrl = "/circuit-banner-ai.jpg"; // 你收到圖後放 public 資料夾即可
+
   return (
-    <div className="p-8 space-y-12 max-w-5xl mx-auto">
+    <div
+      className="min-h-screen p-8 space-y-12 max-w-5xl mx-auto"
+      style={{
+        background:
+          "linear-gradient(135deg, #090E24 0%, #23267A 50%, #3F51B5 100%)",
+      }}
+    >
       {/* 語言切換按鈕 */}
       <div className="flex justify-end space-x-2 mb-4">
         <button
@@ -100,43 +111,60 @@ export default function PersonalProfile() {
       </div>
       {/* Hero Section */}
       <section className="text-center space-y-4">
-        <h1 className="text-4xl font-bold">{t.hero}</h1>
-        <p className="text-xl text-gray-600">{t.heroDesc}</p>
-        <button className="mt-4 text-lg bg-blue-500 text-white px-6 py-2 rounded">{t.contact}</button>
+        <h1 className="text-4xl font-bold text-white drop-shadow">{t.hero}</h1>
+        <p className="text-xl text-blue-200">{t.heroDesc}</p>
+        <button className="mt-4 text-lg bg-blue-500 text-white px-6 py-2 rounded shadow">{t.contact}</button>
       </section>
       {/* About Me */}
       <section>
-        <h2 className="text-2xl font-semibold mb-4">{t.about}</h2>
-        <p>{t.aboutContent}</p>
+        <h2 className="text-2xl font-semibold mb-4 text-white">{t.about}</h2>
+        <p className="text-blue-100">{t.aboutContent}</p>
       </section>
       {/* Services */}
       <section>
-        <h2 className="text-2xl font-semibold mb-4">{t.services}</h2>
-        <ul className="list-disc list-inside space-y-2">
+        <h2 className="text-2xl font-semibold mb-4 text-white">{t.services}</h2>
+        <ul className="list-disc list-inside space-y-2 text-blue-100">
           {t.serviceList.map((item, idx) => <li key={idx}>{item}</li>)}
         </ul>
       </section>
       {/* Projects */}
       <section>
-        <h2 className="text-2xl font-semibold mb-4">{t.projects}</h2>
-        <ul className="list-disc list-inside space-y-2">
+        <h2 className="text-2xl font-semibold mb-4 text-white">{t.projects}</h2>
+        <ul className="list-disc list-inside space-y-2 text-blue-100">
           {t.projectList.map((item, idx) => <li key={idx}>{item}</li>)}
         </ul>
       </section>
       {/* Advantages */}
       <section>
-        <h2 className="text-2xl font-semibold mb-4">{t.advantages}</h2>
-        <ul className="list-disc list-inside space-y-2">
+        <h2 className="text-2xl font-semibold mb-4 text-white">{t.advantages}</h2>
+        <ul className="list-disc list-inside space-y-2 text-blue-100">
           {t.advantageList.map((item, idx) => <li key={idx}>{item}</li>)}
         </ul>
       </section>
       {/* Contact */}
       <section className="text-center">
-        <h2 className="text-2xl font-semibold mb-4">{t.contactSection}</h2>
-        <p>{t.email}: <a href="mailto:david_h@incubed-intl.com" className="text-blue-600">david_h@incubed-intl.com</a></p>
-        <p>{t.line}: slr200k</p>
-        <p>{t.whatsapp}: +886937080529</p>
-        <p>{t.address}：{t.addressDetail}</p>
+        <h2 className="text-2xl font-semibold mb-4 text-white">{t.contactSection}</h2>
+        <p className="text-blue-100">
+          {t.email}: <a href="mailto:david_h@incubed-intl.com" className="text-blue-300 underline">david_h@incubed-intl.com</a>
+        </p>
+        <p className="text-blue-100">{t.line}: slr200k</p>
+        <p className="text-blue-100">{t.whatsapp}: +886937080529</p>
+        <p className="text-blue-100">{t.address}：{t.addressDetail}</p>
+      </section>
+      {/* High-tech Banner at the bottom */}
+      <section className="w-full mt-10">
+        <img
+          src={bannerUrl}
+          alt={t.bannerAlt}
+          style={{
+            width: "100%",
+            maxHeight: 300,
+            objectFit: "cover",
+            borderRadius: "2rem",
+            boxShadow: "0 8px 32px 0 rgba(44,88,160,0.3)",
+            margin: "0 auto",
+          }}
+        />
       </section>
     </div>
   );
