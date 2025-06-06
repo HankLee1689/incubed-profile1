@@ -125,8 +125,8 @@ export default function PersonalProfile() {
   return (
     <div
       style={{
-        /* 從白色底改為淺灰電路圖背景 */
-        background: `#f2f2f2 url("/circuit-pattern.png") repeat`,
+        /* 背景設定為極淺灰色電路紋理 */
+        background: `#f7f7f7 url("/circuit-pattern.png") repeat`,
         minHeight: "100vh",
         fontFamily: "inherit",
       }}
@@ -256,7 +256,7 @@ export default function PersonalProfile() {
             {t.contactSection}
           </h2>
 
-          {/* Email 與 Mail Icon */}
+          {/* Email with Mail Icon */}
           <p
             style={{
               color: "#444",
@@ -284,7 +284,7 @@ export default function PersonalProfile() {
             </a>
           </p>
 
-          {/* Line ID 與 MessageCircle Icon */}
+          {/* Line ID with MessageCircle Icon */}
           <p
             style={{
               color: "#444",
@@ -310,7 +310,7 @@ export default function PersonalProfile() {
             <span style={{ color: "#2956d4", marginLeft: 4 }}>slr200k</span>
           </p>
 
-          {/* Phone No. 與 Phone Icon */}
+          {/* Phone No. with Phone Icon */}
           <p
             style={{
               color: "#444",
@@ -336,7 +336,7 @@ export default function PersonalProfile() {
             <span style={{ color: "#2956d4", marginLeft: 4 }}>+886-2-87919189</span>
           </p>
 
-          {/* Address 與 Building Icon */}
+          {/* Address with Building Icon */}
           <p
             style={{
               color: "#444",
@@ -365,12 +365,13 @@ export default function PersonalProfile() {
       </div>
 
       {/* Footer Image */}
-       <div style={{ width: "100%", maxHeight: 200, overflow: "hidden", marginTop: 40 }}>
-       <img
-        src="/footer_circuit_strip.png"
-        alt="footer"
-        style={{ width: "100%", objectFit: "cover" }}
-        />   
+      <div style={{ width: "100%", maxHeight: 200, overflow: "hidden", marginTop: 40 }}>
+        <img
+          src="/footer_circuit_strip.png"
+          alt="footer"
+          style={{ width: "100%", objectFit: "cover" }}
+        />
+      </div>
     </div>
   );
 }
