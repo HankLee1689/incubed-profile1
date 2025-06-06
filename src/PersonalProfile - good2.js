@@ -1,5 +1,4 @@
-import React, { useState, useRef } from "react";
-
+import React, { useState } from "react";
 
 const content = {
   en: {
@@ -85,10 +84,6 @@ const content = {
 export default function PersonalProfile() {
   const [lang, setLang] = useState("en");
   const t = content[lang];
-  const contactRef = useRef(null);
-  const scrollToContact = () => {
-    contactRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
   const LanguageSwitcher = () => (
     <div style={{ display: "flex", justifyContent: "flex-end", gap: 8 }}>
@@ -139,7 +134,6 @@ export default function PersonalProfile() {
           <h1 style={{ fontSize: 36, fontWeight: 700, marginBottom: 12 }}>{t.hero}</h1>
           <p style={{ fontSize: 18, color: "#333" }}>{t.heroDesc}</p>
           <button
-            onClick={scrollToContact}
             style={{
               marginTop: 18,
               fontSize: 16,
@@ -200,7 +194,7 @@ export default function PersonalProfile() {
         </section>
 
         {/* Contact */}
-        <section ref={contactRef} style={{ textAlign: "center", margin: "40px 0 0" }}>
+        <section style={{ textAlign: "center", margin: "40px 0 0" }}>
           <h2 style={{ fontSize: 22, fontWeight: 600, marginBottom: 12, color: "#222" }}>
             {t.contactSection}
           </h2>
