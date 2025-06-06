@@ -4,11 +4,12 @@ import React, { useState, useRef } from "react";
 const content = {
   en: {
     hero: "Empowering Next-Gen Embedded Design",
+    hero: "Innovative ● Efficient ● Reliable",
     heroDesc: "Your Partner for Next-Gen Embedded Innovation",
     contact: "Contact",
-    about: "About Us",
+    about: "About About IN Cubed international",
     aboutContent: `IN Cubed International Co Ltd is led by a team with extensive experience in embedded systems industrial computer architectures and SoC integration. The founder has served as CEO and CTO of a publicly listed company leading and successfully delivering hundreds of projects into mass production. The founder independently designed three innovative products producing and three products shipping over 20 million units. Today IN Cubed provides full process embedded design services from hardware layout and firmware integration to system optimization and assists clients in the industrial and electric vehicle charging sectors to rapidly achieve mass production goals `,
-    services: "Services",
+    services: "Our Services",
     serviceList: [
       "Embedded hardware design (MB, carrier, adapter)",
       "High reliability, mass-production–oriented design services",
@@ -18,7 +19,7 @@ const content = {
       "Project Management and International Communication Bridge",
       "Design transfer, BOM optimization, production support",
     ],
-    projects: "Projects",
+    projects: "Highlighted Projects",
     projectList: [
       "PLC Board – Mass production for US EV chargers",
       "Embedded motherboard system integration",
@@ -26,7 +27,7 @@ const content = {
       "Industrial HMI Octa‐core controller",
       "Industrial 15” touch panel module",
     ],
-    advantages: "Why Work With Us",
+    advantages: "Why Choose Us",
     advantageList: [
       "Super fast lead time, prototype in 3 weeks",
       "Transparent workflow, contracts & NDA",
