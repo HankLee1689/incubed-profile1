@@ -45,7 +45,7 @@ const content = {
     heroDesc: "Your Partner for Next-Gen Embedded Design",
     contact: "聯絡我們",
     about: "關於我們",
-    aboutContent: `穎特力欣股份有限公司（IN Cubed International Co., Ltd.）由具備嵌入式系統、工業電腦架構及 SoC 整合豐富經驗的團隊領導。管理層曾擔任上市公司 CEO 與 CTO，帶領並成功將數百個專案推向量產，創辦人更曾獨立設計三條創新產品線，約算生產並出貨超過兩千萬臺。現今，穎特力欣提供從硬體佈局、麻丁體整合到系統優化的全流程嵌入式設計服務，並在工業及電動車充電領域協助客戶快速達成量產目標。`,
+    aboutContent: `穎特力欣股份有限公司（IN Cubed International Co., Ltd.）由具備嵌入式系統、工業電腦架構及 SoC 整合豐富經驗的團隊領導。管理層曾擔任上市公司 CEO 與 CTO，帶領並成功將數百個專案推向量產，創辦人更曾獨立設計三條創新產品線，累計生產並出貨超過兩千萬台。現今，穎特力欣提供從硬體布局、韌體整合到系統優化的全流程嵌入式設計服務，並在工業及電動車充電領域協助客戶快速達成量產目標。`,
     services: "專業服務",
     serviceList: [
       "嵌入式硬體設計（主機板、載板、轉接模組）",
@@ -53,7 +53,7 @@ const content = {
       "客製化方案整合，硬體、軟體、機構件一站式整合",
       "產品驗證與除錯（EMI、ESD、-40C ~85C 穩定度驗證、驅動整合）",
       "ID 與機構設計生產",
-      "專案管理與國際訊息展档",
+      "專案管理與國際溝通橋接",
       "設計移轉、BOM 優化與量產技術支援",
     ],
     projects: "近期成功案例",
@@ -68,8 +68,8 @@ const content = {
     advantageList: [
       "設計交期快速，最短三週完成原型",
       "專案流程透明，合約與保密制度完善",
-      "跨領域技術整合：硬體、麻丁體、軟體、系統",
-      "熟悉歐美與亞洲市場需求，訊息無障礙",
+      "跨領域技術整合：硬體、韌體、軟體、系統",
+      "熟悉歐美與亞洲市場需求，溝通無障礙",
       "ISO 9001、ISO 14001、ISO 13485 認證工廠",
     ],
     contactSection: "聯絡方式",
@@ -107,7 +107,7 @@ export default function PersonalProfile() {
           <p style={{ fontSize: 18, color: "#333" }}>{t.heroDesc}</p>
           <button onClick={scrollToContact} style={{ marginTop: 18, fontSize: 16, padding: "8px 28px", borderRadius: 6, background: "#2956d4", color: "#fff", border: "none", cursor: "pointer" }}>{t.contact}</button>
         </section>
-        {/* ...你原有的 About / Services / Projects / Advantages 區段保留... */}
+        {/* 其餘區塊保持原樣，可依需要加入 About / Services / Projects / Advantages 區段 */}
         <section ref={contactRef} style={{ textAlign: "center", margin: "40px 0 0" }}>
           <h2 style={{ fontSize: 22, fontWeight: 600, marginBottom: 12, color: "#222" }}>{t.contactSection}</h2>
           <p style={{ color: "#444", lineHeight: 1.6 }}>{t.email}：<a href="mailto:michelle@incubed-intl.com" style={{ color: "#2956d4" }}>michelle@incubed-intl.com</a></p>
