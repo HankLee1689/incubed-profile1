@@ -1,3 +1,5 @@
+
+
 // PersonalProfile.js
 
 import React, { useState, useRef } from "react";
@@ -7,7 +9,7 @@ const content = {
   en: {
     hero: "Empowering Next-Gen Embedded Design",
     heroDesc: "Your Partner for Next-Gen Embedded Innovation",
-    contact: "Contact us",
+    contactLabel: "Contact us",
     about: "About IN Cubed",
     aboutContent: `IN Cubed International Co. Ltd is led by a team with extensive experience in embedded systems, industrial computer architectures, and SoC integration. The founder has served as CEO and CTO of a publicly listed company, leading and successfully delivering hundreds of projects into mass production. The founder independently designed three innovative product lines, producing and shipping over 20 million units. Today, IN Cubed provides full-process embedded design services—from hardware layout and firmware integration to system optimization—and assists clients in the industrial and electric vehicle charging sectors to quickly achieve mass production goals.`,
     services: "Our Services",
@@ -46,7 +48,7 @@ const content = {
   zh: {
     hero: "打造次世代嵌入式設計的核心夥伴",
     heroDesc: "您下一代嵌入式創新的夥伴",
-    contact: "聯絡我們",
+    contactLabel: "聯絡我們",
     about: "關於我們",
     aboutContent: `穎特力欣股份有限公司（IN Cubed International Co. Ltd）由具備嵌入式系統、工業電腦架構及 SoC 整合豐富經驗的團隊領導。管理層曾擔任上市公司 CEO、CTO，帶領並成功將數百個專案推向量產，創辦人獨立設計三條創新產品線，累計出貨超過兩千萬台。現今，穎特力欣提供從硬體布局、韌體整合到系統優化的全流程嵌入式設計服務，協助工業及電動車充電領域客戶快速達成量產目標。`,
     services: "專業服務",
@@ -124,7 +126,7 @@ export default function PersonalProfile() {
 
   return (
     <div style={{ background: "#fff", minHeight: "100vh", fontFamily: "inherit" }}>
-      {/* Banner 圖片 */}
+      {/* Banner Image */}
       <div style={{ width: "100%", maxHeight: 250, overflow: "hidden" }}>
         <img
           src="/circuit-banner-ai.jpg"
@@ -133,11 +135,11 @@ export default function PersonalProfile() {
         />
       </div>
 
-      {/* 內文區塊 */}
+      {/* Main Content */}
       <div style={{ maxWidth: 800, margin: "0 auto", padding: "32px 16px" }}>
         <LanguageSwitcher />
 
-        {/* Hero */}
+        {/* Hero Section */}
         <section style={{ textAlign: "center", margin: "40px 0 24px" }}>
           <h1 style={{ fontSize: 36, fontWeight: 700, marginBottom: 12 }}>{t.hero}</h1>
           <p style={{ fontSize: 18, color: "#333", marginBottom: 8 }}>{t.heroDesc}</p>
@@ -154,11 +156,11 @@ export default function PersonalProfile() {
               cursor: "pointer",
             }}
           >
-            {t.contact}
+            {t.contactLabel}
           </button>
         </section>
 
-        {/* About */}
+        {/* About Section */}
         <section>
           <h2 style={{ fontSize: 24, fontWeight: 600, margin: "24px 0 8px", color: "#222" }}>
             {t.about}
@@ -166,7 +168,7 @@ export default function PersonalProfile() {
           <p style={{ color: "#444", lineHeight: 1.6 }}>{t.aboutContent}</p>
         </section>
 
-        {/* Services */}
+        {/* Services Section */}
         <section>
           <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px", color: "#222" }}>
             {t.services}
@@ -178,7 +180,7 @@ export default function PersonalProfile() {
           </ul>
         </section>
 
-        {/* Projects */}
+        {/* Projects Section */}
         <section>
           <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px", color: "#222" }}>
             {t.projects}
@@ -190,7 +192,7 @@ export default function PersonalProfile() {
           </ul>
         </section>
 
-        {/* Advantages */}
+        {/* Advantages Section */}
         <section>
           <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px", color: "#222" }}>
             {t.advantages}
@@ -202,12 +204,13 @@ export default function PersonalProfile() {
           </ul>
         </section>
 
-        {/* Contact */}
+        {/* Contact Section */}
         <section ref={contactRef} style={{ textAlign: "center", margin: "40px 0 0" }}>
           <h2 style={{ fontSize: 22, fontWeight: 600, marginBottom: 12, color: "#222" }}>
             {t.contactSection}
           </h2>
 
+          {/* Email with Mail Icon right after "Email" */}
           <p
             style={{
               color: "#444",
@@ -218,16 +221,17 @@ export default function PersonalProfile() {
               gap: 6,
             }}
           >
-            <Mail size={16} />
-            <span style={{ fontWeight: 500 }}>{t.email}</span>:
-            <a
-              href="mailto:michelle@incubed-intl.com"
-              style={{ color: "#2956d4", marginLeft: 4 }}
-            >
+            <span style={{ fontWeight: 500, display: "inline-flex", alignItems: "center", gap: 4 }}>
+              {t.email}
+              <Mail size={16} />
+              :
+            </span>
+            <a href="mailto:michelle@incubed-intl.com" style={{ color: "#2956d4", marginLeft: 4 }}>
               michelle@incubed-intl.com
             </a>
           </p>
 
+          {/* Line ID with MessageCircle Icon right after "Line ID" */}
           <p
             style={{
               color: "#444",
@@ -238,10 +242,15 @@ export default function PersonalProfile() {
               gap: 6,
             }}
           >
-            <MessageCircle size={16} />
-            <span style={{ fontWeight: 500 }}>{t.line}</span>: slr200k
+            <span style={{ fontWeight: 500, display: "inline-flex", alignItems: "center", gap: 4 }}>
+              {t.line}
+              <MessageCircle size={16} />
+              :
+            </span>
+            <span style={{ color: "#2956d4", marginLeft: 4 }}>slr200k</span>
           </p>
 
+          {/* Phone No. with Phone Icon right after "Phone No." */}
           <p
             style={{
               color: "#444",
@@ -252,10 +261,15 @@ export default function PersonalProfile() {
               gap: 6,
             }}
           >
-            <Phone size={16} />
-            <span style={{ fontWeight: 500 }}>{t.whatsapp}</span>: +886-2-87919189
+            <span style={{ fontWeight: 500, display: "inline-flex", alignItems: "center", gap: 4 }}>
+              {t.whatsapp}
+              <Phone size={16} />
+              :
+            </span>
+            <span style={{ color: "#2956d4", marginLeft: 4 }}>+886-2-87919189</span>
           </p>
 
+          {/* Address with Building Icon right after "Address" */}
           <p
             style={{
               color: "#444",
@@ -266,16 +280,20 @@ export default function PersonalProfile() {
               gap: 6,
             }}
           >
-            <Building size={16} />
-            <span style={{ fontWeight: 500 }}>{t.address}</span>: {t.addressDetail}
+            <span style={{ fontWeight: 500, display: "inline-flex", alignItems: "center", gap: 4 }}>
+              {t.address}
+              <Building size={16} />
+              :
+            </span>
+            <span style={{ color: "#2956d4", marginLeft: 4 }}>{t.addressDetail}</span>
           </p>
         </section>
       </div>
 
-      {/* 底部圖片 */}
+      {/* Footer Image */}
       <div style={{ width: "100%", maxHeight: 200, overflow: "hidden", marginTop: 40 }}>
         <img
-          src="/bottom picture.jpg"
+          src="/bottom-picture.jpg"
           alt="footer"
           style={{ width: "100%", objectFit: "cover" }}
         />
@@ -283,5 +301,3 @@ export default function PersonalProfile() {
     </div>
   );
 }
-
-
