@@ -88,10 +88,6 @@ const content = {
   },
 };
 
-// 中文 Google Maps 連結（已經測試可正常顯示地圖與座標）
-const googleMapsPlaceUrl =
-  "https://www.google.com/maps/place/新北市新店區寶中路94號2樓之3";
-
 export default function PersonalProfile() {
   const [lang, setLang] = useState("en");
   const [showAbout, setShowAbout] = useState(false);
@@ -198,10 +194,10 @@ export default function PersonalProfile() {
         <section>
           <h2
             style={{
-              fontSize: 22,
-              fontWeight: 600,
-              margin: "24px 0 8px",
-              color: "#222",
+            fontSize: 22,
+            fontWeight: 600,
+            margin: "24px 0 8px",
+            color: "#222",
             }}
           >
             {t.services}
@@ -211,7 +207,7 @@ export default function PersonalProfile() {
               margin: "0 0 0 24px",
               color: "#444",
               lineHeight: 1.6,
-              listStyleType: "disc", // 每一項目前顯示「•」
+              listStyleType: "disc",   // ← 加入這行以顯示「•」
             }}
           >
             {t.serviceList.map((item, idx) => (
@@ -237,7 +233,7 @@ export default function PersonalProfile() {
               margin: "0 0 0 24px",
               color: "#444",
               lineHeight: 1.6,
-              listStyleType: "disc", // 每一項目前顯示「•」
+              listStyleType: "disc",  // ← 加入這行以顯示「•」
             }}
           >
             {t.advantageList.map((item, idx) => (
@@ -263,7 +259,7 @@ export default function PersonalProfile() {
               margin: "0 0 0 24px",
               color: "#444",
               lineHeight: 1.6,
-              listStyleType: "disc", // 每一項目前顯示「•」
+              listStyleType: "disc",  // ← 加入這行以顯示「•」
             }}
           >
             {t.projectList.map((item, idx) => (
@@ -365,7 +361,7 @@ export default function PersonalProfile() {
             <span style={{ color: "#2956d4", marginLeft: 4 }}>+886-2-87919189</span>
           </p>
 
-          {/* Address with Building Icon (英文與中文皆使用相同 Google Maps 連結) */}
+          {/* Address with Building Icon */}
           <p
             style={{
               color: "#444",
@@ -388,14 +384,7 @@ export default function PersonalProfile() {
               <Building size={16} />
               :
             </span>
-            <a
-              href={googleMapsPlaceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "#2956d4", marginLeft: 4, textDecoration: "underline" }}
-            >
-              {t.addressDetail}
-            </a>
+            <span style={{ color: "#2956d4", marginLeft: 4 }}>{t.addressDetail}</span>
           </p>
         </section>
       </div>
