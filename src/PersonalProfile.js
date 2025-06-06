@@ -1,7 +1,7 @@
 // PersonalProfile.js
 
 import React, { useState, useRef } from "react";
-import { Mail, MessageCircle, Phone, Building } from "lucide-react";
+import { Mail, MessageCircle, Phone, Building, X } from "lucide-react";
 
 const content = {
   en: {
@@ -15,7 +15,7 @@ const content = {
       "Embedded System Design and Architecture",
       "High-reliability, mass-production–oriented design services",
       "Custom solution integration: end-to-end hardware, software, mechanical integration",
-      "Product validation debugging and driver integration ",
+      "Product validation debugging and driver integration",
       "ID and mechanical design and production",
       "Project management and international communication bridge",
       "Design transfer, BOM optimization, production support",
@@ -90,8 +90,10 @@ const content = {
 
 export default function PersonalProfile() {
   const [lang, setLang] = useState("en");
-  const t = content[lang];
+  const [showAbout, setShowAbout] = useState(false);
   const contactRef = useRef(null);
+
+  const t = content[lang];
 
   const scrollToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -153,82 +155,68 @@ export default function PersonalProfile() {
           <h1 style={{ fontSize: 36, fontWeight: 700, marginBottom: 12 }}>
             {t.hero}
           </h1>
-          <p style={{ fontSize: 18, color: "#333", marginBottom: 8 }}>
+          <p style={{ fontSize: 18, color: "#333", marginBottom: 16 }}>
             {t.heroDesc}
           </p>
-          <button
-            onClick={scrollToContact}
-            style={{
-              marginTop: 18,
-              fontSize: 16,
-              padding: "8px 28px",
-              borderRadius: 6,
-              background: "#2956d4",
-              color: "#fff",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
-            {t.contactLabel}
-          </button>
-        </section>
-
-        {/* About Section */}
-        <section>
-          <h2
-            style={{
-              fontSize: 24,
-              fontWeight: 600,
-              margin: "24px 0 8px",
-              color: "#222",
-            }}
-          >
-            {t.about}
-          </h2>
-          <p style={{ color: "#444", lineHeight: 1.6 }}>
-            {t.aboutContent}
-          </p>
+          <div style={{ display: "flex", justifyContent: "center", gap: 12 }}>
+            <button
+              onClick={() => setShowAbout(true)}
+              style={{
+                fontSize: 16,
+                padding: "8px 24px",
+                borderRadius: 6,
+                background: "#2956d4",
+                color: "#fff",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              {t.about}
+            </button>
+            <button
+              onClick={scrollToContact}
+              style={{
+                fontSize: 16,
+                padding: "8px 24px",
+                borderRadius: 6,
+                background: "#2956d4",
+                color: "#fff",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              {t.contactLabel}
+            </button>
+          </div>
         </section>
 
         {/* Services Section */}
         <section>
           <h2
             style={{
-              fontSize: 22,
-              fontWeight: 600,
-              margin: "24px 0 8px",
-              color: "#222",
+            fontSize: 22,
+            fontWeight: 600,
+            margin: "24px 0 8px",
+            color: "#222",
             }}
           >
             {t.services}
           </h2>
-          <ul style={{ margin: "0 0 0 24px", color: "#444", lineHeight: 1.6 }}>
+          <ul
+            style={{
+              margin: "0 0 0 24px",
+              color: "#444",
+              lineHeight: 1.6,
+              listStyleType: "disc",   // ← 加入這行以顯示「•」
+            }}
+          >
             {t.serviceList.map((item, idx) => (
               <li key={idx}>{item}</li>
             ))}
           </ul>
         </section>
 
-        {/* Projects Section */}
-        <section>
-          <h2
-            style={{
-              fontSize: 22,
-              fontWeight: 600,
-              margin: "24px 0 8px",
-              color: "#222",
-            }}
-          >
-            {t.projects}
-          </h2>
-          <ul style={{ margin: "0 0 0 24px", color: "#444", lineHeight: 1.6 }}>
-            {t.projectList.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
-        </section>
-
-        {/* Advantages Section */}
+        {/* Why Choose Us Section */}
         <section>
           <h2
             style={{
@@ -240,8 +228,41 @@ export default function PersonalProfile() {
           >
             {t.advantages}
           </h2>
-          <ul style={{ margin: "0 0 0 24px", color: "#444", lineHeight: 1.6 }}>
+          <ul
+            style={{
+              margin: "0 0 0 24px",
+              color: "#444",
+              lineHeight: 1.6,
+              listStyleType: "disc",  // ← 加入這行以顯示「•」
+            }}
+          >
             {t.advantageList.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Highlighted Projects Section */}
+        <section>
+          <h2
+            style={{
+              fontSize: 22,
+              fontWeight: 600,
+              margin: "24px 0 8px",
+              color: "#222",
+            }}
+          >
+            {t.projects}
+          </h2>
+          <ul
+            style={{
+              margin: "0 0 0 24px",
+              color: "#444",
+              lineHeight: 1.6,
+              listStyleType: "disc",  // ← 加入這行以顯示「•」
+            }}
+          >
+            {t.projectList.map((item, idx) => (
               <li key={idx}>{item}</li>
             ))}
           </ul>
@@ -376,6 +397,53 @@ export default function PersonalProfile() {
           style={{ width: "100%", objectFit: "cover" }}
         />
       </div>
+
+      {/* About Modal */}
+      {showAbout && (
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            background: "rgba(0, 0, 0, 0.5)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 1000,
+          }}
+        >
+          <div
+            style={{
+              background: "#fff",
+              padding: 24,
+              borderRadius: 8,
+              maxWidth: 600,
+              width: "90%",
+              maxHeight: "80%",
+              overflowY: "auto",
+              position: "relative",
+            }}
+          >
+            <button
+              onClick={() => setShowAbout(false)}
+              style={{
+                position: "absolute",
+                top: 12,
+                right: 12,
+                background: "transparent",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              <X size={24} />
+            </button>
+            <h2 style={{ marginBottom: 16, color: "#222" }}>{t.about}</h2>
+            <p style={{ color: "#444", lineHeight: 1.6 }}>{t.aboutContent}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
