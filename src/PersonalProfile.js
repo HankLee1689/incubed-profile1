@@ -34,7 +34,7 @@ const content = {
       "Market‐savvy, Asia/US/EU seamless communication",
       "ISO 9001, ISO 14001, ISO 13485 certified factories",
     ],
-    contactSection: "Contact",
+    contactSection: "Get in Touch",
     email: "Email",
     line: "Line ID",
     whatsapp: "Phone No.",
