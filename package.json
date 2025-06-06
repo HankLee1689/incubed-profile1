@@ -2,6 +2,9 @@
   "name": "incubed-profile",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -9,13 +12,11 @@
     "lucide-react": "^0.263.0"
   },
   "scripts": {
--   "start": "react-scripts start",
--   "build": "react-scripts build",
-+   "start": "react-scripts start",
-+   // prebuild 先把 react-scripts 二進位檔加上可執行權限
-+   "prebuild": "chmod +x node_modules/.bin/react-scripts",
-+   // 然後才真正執行 build
-+   "build": "react-scripts build",
+    "start": "react-scripts start",
+    // 「prebuild」會在執行 npm run build 之前先跑，用來修正 react-scripts 的執行權限
+    "prebuild": "chmod +x node_modules/.bin/react-scripts",
+    // 真正的 build 指令
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
