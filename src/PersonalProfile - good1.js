@@ -85,6 +85,7 @@ export default function PersonalProfile() {
   const [lang, setLang] = useState("en");
   const t = content[lang];
 
+  // 語言切換按鈕
   const LanguageSwitcher = () => (
     <div style={{ display: "flex", justifyContent: "flex-end", gap: 8 }}>
       <button
@@ -124,11 +125,8 @@ export default function PersonalProfile() {
           style={{ width: "100%", objectFit: "cover" }}
         />
       </div>
-
-      {/* 內文區塊 */}
       <div style={{ maxWidth: 800, margin: "0 auto", padding: "32px 16px" }}>
         <LanguageSwitcher />
-
         {/* Hero */}
         <section style={{ textAlign: "center", margin: "40px 0 24px" }}>
           <h1 style={{ fontSize: 36, fontWeight: 700, marginBottom: 12 }}>{t.hero}</h1>
@@ -148,7 +146,6 @@ export default function PersonalProfile() {
             {t.contact}
           </button>
         </section>
-
         {/* About */}
         <section>
           <h2 style={{ fontSize: 24, fontWeight: 600, margin: "24px 0 8px", color: "#222" }}>
@@ -156,7 +153,6 @@ export default function PersonalProfile() {
           </h2>
           <p style={{ color: "#444", lineHeight: 1.6 }}>{t.aboutContent}</p>
         </section>
-
         {/* Services */}
         <section>
           <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px", color: "#222" }}>
@@ -168,7 +164,6 @@ export default function PersonalProfile() {
             ))}
           </ul>
         </section>
-
         {/* Projects */}
         <section>
           <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px", color: "#222" }}>
@@ -180,7 +175,6 @@ export default function PersonalProfile() {
             ))}
           </ul>
         </section>
-
         {/* Advantages */}
         <section>
           <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px", color: "#222" }}>
@@ -192,7 +186,6 @@ export default function PersonalProfile() {
             ))}
           </ul>
         </section>
-
         {/* Contact */}
         <section style={{ textAlign: "center", margin: "40px 0 0" }}>
           <h2 style={{ fontSize: 22, fontWeight: 600, marginBottom: 12, color: "#222" }}>
@@ -211,17 +204,7 @@ export default function PersonalProfile() {
           </p>
         </section>
       </div>
-
-      {/* ✅ 底部圖片 */}
-      <div style={{ width: "100%", maxHeight: 200, overflow: "hidden", marginTop: 40 }}>
-        <img
-          src="/bottom picture.jpg"
-          alt="footer"
-          style={{ width: "100%", objectFit: "cover" }}
-        />
-      </div>
     </div>
   );
 }
-
 
