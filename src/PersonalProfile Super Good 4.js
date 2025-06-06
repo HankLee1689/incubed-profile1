@@ -1,6 +1,6 @@
 // PersonalProfile.js
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { Mail, MessageCircle, Phone, Building, X } from "lucide-react";
 
 const content = {
@@ -26,7 +26,7 @@ const content = {
       "Embedded motherboard system integration",
       "USB-to-PHY Layer 2 MAC-to-MAC PLC Board",
       "Industrial-grade fanless HMI octa-core controller board with –40 °C to 85 °C operating temperature range",
-      "Industrial-grade 15″ IK10 touch panel module with –30 °C to 85 °C operating temperature",
+      "Industrial-grade 15\" IK10 touch panel module with –30 °C to 85 °C operating temperature",
     ],
     advantages: "Why Choose Us",
     advantageList: [
@@ -67,7 +67,7 @@ const content = {
       "嵌入式主機板系統整合",
       "MAC-to-MAC PLC 主控板（USB-to-PHY）",
       "工業級 –40 °C 至 85 °C 操作溫度之無風扇 HMI 八核心控制板",
-      "工業級 –30 °C 至 85 °C 操作溫度之 15″ IK10 觸控面板模組",
+      "工業級 –30 °C 至 85 °C 操作溫度之 15\" IK10 觸控面板模組",
     ],
     advantages: "合作優勢",
     advantageList: [
@@ -86,38 +86,141 @@ const content = {
     address: "地址",
     addressDetail: "新北市新店區寶中路94號2樓之3",
   },
+  jp: {
+    hero: "次世代組込み設計を強力にサポート",
+    heroDesc: "次世代組込みイノベーションのパートナー",
+    contactLabel: "お問い合わせ",
+    about: "IN Cubed について",
+    aboutContent: `IN Cubed International Co. Ltd は、組込みシステム、産業用コンピュータアーキテクチャ、SoC 統合の豊富な経験を持つチームによって指導されています。創業者は上場企業の CEO と CTO を務め、多数のプロジェクトを量産に導きました。さらに、3 つの画期的な製品ラインを設計し、世界で 2,000 万台以上を出荷しました。現在、IN Cubed はハードウェア設計、ファームウェアとソフトウェアの統合、厳格な品質管理、システム統合と最適化までのエンドツーエンド組込み設計サービスを提供し、産業用コンピューティング、AIoT、EV 充電分野のクライアントが高品質な量産を迅速に達成するのを支援しています。`,
+    services: "サービス",
+    serviceList: [
+      "組込みシステムの設計とアーキテクチャ",
+      "高信頼性、大量生産向け設計サービス",
+      "カスタムソリューション統合：ハードウェア、ソフトウェア、機構設計のワンストップ統合",
+      "製品検証、デバッグ、ドライバー統合",
+      "ID と機構設計および量産製造",
+      "プロジェクト管理と国際的なコミュニケーションブリッジ",
+      "設計移管、部品表最適化、生産サポート",
+    ],
+    projects: "注目プロジェクト",
+    projectList: [
+      "PLC ボード – 米国 EV 充電器向け量産",
+      "組込みマザーボードシステム統合",
+      "USB-to-PHY レイヤー 2 MAC-to-MAC PLC ボード",
+      "産業用ファンレス HMI 8 コアコントローラーボード (–40 ℃ ～ 85 ℃ 動作温度)",
+      "産業用 15\" IK10 タッチパネルモジュール (–30 ℃ ～ 85 ℃ 動作温度)",
+    ],
+    advantages: "選ばれる理由",
+    advantageList: [
+      "組込みシステム、産業用コンピューティング、SoC 統合の豊富な経験",
+      "創業者は 3 つの画期的な製品ラインを率い、世界で 2,000 万台以上を出荷",
+      "エンドツーエンドサービス：ハードウェア設計、ファームウェア＆ソフトウェア統合、厳格な品質管理、システム最適化",
+      "迅速な試作：プロトタイプを3週間で提供し、市場投入を加速",
+      "グローバル対応：アジア、北米、欧州間のシームレスなコミュニケーション",
+      "顧客中心：透明なワークフロー、NDA 保護、専任プロジェクト管理",
+      "信頼できるパートナー：ISO 9001、ISO 14001、ISO 13485 認証工場",
+    ],
+    contactSection: "お問い合わせ",
+    email: "メール",
+    line: "Line ID",
+    whatsapp: "電話番号",
+    address: "住所",
+    addressDetail: "新北市新店区寶中路94号2階之3",
+  },
+  es: {
+    hero: "Potenciando el Diseño Embebido de Próxima Generación",
+    heroDesc: "Su Socio para la Innovación Embebida de Próxima Generación",
+    contactLabel: "Contáctenos",
+    about: "Acerca de IN Cubed",
+    aboutContent: `IN Cubed International Co. Ltd está dirigida por un equipo con amplia experiencia en sistemas embebidos, arquitecturas de computadoras industriales e integración de SoC. El fundador se desempeñó como CEO y CTO de una empresa que cotiza en bolsa, liderando con éxito cientos de proyectos hacia la producción en masa. Además, diseñó tres líneas de productos innovadores, enviando más de 20 millones de unidades en todo el mundo. Hoy, IN Cubed ofrece servicios de diseño embebido de extremo a extremo, desde el diseño de hardware, integración de firmware y software, hasta control de calidad riguroso e integración y optimización de sistemas, ayudando a clientes en los sectores de computación industrial, AIoT y carga de vehículos eléctricos a lograr rápidamente objetivos de producción en masa de alta calidad.`,
+    services: "Nuestros Servicios",
+    serviceList: [
+      "Diseño y Arquitectura de Sistemas Embebidos",
+      "Servicios de diseño de alta confiabilidad orientados a producción en masa",
+      "Integración de soluciones personalizadas: integración de hardware, software y mecánica de extremo a extremo",
+      "Validación de productos, depuración e integración de controladores",
+      "Diseño de identidad y mecánica y fabricación en masa",
+      "Gestión de proyectos y puente de comunicación internacional",
+      "Transferencia de diseño, optimización de la lista de materiales, soporte de producción",
+    ],
+    projects: "Proyectos Destacados",
+    projectList: [
+      "Tarjeta PLC – Producción en masa para cargadores EV en EE. UU.",
+      "Integración de sistema de placa madre embebida",
+      "Tarjeta PLC USB-a-PHY Capa 2 MAC-a-MAC",
+      "Placa controladora HMI octa-core industrial sin ventilador con rango de temperatura de operación –40 °C a 85 °C",
+      "Módulo de panel táctil IK10 de 15\" industrial con rango de temperatura de operación –30 °C a 85 °C",
+    ],
+    advantages: "Por Qué Elegirnos",
+    advantageList: [
+      "Décadas de experiencia en sistemas embebidos, computación industrial e integración de SoC",
+      "El fundador lideró tres líneas de productos innovadores con más de 20 millones de unidades enviadas globalmente",
+      "Servicio de extremo a extremo: diseño de hardware, integración de firmware y software, control de calidad riguroso, optimización de sistemas",
+      "Prototipado rápido: prototipos entregados en 3 semanas, acelerando el tiempo de comercialización",
+      "Alcance global: comunicación fluida entre Asia, Norteamérica y Europa",
+      "Enfoque centrado en el cliente: flujo de trabajo transparente, protección de NDA y gestión de proyectos dedicada",
+      "Socios de confianza: fábricas certificadas ISO 9001, ISO 14001 e ISO 13485",
+    ],
+    contactSection: "Póngase en Contacto",
+    email: "Correo Electrónico",
+    line: "ID de Line",
+    whatsapp: "Teléfono",
+    address: "Dirección",
+    addressDetail: "2F-3, No. 94 Baozhong Rd, Distrito Xindian, Ciudad de Nuevo Taipéi",
+  },
+  de: {
+    hero: "Stärkung des Next-Gen Embedded Designs",
+    heroDesc: "Ihr Partner für Next-Gen Embedded Innovation",
+    contactLabel: "Kontaktieren Sie uns",
+    about: "Über IN Cubed",
+    aboutContent: `IN Cubed International Co. Ltd wird von einem Team mit umfassender Erfahrung in Embedded-Systemen, Industriecomputerarchitekturen und SoC-Integration geleitet. Der Gründer war CEO und CTO eines börsennotierten Unternehmens und hat Hunderte von Projekten erfolgreich in die Massenproduktion geführt. Außerdem entwarf er drei bahnbrechende Produktlinien, die weltweit über 20 Millionen Einheiten auslieferten. Heute bietet IN Cubed End-to-End Embedded-Design-Services – von der Hardwaregestaltung über Firmware- und Softwareintegration bis hin zu strenger Qualitätskontrolle und Systemintegration und -optimierung – und hilft Kunden in den Bereichen industrielle Computertechnik, AIoT und EV-Ladung, schnell hochwertige Massenproduktionsziele zu erreichen.`,
+    services: "Unsere Dienstleistungen",
+    serviceList: [
+      "Embedded-System-Design und Architektur",
+      "Hochzuverlässige, massenproduktionsorientierte Design-Services",
+      "Integration kundenspezifischer Lösungen: End-to-End Hardware-, Software- und Mechanikintegration",
+      "Produktvalidierung, Debugging und Treiberintegration",
+      "ID- und Mechanikdesign sowie Massenproduktion",
+      "Projektmanagement und internationale Kommunikationsbrücke",
+      "Design-Transfer, Stücklistenoptimierung, Produktionsunterstützung",
+    ],
+    projects: "Hervorgehobene Projekte",
+    projectList: [
+      "PLC-Platine – Massenproduktion für US-EV-Ladegeräte",
+      "Embedded-Motherboard-Systemintegration",
+      "USB-zu-PHY Layer 2 MAC-zu-MAC PLC-Platine",
+      "Industriefähige lüfterlose HMI-Oktacore-Controller-Platine mit –40 °C bis 85 °C Betriebstemperatur",
+      "Industriefähiges 15\" IK10 Touchpanel-Modul mit –30 °C bis 85 °C Betriebstemperatur",
+    ],
+    advantages: "Warum Uns Wählen",
+    advantageList: [
+      "Jahrzehntelange Erfahrung in Embedded-Systemen, Industriecomputertechnik und SoC-Integration",
+      "Der Gründer leitete drei bahnbrechende Produktlinien mit über 20 Millionen weltweit ausgelieferten Einheiten",
+      "End-to-End-Service: Hardware-Design, Firmware- & Softwareintegration, strenge Qualitätskontrolle, Systemoptimierung",
+      "Schnelles Prototyping: Prototypen in 3 Wochen, Beschleunigung der Markteinführung",
+      "Globale Reichweite: nahtlose Kommunikation zwischen Asien, Nordamerika und Europa",
+      "Kundenorientierung: Transparente Arbeitsabläufe, NDA-Schutz und dediziertes Projektmanagement",
+      "Vertrauenswürdige Partner: ISO 9001, ISO 14001 und ISO 13485 zertifizierte Fertigungsstätten",
+    ],
+    contactSection: "Kontakt aufnehmen",
+    email: "E-Mail",
+    line: "Line ID",
+    whatsapp: "Telefon",
+    address: "Adresse",
+    addressDetail: "2F-3, No. 94 Baozhong Rd, Xindian Dist, Neu-Taipeh Stadt",
+  },
 };
 
 // 中文 Google Maps 連結（正確顯示地圖與座標）
 const googleMapsPlaceUrl =
   "https://www.google.com/maps/place/新北市新店區寶中路94號2樓之3";
 
-// 使用 CountAPI “get” endpoint，避免 CORS 或 “hit” 失敗問題
-const COUNT_API_URL = "https://api.countapi.xyz/get/incubed/homepage";
-
 export default function PersonalProfile() {
   const [lang, setLang] = useState("en");
   const [showAbout, setShowAbout] = useState(false);
-  const [viewCount, setViewCount] = useState("Loading...");
   const contactRef = useRef(null);
 
   const t = content[lang];
-
-  useEffect(() => {
-    fetch(COUNT_API_URL)
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Network response not ok");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        setViewCount(data.value ?? 0);
-      })
-      .catch(() => {
-        setViewCount(0);
-      });
-  }, []);
 
   const scrollToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -148,6 +251,42 @@ export default function PersonalProfile() {
         onClick={() => setLang("zh")}
       >
         中文
+      </button>
+      <button
+        style={{
+          padding: "4px 12px",
+          borderRadius: 4,
+          border: lang === "jp" ? "2px solid #222" : "1px solid #ccc",
+          background: lang === "jp" ? "#f7f7f7" : "#fff",
+          cursor: "pointer",
+        }}
+        onClick={() => setLang("jp")}
+      >
+        日本語
+      </button>
+      <button
+        style={{
+          padding: "4px 12px",
+          borderRadius: 4,
+          border: lang === "es" ? "2px solid #222" : "1px solid #ccc",
+          background: lang === "es" ? "#f7f7f7" : "#fff",
+          cursor: "pointer",
+        }}
+        onClick={() => setLang("es")}
+      >
+        Español
+      </button>
+      <button
+        style={{
+          padding: "4px 12px",
+          borderRadius: 4,
+          border: lang === "de" ? "2px solid #222" : "1px solid #ccc",
+          background: lang === "de" ? "#f7f7f7" : "#fff",
+          cursor: "pointer",
+        }}
+        onClick={() => setLang("de")}
+      >
+        Deutsch
       </button>
     </div>
   );
@@ -384,7 +523,7 @@ export default function PersonalProfile() {
             <span style={{ color: "#2956d4", marginLeft: 4 }}>+886-2-87919189</span>
           </p>
 
-          {/* Address with Building Icon (英文與中文皆使用相同 Google Maps 連結) */}
+          {/* Address with Building Icon */}
           <p
             style={{
               color: "#444",
@@ -426,23 +565,6 @@ export default function PersonalProfile() {
           alt="footer"
           style={{ width: "100%", objectFit: "cover" }}
         />
-      </div>
-
-      {/* Page View Counter at bottom-right */}
-      <div
-        style={{
-          position: "fixed",
-          bottom: 12,
-          right: 12,
-          background: "rgba(0, 0, 0, 0.6)",
-          color: "#fff",
-          padding: "4px 8px",
-          borderRadius: 4,
-          fontSize: 12,
-          zIndex: 1100,
-        }}
-      >
-        {lang === "en" ? `Views: ${viewCount}` : `瀏覽次數：${viewCount}`}
       </div>
 
       {/* About Modal */}
