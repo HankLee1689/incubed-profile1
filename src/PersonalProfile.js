@@ -365,13 +365,12 @@ export default function PersonalProfile() {
       </div>
 
       {/* Footer Image */}
-      <div style={{ width: "100%", maxHeight: 200, overflow: "hidden", marginTop: 40 }}>
-        <img
-          src="/bottom-picture.jpg"
-          alt="footer"
-          style={{ width: "100%", objectFit: "cover" }}
-        />
-      </div>
+       <div style={{ width: "100%", maxHeight: 200, overflow: "hidden", marginTop: 40 }}>
+       <img
+        src="/footer_circuit_strip.png"
+        alt="footer"
+        style={{ width: "100%", objectFit: "cover" }}
+        />   
     </div>
   );
 }
