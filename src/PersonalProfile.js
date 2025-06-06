@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 
 const content = {
   en: {
@@ -84,40 +84,141 @@ const content = {
 export default function PersonalProfile() {
   const [lang, setLang] = useState("en");
   const t = content[lang];
-  const contactRef = useRef(null);
-  const scrollToContact = () => contactRef.current?.scrollIntoView({ behavior: "smooth" });
-  const bottomImage = lang === "zh" ? "/bottom-zh.jpg" : "/bottom-en.jpg";
 
   const LanguageSwitcher = () => (
     <div style={{ display: "flex", justifyContent: "flex-end", gap: 8 }}>
-      <button style={{ padding: "4px 12px", borderRadius: 4, border: lang === "en" ? "2px solid #222" : "1px solid #ccc", background: lang === "en" ? "#f7f7f7" : "#fff", cursor: "pointer" }} onClick={() => setLang("en")}>EN</button>
-      <button style={{ padding: "4px 12px", borderRadius: 4, border: lang === "zh" ? "2px solid #222" : "1px solid #ccc", background: lang === "zh" ? "#f7f7f7" : "#fff", cursor: "pointer" }} onClick={() => setLang("zh")}>中文</button>
+      <button
+        style={{
+          padding: "4px 12px",
+          borderRadius: 4,
+          border: lang === "en" ? "2px solid #222" : "1px solid #ccc",
+          background: lang === "en" ? "#f7f7f7" : "#fff",
+          cursor: "pointer",
+        }}
+        onClick={() => setLang("en")}
+      >
+        EN
+      </button>
+      <button
+        style={{
+          padding: "4px 12px",
+          borderRadius: 4,
+          border: lang === "zh" ? "2px solid #222" : "1px solid #ccc",
+          background: lang === "zh" ? "#f7f7f7" : "#fff",
+          cursor: "pointer",
+        }}
+        onClick={() => setLang("zh")}
+      >
+        中文
+      </button>
     </div>
   );
 
   return (
     <div style={{ background: "#fff", minHeight: "100vh", fontFamily: "inherit" }}>
+      {/* Banner 圖片 */}
       <div style={{ width: "100%", maxHeight: 250, overflow: "hidden" }}>
-        <img src="/circuit-banner-ai.jpg" alt="banner" style={{ width: "100%", objectFit: "cover" }} />
+        <img
+          src="/circuit-banner-ai.jpg"
+          alt="banner"
+          style={{ width: "100%", objectFit: "cover" }}
+        />
       </div>
+
+      {/* 內文區塊 */}
       <div style={{ maxWidth: 800, margin: "0 auto", padding: "32px 16px" }}>
         <LanguageSwitcher />
+
+        {/* Hero */}
         <section style={{ textAlign: "center", margin: "40px 0 24px" }}>
           <h1 style={{ fontSize: 36, fontWeight: 700, marginBottom: 12 }}>{t.hero}</h1>
           <p style={{ fontSize: 18, color: "#333" }}>{t.heroDesc}</p>
-          <button onClick={scrollToContact} style={{ marginTop: 18, fontSize: 16, padding: "8px 28px", borderRadius: 6, background: "#2956d4", color: "#fff", border: "none", cursor: "pointer" }}>{t.contact}</button>
+          <button
+            style={{
+              marginTop: 18,
+              fontSize: 16,
+              padding: "8px 28px",
+              borderRadius: 6,
+              background: "#2956d4",
+              color: "#fff",
+              border: "none",
+              cursor: "pointer",
+            }}
+          >
+            {t.contact}
+          </button>
         </section>
-        {/* 其餘區塊保持原樣，可依需要加入 About / Services / Projects / Advantages 區段 */}
-        <section ref={contactRef} style={{ textAlign: "center", margin: "40px 0 0" }}>
-          <h2 style={{ fontSize: 22, fontWeight: 600, marginBottom: 12, color: "#222" }}>{t.contactSection}</h2>
-          <p style={{ color: "#444", lineHeight: 1.6 }}>{t.email}：<a href="mailto:michelle@incubed-intl.com" style={{ color: "#2956d4" }}>michelle@incubed-intl.com</a></p>
+
+        {/* About */}
+        <section>
+          <h2 style={{ fontSize: 24, fontWeight: 600, margin: "24px 0 8px", color: "#222" }}>
+            {t.about}
+          </h2>
+          <p style={{ color: "#444", lineHeight: 1.6 }}>{t.aboutContent}</p>
+        </section>
+
+        {/* Services */}
+        <section>
+          <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px", color: "#222" }}>
+            {t.services}
+          </h2>
+          <ul style={{ margin: "0 0 0 24px", color: "#444", lineHeight: 1.6 }}>
+            {t.serviceList.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Projects */}
+        <section>
+          <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px", color: "#222" }}>
+            {t.projects}
+          </h2>
+          <ul style={{ margin: "0 0 0 24px", color: "#444", lineHeight: 1.6 }}>
+            {t.projectList.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Advantages */}
+        <section>
+          <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px", color: "#222" }}>
+            {t.advantages}
+          </h2>
+          <ul style={{ margin: "0 0 0 24px", color: "#444", lineHeight: 1.6 }}>
+            {t.advantageList.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Contact */}
+        <section style={{ textAlign: "center", margin: "40px 0 0" }}>
+          <h2 style={{ fontSize: 22, fontWeight: 600, marginBottom: 12, color: "#222" }}>
+            {t.contactSection}
+          </h2>
+          <p style={{ color: "#444", lineHeight: 1.6 }}>
+            {t.email}：{" "}
+            <a href="mailto:michelle@incubed-intl.com" style={{ color: "#2956d4" }}>
+              michelle@incubed-intl.com
+            </a>
+          </p>
           <p style={{ color: "#444", lineHeight: 1.6 }}>{t.line}: slr200k</p>
           <p style={{ color: "#444", lineHeight: 1.6 }}>{t.whatsapp}: +886-2-87919189</p>
-          <p style={{ color: "#444", lineHeight: 1.6 }}>{t.address}：{t.addressDetail}</p>
+          <p style={{ color: "#444", lineHeight: 1.6 }}>
+            {t.address}：{t.addressDetail}
+          </p>
         </section>
       </div>
+
+      {/* ✅ 底部圖片 */}
       <div style={{ width: "100%", maxHeight: 200, overflow: "hidden", marginTop: 40 }}>
-        <img src={bottomImage} alt="footer" style={{ width: "100%", objectFit: "cover" }} />
+        <img
+          src="/bottom picture.jpg"
+          alt="footer"
+          style={{ width: "100%", objectFit: "cover" }}
+        />
       </div>
     </div>
   );
