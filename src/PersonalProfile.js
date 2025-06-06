@@ -9,7 +9,7 @@ const content = {
     heroDesc: "Your Partner for Next-Gen Embedded Innovation",
     contactLabel: "Contact us",
     about: "About IN Cubed",
-    aboutContent: `IN Cubed International Co. Ltd is led by a team with extensive experience in embedded systems, industrial computer architectures, and SoC integration. The founder has served as CEO and CTO of a publicly listed company, leading and successfully delivering hundreds of projects into mass production. The founder designed three groundbreaking models, resulting in over 20 million units shipped. Today, IN Cubed provides full-process embedded design services—from hardware layout and firmware integration to system optimization—and assists clients in the industrial and electric vehicle charging sectors to quickly achieve mass production goals.`,
+    aboutContent: `IN Cubed International Co. Ltd is led by a team with extensive experience in embedded systems, industrial computer architectures, and SoC integration. The founder has served as CEO and CTO of a publicly listed company, leading and successfully delivering hundreds of projects into mass production. Also designed three epochal innovative products achieving over 20 million units shipped worldwide. Today, IN Cubed provides full-process embedded design services—from hardware layout and firmware integration to system optimization—and assists clients in the industrial and electric vehicle charging sectors to quickly achieve mass production goals.`,
     services: "Our Services",
     serviceList: [
       "Embedded hardware design (MB, carrier, adapter)",
@@ -48,7 +48,7 @@ const content = {
     heroDesc: "您下一代嵌入式創新的夥伴",
     contactLabel: "聯絡我們",
     about: "關於我們",
-    aboutContent: `穎特力欣股份有限公司（IN Cubed International Co. Ltd）由具備嵌入式系統、工業電腦架構及 SoC 整合豐富經驗的團隊領導。管理層曾擔任上市公司 CEO、CTO，帶領並成功將數百個專案推向量產，創辦人設計了三款劃時代的產品，全球出貨量超過兩千萬台。現今，穎特力欣提供從硬體布局、韌體整合到系統優化的全流程嵌入式設計服務，協助工業及電動車充電領域客戶快速達成量產目標。`,
+    aboutContent: `穎特力欣股份有限公司（IN Cubed International Co. Ltd）由具備嵌入式系統、工業電腦架構及 SoC 整合豐富經驗的團隊領導。管理層曾擔任上市公司 CEO、CTO，帶領並成功將數百個專案推向量產，亦曾設計出三款劃時代創新產品，全球累計出貨量超過兩千萬台。現今，穎特力欣提供從硬體布局、韌體整合到系統優化的全流程嵌入式設計服務，協助工業及電動車充電領域客戶快速達成量產目標。`,
     services: "專業服務",
     serviceList: [
       "嵌入式硬體設計（主機板 • 載板 • 轉接模組）",
