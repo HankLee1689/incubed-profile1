@@ -4,10 +4,9 @@ import React, { useState, useRef } from "react";
 const content = {
   en: {
     hero: "Empowering Next-Gen Embedded Design",
-    hero: "Innovative ● Efficient ● Reliable",
     heroDesc: "Your Partner for Next-Gen Embedded Innovation",
     contact: "Contact",
-    about: "About About IN Cubed international",
+    about: "About IN Cubed",
     aboutContent: `IN Cubed International Co Ltd is led by a team with extensive experience in embedded systems industrial computer architectures and SoC integration. The founder has served as CEO and CTO of a publicly listed company leading and successfully delivering hundreds of projects into mass production. The founder independently designed three innovative products producing and three products shipping over 20 million units. Today IN Cubed provides full process embedded design services from hardware layout and firmware integration to system optimization and assists clients in the industrial and electric vehicle charging sectors to rapidly achieve mass production goals `,
     services: "Our Services",
     serviceList: [
