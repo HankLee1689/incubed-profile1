@@ -92,23 +92,30 @@ const content = {
 const googleMapsPlaceUrl =
   "https://www.google.com/maps/place/新北市新店區寶中路94號2樓之3";
 
+// 使用 CountAPI “get” endpoint，避免 CORS 或 “hit” 失敗問題
+const COUNT_API_URL = "https://api.countapi.xyz/get/incubed/homepage";
+
 export default function PersonalProfile() {
   const [lang, setLang] = useState("en");
   const [showAbout, setShowAbout] = useState(false);
-  const [viewCount, setViewCount] = useState("Loading..."); // 先設為 Loading...
+  const [viewCount, setViewCount] = useState("Loading...");
   const contactRef = useRef(null);
 
   const t = content[lang];
 
-  // 螢幕載入時呼叫 CountAPI 來累計並取得最新「瀏覽數」
   useEffect(() => {
-    fetch("https://api.countapi.xyz/hit/incubed/homepage")
-      .then((res) => res.json())
+    fetch(COUNT_API_URL)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Network response not ok");
+        }
+        return res.json();
+      })
       .then((data) => {
-        setViewCount(data.value);
+        setViewCount(data.value ?? 0);
       })
       .catch(() => {
-        setViewCount("N/A");
+        setViewCount(0);
       });
   }, []);
 
@@ -432,12 +439,10 @@ export default function PersonalProfile() {
           padding: "4px 8px",
           borderRadius: 4,
           fontSize: 12,
-          zIndex: 1100, // 提升 z-index 確認顯示在最上層
+          zIndex: 1100,
         }}
       >
-        {lang === "en"
-          ? `Views: ${viewCount}`
-          : `瀏覽次數：${viewCount}`}
+        {lang === "en" ? `Views: ${viewCount}` : `瀏覽次數：${viewCount}`}
       </div>
 
       {/* About Modal */}
@@ -453,7 +458,7 @@ export default function PersonalProfile() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            zIndex: 1000,
+            zIndex: 1001,
           }}
         >
           <div
