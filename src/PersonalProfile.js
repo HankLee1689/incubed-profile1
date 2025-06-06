@@ -1,5 +1,3 @@
-
-
 // PersonalProfile.js
 
 import React, { useState, useRef } from "react";
@@ -125,7 +123,14 @@ export default function PersonalProfile() {
   );
 
   return (
-    <div style={{ background: "#fff", minHeight: "100vh", fontFamily: "inherit" }}>
+    <div
+      style={{
+        /* 從白色底改為淺灰電路圖背景 */
+        background: `#f2f2f2 url("/circuit-pattern.png") repeat`,
+        minHeight: "100vh",
+        fontFamily: "inherit",
+      }}
+    >
       {/* Banner Image */}
       <div style={{ width: "100%", maxHeight: 250, overflow: "hidden" }}>
         <img
@@ -141,8 +146,12 @@ export default function PersonalProfile() {
 
         {/* Hero Section */}
         <section style={{ textAlign: "center", margin: "40px 0 24px" }}>
-          <h1 style={{ fontSize: 36, fontWeight: 700, marginBottom: 12 }}>{t.hero}</h1>
-          <p style={{ fontSize: 18, color: "#333", marginBottom: 8 }}>{t.heroDesc}</p>
+          <h1 style={{ fontSize: 36, fontWeight: 700, marginBottom: 12 }}>
+            {t.hero}
+          </h1>
+          <p style={{ fontSize: 18, color: "#333", marginBottom: 8 }}>
+            {t.heroDesc}
+          </p>
           <button
             onClick={scrollToContact}
             style={{
@@ -162,15 +171,31 @@ export default function PersonalProfile() {
 
         {/* About Section */}
         <section>
-          <h2 style={{ fontSize: 24, fontWeight: 600, margin: "24px 0 8px", color: "#222" }}>
+          <h2
+            style={{
+              fontSize: 24,
+              fontWeight: 600,
+              margin: "24px 0 8px",
+              color: "#222",
+            }}
+          >
             {t.about}
           </h2>
-          <p style={{ color: "#444", lineHeight: 1.6 }}>{t.aboutContent}</p>
+          <p style={{ color: "#444", lineHeight: 1.6 }}>
+            {t.aboutContent}
+          </p>
         </section>
 
         {/* Services Section */}
         <section>
-          <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px", color: "#222" }}>
+          <h2
+            style={{
+              fontSize: 22,
+              fontWeight: 600,
+              margin: "24px 0 8px",
+              color: "#222",
+            }}
+          >
             {t.services}
           </h2>
           <ul style={{ margin: "0 0 0 24px", color: "#444", lineHeight: 1.6 }}>
@@ -182,7 +207,14 @@ export default function PersonalProfile() {
 
         {/* Projects Section */}
         <section>
-          <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px", color: "#222" }}>
+          <h2
+            style={{
+              fontSize: 22,
+              fontWeight: 600,
+              margin: "24px 0 8px",
+              color: "#222",
+            }}
+          >
             {t.projects}
           </h2>
           <ul style={{ margin: "0 0 0 24px", color: "#444", lineHeight: 1.6 }}>
@@ -194,7 +226,14 @@ export default function PersonalProfile() {
 
         {/* Advantages Section */}
         <section>
-          <h2 style={{ fontSize: 22, fontWeight: 600, margin: "24px 0 8px", color: "#222" }}>
+          <h2
+            style={{
+              fontSize: 22,
+              fontWeight: 600,
+              margin: "24px 0 8px",
+              color: "#222",
+            }}
+          >
             {t.advantages}
           </h2>
           <ul style={{ margin: "0 0 0 24px", color: "#444", lineHeight: 1.6 }}>
@@ -206,11 +245,18 @@ export default function PersonalProfile() {
 
         {/* Contact Section */}
         <section ref={contactRef} style={{ textAlign: "center", margin: "40px 0 0" }}>
-          <h2 style={{ fontSize: 22, fontWeight: 600, marginBottom: 12, color: "#222" }}>
+          <h2
+            style={{
+              fontSize: 22,
+              fontWeight: 600,
+              marginBottom: 12,
+              color: "#222",
+            }}
+          >
             {t.contactSection}
           </h2>
 
-          {/* Email with Mail Icon right after "Email" */}
+          {/* Email 與 Mail Icon */}
           <p
             style={{
               color: "#444",
@@ -221,7 +267,14 @@ export default function PersonalProfile() {
               gap: 6,
             }}
           >
-            <span style={{ fontWeight: 500, display: "inline-flex", alignItems: "center", gap: 4 }}>
+            <span
+              style={{
+                fontWeight: 500,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+              }}
+            >
               {t.email}
               <Mail size={16} />
               :
@@ -231,7 +284,7 @@ export default function PersonalProfile() {
             </a>
           </p>
 
-          {/* Line ID with MessageCircle Icon right after "Line ID" */}
+          {/* Line ID 與 MessageCircle Icon */}
           <p
             style={{
               color: "#444",
@@ -242,7 +295,14 @@ export default function PersonalProfile() {
               gap: 6,
             }}
           >
-            <span style={{ fontWeight: 500, display: "inline-flex", alignItems: "center", gap: 4 }}>
+            <span
+              style={{
+                fontWeight: 500,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+              }}
+            >
               {t.line}
               <MessageCircle size={16} />
               :
@@ -250,7 +310,7 @@ export default function PersonalProfile() {
             <span style={{ color: "#2956d4", marginLeft: 4 }}>slr200k</span>
           </p>
 
-          {/* Phone No. with Phone Icon right after "Phone No." */}
+          {/* Phone No. 與 Phone Icon */}
           <p
             style={{
               color: "#444",
@@ -261,7 +321,14 @@ export default function PersonalProfile() {
               gap: 6,
             }}
           >
-            <span style={{ fontWeight: 500, display: "inline-flex", alignItems: "center", gap: 4 }}>
+            <span
+              style={{
+                fontWeight: 500,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+              }}
+            >
               {t.whatsapp}
               <Phone size={16} />
               :
@@ -269,7 +336,7 @@ export default function PersonalProfile() {
             <span style={{ color: "#2956d4", marginLeft: 4 }}>+886-2-87919189</span>
           </p>
 
-          {/* Address with Building Icon right after "Address" */}
+          {/* Address 與 Building Icon */}
           <p
             style={{
               color: "#444",
@@ -280,7 +347,14 @@ export default function PersonalProfile() {
               gap: 6,
             }}
           >
-            <span style={{ fontWeight: 500, display: "inline-flex", alignItems: "center", gap: 4 }}>
+            <span
+              style={{
+                fontWeight: 500,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+              }}
+            >
               {t.address}
               <Building size={16} />
               :
