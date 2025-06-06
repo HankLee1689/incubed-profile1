@@ -92,8 +92,8 @@ const content = {
 const googleMapsPlaceUrl =
   "https://www.google.com/maps/place/新北市新店區寶中路94號2樓之3";
 
-// 使用 CountAPI “get” endpoint，避免 CORS 或 “hit” 失敗問題
-const COUNT_API_URL = "https://api.countapi.xyz/get/incubed/homepage";
+// 使用 CountAPI 的 “hit” endpoint，每次頁面載入都會自動 +1
+const COUNT_API_HIT_URL = "https://api.countapi.xyz/hit/incubed/homepage";
 
 export default function PersonalProfile() {
   const [lang, setLang] = useState("en");
@@ -104,11 +104,9 @@ export default function PersonalProfile() {
   const t = content[lang];
 
   useEffect(() => {
-    fetch(COUNT_API_URL)
+    fetch(COUNT_API_HIT_URL)
       .then((res) => {
-        if (!res.ok) {
-          throw new Error("Network response not ok");
-        }
+        if (!res.ok) throw new Error("Network response not ok");
         return res.json();
       })
       .then((data) => {
@@ -384,7 +382,7 @@ export default function PersonalProfile() {
             <span style={{ color: "#2956d4", marginLeft: 4 }}>+886-2-87919189</span>
           </p>
 
-          {/* Address with Building Icon (英文與中文皆使用相同 Google Maps 連結) */}
+          {/* Address with Building Icon */}
           <p
             style={{
               color: "#444",
