@@ -118,7 +118,7 @@ export default function PersonalProfile() {
   return (
     <div style={{ background: "#fff", minHeight: "100vh", fontFamily: "inherit" }}>
       {/* Banner 圖片 */}
-      <div style={{ width: "100%", maxHeight: 300, overflow: "hidden" }}>
+      <div style={{ width: "80%", maxHeight: 250, overflow: "hidden" }}>
         <img
           src="/circuit-banner-ai.jpg"
           alt="banner"
