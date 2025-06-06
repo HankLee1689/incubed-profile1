@@ -4,6 +4,7 @@ import React, { useState, useRef } from "react";
 const content = {
   en: {
     hero: "Empowering Next-Gen Embedded Design",
+    heroSub: "Innovative ● Efficient ● Reliable", 
     heroDesc: "Your Partner for Next-Gen Embedded Innovation",
     contact: "Contact",
     about: "About IN Cubed",
