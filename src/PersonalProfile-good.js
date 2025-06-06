@@ -32,6 +32,7 @@ const content = {
       "Full‐stack know‐how: HW, FW, SW, system",
       "Market‐savvy, Asia/US/EU seamless communication",
       "ISO 9001, ISO 14001, ISO 13485 certified factories",
+      "ISO 9001, ISO 14001, ISO 13485 certified factories",
     ],
     contactSection: "Contact",
     email: "Email",
