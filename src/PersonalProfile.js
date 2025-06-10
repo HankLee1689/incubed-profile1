@@ -250,18 +250,6 @@ export default function PersonalProfile() {
         }}
         onClick={() => setLang("zh")}
       >
-        中文
-      </button>
-      <button
-        style={{
-          padding: "4px 12px",
-          borderRadius: 4,
-          border: lang === "jp" ? "2px solid #222" : "1px solid #ccc",
-          background: lang === "jp" ? "#f7f7f7" : "#fff",
-          cursor: "pointer",
-        }}
-        onClick={() => setLang("jp")}
-      >
         日本語
       </button>
       <button
@@ -299,6 +287,18 @@ export default function PersonalProfile() {
         fontFamily: "inherit",
       }}
     >
+               中文
+      </button>
+      <button
+        style={{
+          padding: "4px 12px",
+          borderRadius: 4,
+          border: lang === "jp" ? "2px solid #222" : "1px solid #ccc",
+          background: lang === "jp" ? "#f7f7f7" : "#fff",
+          cursor: "pointer",
+        }}
+        onClick={() => setLang("jp")}
+      >
       {/* Banner Image */}
       <div style={{ width: "100%", maxHeight: 250, overflow: "hidden" }}>
         <img
