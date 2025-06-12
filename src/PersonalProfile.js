@@ -121,6 +121,9 @@ const content = {
       "グローバル対応：アジア、北米、欧州間のシームレスなコミュニケーション",
       "顧客中心：透明なワークフロー、NDA 保護、専任プロジェクト管理",
       "信頼できるパートナー：ISO 9001、ISO 14001、ISO 13485、ISO 45001、QC080000 認証工場",
+      "→ ISO 45001 は製造現場での労働者の安全と健康を守るだけでなく、従業員の福祉と社会的責任に対する深い取り組みを表しています。私たちは、安全で倫理的かつ持続可能な職場環境を提供する信頼できるパートナーです",
+      "→ QC080000 は単なる法規制の遵守にとどまらず、グリーン製造と環境保護への積極的な貢献を意味します。私たちは、グローバルな ESG価値観 や持続可能な目標に沿った責任あるサプライチェーンの構築を支援します",
+
     ],
     contactSection: "お問い合わせ",
     email: "メール",
@@ -162,6 +165,9 @@ const content = {
       "Alcance global: comunicación fluida entre Asia, Norteamérica y Europa",
       "Enfoque centrado en el cliente: flujo de trabajo transparente, protección de NDA y gestión de proyectos dedicada",
       "Socios de confianza: fábricas certificadas ISO 9001, ISO 14001, ISO 45001, QC080000  e ISO 13485",
+            " → ISO 45001 gewährleistet nicht nur Sicherheit und Gesundheitsschutz am Arbeitsplatz, sondern zeigt auch unser starkes Engagement für das Wohlbefinden der Mitarbeiter und unsere soziale Verantwortung. Wir schaffen ein sicheres, ethisches und nachhaltiges Arbeitsumfeld – als zuverlässiger Partner für langfristige Zusammenarbeit",
+      "→ QC080000 steht nicht nur für die Einhaltung von Vorschriften, sondern für unser aktives Engagement im Bereich umweltfreundliche Produktion und Umweltschutz. Wir unterstützen unsere Kunden beim Aufbau einer verantwortungsvollen Lieferkette im Einklang mit globalen ESG-Zielen und Nachhaltigkeitsstandards",
+
     ],
     contactSection: "Póngase en Contacto",
     email: "Correo Electrónico",
