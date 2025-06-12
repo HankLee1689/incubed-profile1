@@ -37,8 +37,6 @@ const content = {
       "Global reach: seamless communication across Asia, North America, and Europe, bridging cultural and technical gaps",
       "Customer-centric approach: transparent workflow, NDA protection, and dedicated project management for every client",
       "Trusted partners: ISO 9001, ISO 14001, ISO 45001, ISO 13485 and QC080000 certified manufacturing facilities ensure consistent quality",
-             " → ISO 45001 ensures not only occupational safety and health, but also reflects our deep commitment to employee well-being and social responsibility. We aim to provide a safe, ethical, and sustainable workplace, making us a trustworthy long-term partner",
-      "→ QC080000 goes beyond compliance — it represents our active role in green manufacturing and environmental protection. We help our clients build a responsible supply chain aligned with global ESG values and sustainability goals",
     ],
     contactSection: "Get in Touch",
     email: "Email",
