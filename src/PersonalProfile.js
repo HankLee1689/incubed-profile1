@@ -165,9 +165,6 @@ const content = {
       "Alcance global: comunicación fluida entre Asia, Norteamérica y Europa",
       "Enfoque centrado en el cliente: flujo de trabajo transparente, protección de NDA y gestión de proyectos dedicada",
       "Socios de confianza: fábricas certificadas ISO 9001, ISO 14001, ISO 45001, QC080000  e ISO 13485",
-            " → ISO 45001 gewährleistet nicht nur Sicherheit und Gesundheitsschutz am Arbeitsplatz, sondern zeigt auch unser starkes Engagement für das Wohlbefinden der Mitarbeiter und unsere soziale Verantwortung. Wir schaffen ein sicheres, ethisches und nachhaltiges Arbeitsumfeld – als zuverlässiger Partner für langfristige Zusammenarbeit",
-      "→ QC080000 steht nicht nur für die Einhaltung von Vorschriften, sondern für unser aktives Engagement im Bereich umweltfreundliche Produktion und Umweltschutz. Wir unterstützen unsere Kunden beim Aufbau einer verantwortungsvollen Lieferkette im Einklang mit globalen ESG-Zielen und Nachhaltigkeitsstandards",
-
     ],
     contactSection: "Póngase en Contacto",
     email: "Correo Electrónico",
@@ -209,6 +206,8 @@ const content = {
       "Globale Reichweite: nahtlose Kommunikation zwischen Asien, Nordamerika und Europa",
       "Kundenorientierung: Transparente Arbeitsabläufe, NDA-Schutz und dediziertes Projektmanagement",
       "Vertrauenswürdige Partner: ISO 9001, ISO 14001, ISO 45001, QC080000 und ISO 13485 zertifizierte Fertigungsstätten",
+            " → ISO 45001 gewährleistet nicht nur Sicherheit und Gesundheitsschutz am Arbeitsplatz, sondern zeigt auch unser starkes Engagement für das Wohlbefinden der Mitarbeiter und unsere soziale Verantwortung. Wir schaffen ein sicheres, ethisches und nachhaltiges Arbeitsumfeld – als zuverlässiger Partner für langfristige Zusammenarbeit",
+      "→ QC080000 steht nicht nur für die Einhaltung von Vorschriften, sondern für unser aktives Engagement im Bereich umweltfreundliche Produktion und Umweltschutz. Wir unterstützen unsere Kunden beim Aufbau einer verantwortungsvollen Lieferkette im Einklang mit globalen ESG-Zielen und Nachhaltigkeitsstandards",
     ],
     contactSection: "Kontakt aufnehmen",
     email: "E-Mail",
