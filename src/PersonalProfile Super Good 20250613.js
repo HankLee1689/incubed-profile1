@@ -450,7 +450,7 @@ const LanguageSwitcher = () => (
           </ul>
         </section>
 
-        {/* Contact Section */}
+{/* Contact Section */}
 <section
   style={{
     background: `
@@ -593,6 +593,7 @@ const LanguageSwitcher = () => (
     `}
   </style>
 </section>
+
 
 
 
