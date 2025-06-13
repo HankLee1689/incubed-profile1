@@ -290,7 +290,7 @@ const LanguageSwitcher = () => (
           <h1 style={{ fontSize: 36, fontWeight: 700, marginBottom: 12 }}>
             {t.hero}
           </h1>
-          <p style={{ fontSize: 18, color: "#0068b5", marginBottom: 16 }}>
+          <p style={{ fontSize: 18, color: "#333", marginBottom: 16 }}>
             {t.heroDesc}
           </p>
          <div style={{ display: "flex", justifyContent: "center", gap: 24 }}>
@@ -335,7 +335,7 @@ const LanguageSwitcher = () => (
               fontSize: 22,
               fontWeight: 600,
               margin: "24px 0 8px",
-              color: "#0068b5",
+              color: "#222",
             }}
           >
             {t.services}
@@ -343,7 +343,7 @@ const LanguageSwitcher = () => (
           <ul
             style={{
               margin: "0 0 0 24px",
-              color: "#0068b5",
+              color: "#444",
               lineHeight: 1.6,
               listStyleType: "disc",
             }}
@@ -361,7 +361,7 @@ const LanguageSwitcher = () => (
               fontSize: 22,
               fontWeight: 600,
               margin: "24px 0 8px",
-              color: "#0068b5",
+              color: "#222",
             }}
           >
             {t.advantages}
@@ -369,7 +369,7 @@ const LanguageSwitcher = () => (
           <ul
             style={{
               margin: "0 0 0 24px",
-              color: "#0068b5",
+              color: "#444",
               lineHeight: 1.6,
               listStyleType: "disc",
             }}
@@ -387,7 +387,7 @@ const LanguageSwitcher = () => (
               fontSize: 22,
               fontWeight: 600,
               margin: "24px 0 8px",
-              color: "#0068b5",
+              color: "#222",
             }}
           >
             {t.projects}
@@ -395,7 +395,7 @@ const LanguageSwitcher = () => (
           <ul
             style={{
               margin: "0 0 0 24px",
-              color: "#0068b5",
+              color: "#444",
               lineHeight: 1.6,
               listStyleType: "disc",
             }}
@@ -510,8 +510,8 @@ const LanguageSwitcher = () => (
             >
               <X size={24} />
             </button>
-            <h2 style={{ marginBottom: 16, color: "#0068b5" }}>{t.about}</h2>
-            <p style={{ color: "#0068b5", lineHeight: 1.6 }}>{t.aboutContent}</p>
+            <h2 style={{ marginBottom: 16, color: "#222" }}>{t.about}</h2>
+            <p style={{ color: "#444", lineHeight: 1.6 }}>{t.aboutContent}</p>
           </div>
         </div>
       )}
