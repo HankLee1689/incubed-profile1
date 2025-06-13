@@ -234,8 +234,7 @@ export default function PersonalProfile() {
   };
 
 const LanguageSwitcher = () => (
-  <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", marginBottom: 8, gap: 6 }}>
-    <Globe size={24} style={{ color: "#2574e8" }} />
+  <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 8 }}>
     <select
       value={lang}
       onChange={e => setLang(e.target.value)}
@@ -261,7 +260,6 @@ const LanguageSwitcher = () => (
     </select>
   </div>
 );
-
 
 
   return (
@@ -330,32 +328,16 @@ const LanguageSwitcher = () => (
 
         {/* Services Section */}
         <section>
-<h2 style={{
-  fontSize: 32,
-  fontWeight: 800,
-  letterSpacing: 1,
-  margin: "38px 0 26px 0",
-  display: "inline-block",
-  background: "linear-gradient(90deg, #2574e8 60%, #53b9f7 100%)",
-  WebkitBackgroundClip: "text",
-  backgroundClip: "text",
-  color: "transparent",
-  position: "relative"
-}}>
-  <span style={{ position: "relative", zIndex: 1 }}>{t.services}</span>
-  <span style={{
-    position: "absolute",
-    left: 0,
-    bottom: -6,
-    width: "100%",
-    height: 10,
-    background: "linear-gradient(90deg, #2574e8 40%, #53b9f7 100%)",
-    borderRadius: 7,
-    opacity: 0.24,
-    zIndex: 0
-  }} />
-</h2>
-
+          <h2
+            style={{
+              fontSize: 22,
+              fontWeight: 600,
+              margin: "24px 0 8px",
+              color: "#222",
+            }}
+          >
+            {t.services}
+          </h2>
           <ul
             style={{
               margin: "0 0 0 24px",
