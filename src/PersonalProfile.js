@@ -1,7 +1,7 @@
 // PersonalProfile.js
 
 import React, { useState, useRef } from "react";
-import { Mail, MessageCircle, Phone, Building, X } from "lucide-react";
+import { Mail, MessageCircle, Phone, Building, X, Globe } from "lucide-react";
 
 const content = {
   en: {
@@ -234,7 +234,8 @@ export default function PersonalProfile() {
   };
 
 const LanguageSwitcher = () => (
-  <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 8 }}>
+  <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", marginBottom: 8, gap: 6 }}>
+    <Globe size={24} style={{ color: "#2574e8" }} />
     <select
       value={lang}
       onChange={e => setLang(e.target.value)}
@@ -260,6 +261,7 @@ const LanguageSwitcher = () => (
     </select>
   </div>
 );
+
 
 
   return (
