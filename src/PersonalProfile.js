@@ -1,3 +1,5 @@
+// PersonalProfile.js
+
 import React, { useState, useRef } from "react";
 import { Mail, MessageCircle, Phone, Building, X } from "lucide-react";
 
@@ -16,7 +18,7 @@ const content = {
       "Product validation debugging and driver integration",
       "ID and mechanical design and production",
       "Project management and international communication bridge",
-      "Design transfer, BOM optimization, production support"
+      "Design transfer, BOM optimization, production support",
     ],
     projects: "Highlighted Projects",
     projectList: [
@@ -24,7 +26,7 @@ const content = {
       "Embedded motherboard system integration",
       "USB-to-PHY Layer 2 MAC-to-MAC PLC Board",
       "Industrial-grade fanless HMI octa-core controller board with –40 °C to 85 °C operating temperature range",
-      "Industrial-grade 15\" IK10 touch panel module with –30 °C to 85 °C operating temperature"
+      "Industrial-grade 15\" IK10 touch panel module with –30 °C to 85 °C operating temperature",
     ],
     advantages: "Why Choose Us",
     advantageList: [
@@ -34,14 +36,16 @@ const content = {
       "Rapid prototyping: prototypes delivered within three weeks, accelerating time-to-market",
       "Global reach: seamless communication across Asia, North America, and Europe, bridging cultural and technical gaps",
       "Customer-centric approach: transparent workflow, NDA protection, and dedicated project management for every client",
-      "Trusted partners: ISO 9001, ISO 14001, ISO 45001, ISO 13485 and QC080000 certified manufacturing facilities ensure consistent quality"
+      "Trusted partners: ISO 9001, ISO 14001, ISO 45001, ISO 13485 and QC080000 certified manufacturing facilities ensure consistent quality",
+             " → ISO 45001 ensures not only occupational safety and health, but also reflects our deep commitment to employee well-being and social responsibility. We aim to provide a safe, ethical, and sustainable workplace, making us a trustworthy long-term partner",
+      "→ QC080000 goes beyond compliance — it represents our active role in green manufacturing and environmental protection. We help our clients build a responsible supply chain aligned with global ESG values and sustainability goals",
     ],
     contactSection: "Get in Touch",
     email: "Email",
     line: "Line ID",
     whatsapp: "Phone No.",
     address: "Address",
-    addressDetail: "2F-3, No. 94 Baozhong Rd, Xindian Dist, New Taipei City"
+    addressDetail: "2F-3, No. 94 Baozhong Rd, Xindian Dist, New Taipei City",
   },
   zh: {
     hero: "打造次世代嵌入式設計的核心夥伴",
@@ -57,7 +61,7 @@ const content = {
       "產品驗證、除錯與驅動整合",
       "ID 與機構設計、量產製造",
       "專案管理與國際溝通橋接",
-      "設計移轉、BOM 優化、量產支援"
+      "設計移轉、BOM 優化、量產支援",
     ],
     projects: "近期成功案例",
     projectList: [
@@ -65,24 +69,24 @@ const content = {
       "嵌入式主機板系統整合",
       "MAC-to-MAC PLC 主控板（USB-to-PHY）",
       "工業級 –40 °C 至 85 °C 操作溫度之無風扇 HMI 八核心控制板",
-      "工業級 –30 °C 至 85 °C 操作溫度之 15\" IK10 觸控面板模組"
+      "工業級 –30 °C 至 85 °C 操作溫度之 15\" IK10 觸控面板模組",
     ],
     advantages: "合作優勢",
     advantageList: [
-      "擁有豐富的嵌入式系統、工業電腦與 SoC 整合領域經驗",
+      "擁有豐富的嵌入式系統、工業電腦與SoC整合領域經驗",
       "創辦人領導三款劃時代創新產品，全球累計出貨量超過兩千萬台",
       "全流程服務：硬體布局、韌體與軟體整合、嚴謹品質管控、系統優化",
       "快速原型開發：三週內完成原型，加速產品上市時程",
       "全球佈局：亞、美、歐無縫溝通，消除跨文化技術障礙",
       "值得信賴的夥伴：ISO 9001, ISO 14001, ISO 45001, ISO 13485, QC080000 認證工廠，品質穩定可控",
-      "以客為尊：流程透明、完善 NDA 保護，以及專屬專案管理，確保客戶需求受重視且有效執行"
+      "以客為尊：流程透明、完善NDA保護，以及專屬專案管理，確保客戶需求受重視且有效執行",
     ],
     contactSection: "聯絡方式",
     email: "電子郵件",
     line: "Line ID",
     whatsapp: "電話號碼",
     address: "地址",
-    addressDetail: "新北市新店區寶中路94號2樓之3"
+    addressDetail: "新北市新店區寶中路94號2樓之3",
   },
   jp: {
     hero: "次世代組込み設計を強力にサポート",
@@ -98,7 +102,7 @@ const content = {
       "製品検証、デバッグ、ドライバー統合",
       "ID と機構設計および量産製造",
       "プロジェクト管理と国際的なコミュニケーションブリッジ",
-      "設計移管、部品表最適化、生産サポート"
+      "設計移管、部品表最適化、生産サポート",
     ],
     projects: "注目プロジェクト",
     projectList: [
@@ -106,7 +110,7 @@ const content = {
       "組込みマザーボードシステム統合",
       "USB-to-PHY レイヤー 2 MAC-to-MAC PLC ボード",
       "産業用ファンレス HMI 8 コアコントローラーボード (–40 ℃ ～ 85 ℃ 動作温度)",
-      "産業用 15\" IK10 タッチパネルモジュール (–30 ℃ ～ 85 ℃ 動作温度)"
+      "産業用 15\" IK10 タッチパネルモジュール (–30 ℃ ～ 85 ℃ 動作温度)",
     ],
     advantages: "選ばれる理由",
     advantageList: [
@@ -116,14 +120,17 @@ const content = {
       "迅速な試作：プロトタイプを3週間で提供し、市場投入を加速",
       "グローバル対応：アジア、北米、欧州間のシームレスなコミュニケーション",
       "顧客中心：透明なワークフロー、NDA 保護、専任プロジェクト管理",
-      "信頼できるパートナー：ISO 9001、ISO 14001、ISO 13485、ISO 45001、QC080000 認証工場"
+      "信頼できるパートナー：ISO 9001、ISO 14001、ISO 13485、ISO 45001、QC080000 認証工場",
+      "→ ISO 45001 は製造現場での労働者の安全と健康を守るだけでなく、従業員の福祉と社会的責任に対する深い取り組みを表しています。私たちは、安全で倫理的かつ持続可能な職場環境を提供する信頼できるパートナーです",
+      "→ QC080000 は単なる法規制の遵守にとどまらず、グリーン製造と環境保護への積極的な貢献を意味します。私たちは、グローバルな ESG価値観 や持続可能な目標に沿った責任あるサプライチェーンの構築を支援します",
+
     ],
     contactSection: "お問い合わせ",
     email: "メール",
     line: "Line ID",
     whatsapp: "電話番号",
     address: "住所",
-    addressDetail: "新北市新店區寶中路94號2樓之3"
+    addressDetail: "新北市新店区寶中路94号2階之3",
   },
   es: {
     hero: "Potenciando el Diseño Embebido de Próxima Generación",
@@ -139,7 +146,7 @@ const content = {
       "Validación de productos, depuración e integración de controladores",
       "Diseño de identidad y mecánica y fabricación en masa",
       "Gestión de proyectos y puente de comunicación internacional",
-      "Transferencia de diseño, optimización de la lista de materiales, soporte de producción"
+      "Transferencia de diseño, optimización de la lista de materiales, soporte de producción",
     ],
     projects: "Proyectos Destacados",
     projectList: [
@@ -147,7 +154,7 @@ const content = {
       "Integración de sistema de placa madre embebida",
       "Tarjeta PLC USB-a-PHY Capa 2 MAC-a-MAC",
       "Placa controladora HMI octa-core industrial sin ventilador con rango de temperatura de operación –40 °C a 85 °C",
-      "Módulo de panel táctil IK10 de 15\" industrial con rango de temperatura de operación –30 °C a 85 °C"
+      "Módulo de panel táctil IK10 de 15\" industrial con rango de temperatura de operación –30 °C a 85 °C",
     ],
     advantages: "Por Qué Elegirnos",
     advantageList: [
@@ -155,325 +162,464 @@ const content = {
       "El fundador lideró tres líneas de productos innovadores con más de 20 millones de unidades enviadas globalmente",
       "Servicio de extremo a extremo: diseño de hardware, integración de firmware y software, control de calidad riguroso, optimización de sistemas",
       "Prototipado rápido: prototipos entregados en 3 semanas, acelerando el tiempo de comercialización",
-      "Alcance global: comunicación fluida entre Asia, América del Norte y Europa, superando barreras culturales y técnicas",
-      "Enfoque centrado en el cliente: flujo de trabajo transparente, protección NDA y gestión de proyectos dedicada para cada cliente",
-      "Socios de confianza: fábricas certificadas ISO 9001, ISO 14001, ISO 45001, ISO 13485 y QC080000 garantizan calidad constante"
+      "Alcance global: comunicación fluida entre Asia, Norteamérica y Europa",
+      "Enfoque centrado en el cliente: flujo de trabajo transparente, protección de NDA y gestión de proyectos dedicada",
+      "Socios de confianza: fábricas certificadas ISO 9001, ISO 14001, ISO 45001, QC080000  e ISO 13485",
     ],
-    contactSection: "Contáctanos",
-    email: "Correo electrónico",
-    line: "Line ID",
+    contactSection: "Póngase en Contacto",
+    email: "Correo Electrónico",
+    line: "ID de Line",
     whatsapp: "Teléfono",
     address: "Dirección",
-    addressDetail: "2F-3, No. 94 Baozhong Rd, Xindian Dist, New Taipei City"
+    addressDetail: "2F-3, No. 94 Baozhong Rd, Distrito Xindian, Ciudad de Nuevo Taipéi",
   },
   de: {
-    hero: "Next-Gen Embedded Design auf höchstem Niveau",
-    heroDesc: "Ihr Partner für Innovation im Embedded-Bereich",
+    hero: "Stärkung des Next-Gen Embedded Designs",
+    heroDesc: "Ihr Partner für Next-Gen Embedded Innovation",
     contactLabel: "Kontaktieren Sie uns",
     about: "Über IN Cubed",
-    aboutContent: `IN Cubed International Co. Ltd wird von einem Team mit umfassender Erfahrung in eingebetteten Systemen, Industriecomputerarchitekturen und SoC-Integration geleitet. Der Gründer war CEO und CTO eines börsennotierten Unternehmens und hat Hunderte von Projekten erfolgreich in die Serienproduktion geführt. Zudem wurden drei bahnbrechende Produktlinien entwickelt, von denen weltweit über 20 Millionen Einheiten ausgeliefert wurden. Heute bietet IN Cubed Komplettlösungen für das Embedded Design an – von Hardwarelayout, Firmware- und Softwareintegration, strenger Qualitätskontrolle bis hin zur Systemintegration und Optimierung – und hilft Kunden in den Bereichen Industriecomputer, AIoT und EV-Ladetechnik, hochwertige Serienproduktionsziele schnell zu erreichen.`,
+    aboutContent: `IN Cubed International Co. Ltd wird von einem Team mit umfassender Erfahrung in Embedded-Systemen, Industriecomputerarchitekturen und SoC-Integration geleitet. Der Gründer war CEO und CTO eines börsennotierten Unternehmens und hat Hunderte von Projekten erfolgreich in die Massenproduktion geführt. Außerdem entwarf er drei bahnbrechende Produktlinien, die weltweit über 20 Millionen Einheiten auslieferten. Heute bietet IN Cubed End-to-End Embedded-Design-Services – von der Hardwaregestaltung über Firmware- und Softwareintegration bis hin zu strenger Qualitätskontrolle und Systemintegration und -optimierung – und hilft Kunden in den Bereichen industrielle Computertechnik, AIoT und EV-Ladung, schnell hochwertige Massenproduktionsziele zu erreichen.`,
     services: "Unsere Dienstleistungen",
     serviceList: [
-      "Entwurf und Architektur von Embedded-Systemen",
-      "Designservices mit hoher Zuverlässigkeit und Fokus auf Serienproduktion",
-      "Individuelle Lösungsintegration: Hardware-, Software- und Mechanikintegration aus einer Hand",
+      "Embedded-System-Design und Architektur",
+      "Hochzuverlässige, massenproduktionsorientierte Design-Services",
+      "Integration kundenspezifischer Lösungen: End-to-End Hardware-, Software- und Mechanikintegration",
       "Produktvalidierung, Debugging und Treiberintegration",
-      "ID- und mechanische Entwicklung und Serienfertigung",
+      "ID- und Mechanikdesign sowie Massenproduktion",
       "Projektmanagement und internationale Kommunikationsbrücke",
-      "Designtransfer, Stücklistenoptimierung, Produktionsunterstützung"
+      "Design-Transfer, Stücklistenoptimierung, Produktionsunterstützung",
     ],
-    projects: "Referenzprojekte",
+    projects: "Hervorgehobene Projekte",
     projectList: [
-      "PLC-Board – Serienfertigung für US-EV-Ladestationen",
-      "Integration von Embedded-Motherboardsystemen",
-      "USB-zu-PHY Layer 2 MAC-to-MAC PLC-Board",
-      "Lüfterloses HMI-Octa-Core-Controllerboard für den industriellen Einsatz mit einem Betriebstemperaturbereich von –40 °C bis 85 °C",
-      "15\" IK10 Industrie-Touchpanelmodul mit Betriebstemperaturbereich von –30 °C bis 85 °C"
+      "PLC-Platine – Massenproduktion für US-EV-Ladegeräte",
+      "Embedded-Motherboard-Systemintegration",
+      "USB-zu-PHY Layer 2 MAC-zu-MAC PLC-Platine",
+      "Industriefähige lüfterlose HMI-Oktacore-Controller-Platine mit –40 °C bis 85 °C Betriebstemperatur",
+      "Industriefähiges 15\" IK10 Touchpanel-Modul mit –30 °C bis 85 °C Betriebstemperatur",
     ],
-    advantages: "Warum wir?",
+    advantages: "Warum Uns Wählen",
     advantageList: [
-      "Jahrzehntelange Branchenerfahrung in Embedded-Systemen, Industriecomputing und SoC-Integration",
-      "Der Gründer führte drei bahnbrechende Produktlinien mit über 20 Millionen ausgelieferten Einheiten weltweit",
-      "Komplettservice: Hardwarelayout, Firmware- & Softwareintegration, strenge Qualitätskontrolle, Systemoptimierung",
-      "Schnelle Prototypenerstellung: Prototypenlieferung innerhalb von drei Wochen, schnellere Markteinführung",
-      "Weltweite Reichweite: nahtlose Kommunikation in Asien, Nordamerika und Europa, Überbrückung kultureller und technischer Hürden",
-      "Kundenorientierung: Transparenter Workflow, NDA-Schutz, dediziertes Projektmanagement für jeden Kunden",
-      "Vertrauenswürdige Partner: ISO 9001, ISO 14001, ISO 45001, ISO 13485 und QC080000 zertifizierte Fertigungsstätten gewährleisten gleichbleibende Qualität"
+      "Jahrzehntelange Erfahrung in Embedded-Systemen, Industriecomputertechnik und SoC-Integration",
+      "Der Gründer leitete drei bahnbrechende Produktlinien mit über 20 Millionen weltweit ausgelieferten Einheiten",
+      "End-to-End-Service: Hardware-Design, Firmware- & Softwareintegration, strenge Qualitätskontrolle, Systemoptimierung",
+      "Schnelles Prototyping: Prototypen in 3 Wochen, Beschleunigung der Markteinführung",
+      "Globale Reichweite: nahtlose Kommunikation zwischen Asien, Nordamerika und Europa",
+      "Kundenorientierung: Transparente Arbeitsabläufe, NDA-Schutz und dediziertes Projektmanagement",
+      "Vertrauenswürdige Partner: ISO 9001, ISO 14001, ISO 45001, QC080000 und ISO 13485 zertifizierte Fertigungsstätten",
+            " → ISO 45001 gewährleistet nicht nur Sicherheit und Gesundheitsschutz am Arbeitsplatz, sondern zeigt auch unser starkes Engagement für das Wohlbefinden der Mitarbeiter und unsere soziale Verantwortung. Wir schaffen ein sicheres, ethisches und nachhaltiges Arbeitsumfeld – als zuverlässiger Partner für langfristige Zusammenarbeit",
+      "→ QC080000 steht nicht nur für die Einhaltung von Vorschriften, sondern für unser aktives Engagement im Bereich umweltfreundliche Produktion und Umweltschutz. Wir unterstützen unsere Kunden beim Aufbau einer verantwortungsvollen Lieferkette im Einklang mit globalen ESG-Zielen und Nachhaltigkeitsstandards",
     ],
-    contactSection: "Kontakt",
+    contactSection: "Kontakt aufnehmen",
     email: "E-Mail",
     line: "Line ID",
-    whatsapp: "Telefonnummer",
+    whatsapp: "Telefon",
     address: "Adresse",
-    addressDetail: "2F-3, No. 94 Baozhong Rd, Xindian Dist, New Taipei City"
-  }
+    addressDetail: "2F-3, No. 94 Baozhong Rd, Xindian Dist, Neu-Taipeh Stadt",
+  },
 };
 
-const googleMapsPlaceUrl = "https://www.google.com/maps/place/新北市新店區寶中路94號2樓之3";
-
-const languages = [
-  { code: "en", label: "EN" },
-  { code: "zh", label: "中文" },
-  { code: "jp", label: "日本語" },
-  { code: "es", label: "Español" },
-  { code: "de", label: "Deutsch" },
-];
+// 中文 Google Maps 連結（正確顯示地圖與座標）
+const googleMapsPlaceUrl =
+  "https://www.google.com/maps/place/新北市新店區寶中路94號2樓之3";
 
 export default function PersonalProfile() {
   const [lang, setLang] = useState("en");
   const [showAbout, setShowAbout] = useState(false);
   const contactRef = useRef(null);
+
   const t = content[lang];
 
-  // Modal 淡入動畫
-  const modalAnim = showAbout ? { opacity: 1, pointerEvents: "auto" } : { opacity: 0, pointerEvents: "none" };
-
-  // 卡片 UI
-  const cardStyle = {
-    background: "#fff",
-    borderRadius: 18,
-    boxShadow: "0 2px 18px 0 #2956d414",
-    padding: "32px 24px 28px",
-    margin: "24px 0",
-    maxWidth: 820,
-    marginLeft: "auto",
-    marginRight: "auto"
+  const scrollToContact = () => {
+    contactRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const LanguageSwitcher = () => (
+    <div style={{ display: "flex", justifyContent: "flex-end", gap: 8 }}>
+      <button
+        style={{
+          padding: "4px 12px",
+          borderRadius: 4,
+          border: lang === "en" ? "2px solid #222" : "1px solid #ccc",
+          background: lang === "en" ? "#f7f7f7" : "#fff",
+          cursor: "pointer",
+        }}
+        onClick={() => setLang("en")}
+      >
+        EN
+      </button>
+      <button
+        style={{
+          padding: "4px 12px",
+          borderRadius: 4,
+          border: lang === "jp" ? "2px solid #222" : "1px solid #ccc",
+          background: lang === "jp" ? "#f7f7f7" : "#fff",
+          cursor: "pointer",
+        }}
+        onClick={() => setLang("jp")}
+      >
+        日本語
+      </button>
+      <button
+        style={{
+          padding: "4px 12px",
+          borderRadius: 4,
+          border: lang === "es" ? "2px solid #222" : "1px solid #ccc",
+          background: lang === "es" ? "#f7f7f7" : "#fff",
+          cursor: "pointer",
+        }}
+        onClick={() => setLang("es")}
+      >
+        Español
+      </button>
+      <button
+        style={{
+          padding: "4px 12px",
+          borderRadius: 4,
+          border: lang === "de" ? "2px solid #222" : "1px solid #ccc",
+          background: lang === "de" ? "#f7f7f7" : "#fff",
+          cursor: "pointer",
+        }}
+        onClick={() => setLang("de")}
+      >
+        Deutsch
+      </button>
+      <button
+        style={{
+          padding: "4px 12px",
+          borderRadius: 4,
+          border: lang === "zh" ? "2px solid #222" : "1px solid #ccc",
+          background: lang === "zh" ? "#f7f7f7" : "#fff",
+          cursor: "pointer",
+        }}
+        onClick={() => setLang("zh")}
+      >
+        中文
+      </button>
+    </div>
+  );
+
   return (
-    <div style={{
-      background: "linear-gradient(120deg, #f7f7fb 70%, #e7f0fd 100%)",
-      minHeight: "100vh",
-      fontFamily: "inherit"
-    }}>
-      {/* Hero 區塊 */}
-      <section style={{
-        padding: "58px 0 30px",
-        textAlign: "center",
-        background: "linear-gradient(120deg, #f5f8fe 82%, #e7f0fd 100%)",
-        borderBottom: "1.5px solid #e2eaf7"
-      }}>
-        <div style={{
-          maxWidth: 900, margin: "0 auto", padding: "0 16px"
-        }}>
-          <div style={{
-            display: "flex", justifyContent: "flex-end", marginBottom: 12
-          }}>
-            <select
-              value={lang}
-              onChange={e => setLang(e.target.value)}
-              style={{
-                borderRadius: 6,
-                border: "1.2px solid #2956d4",
-                fontSize: 16,
-                fontWeight: 600,
-                padding: "6px 18px 6px 8px",
-                background: "#fff",
-                color: "#1c3165",
-                boxShadow: "0 2px 8px 0 #2956d406"
-              }}
-            >
-              {languages.map(l => <option key={l.code} value={l.code}>{l.label}</option>)}
-            </select>
-          </div>
-          <h1 style={{
-            fontSize: "clamp(2.1rem, 6vw, 3.2rem)",
-            fontWeight: 900,
-            letterSpacing: 1,
-            margin: "0 0 14px",
-            background: "linear-gradient(90deg,#2956d4 45%,#53b9f7 90%)",
-            color: "transparent", WebkitBackgroundClip: "text", backgroundClip: "text"
-          }}>{t.hero}</h1>
-          <p style={{
-            fontSize: "clamp(1.1rem, 2vw, 1.4rem)",
-            color: "#2246c6",
-            fontWeight: 500,
-            margin: "0 0 32px"
-          }}>{t.heroDesc}</p>
-          <div style={{ display: "flex", justifyContent: "center", gap: 24, flexWrap: "wrap" }}>
+    <div
+      style={{
+        background: `#f7f7f7 url("/circuit-pattern.png") repeat`,
+        minHeight: "100vh",
+        fontFamily: "inherit",
+      }}
+    >
+      {/* Banner Image */}
+      <div style={{ width: "100%", maxHeight: 250, overflow: "hidden" }}>
+        <img
+          src="/circuit-banner-ai.jpg"
+          alt="banner"
+          style={{ width: "100%", objectFit: "cover" }}
+        />
+      </div>
+
+      {/* Main Content */}
+      <div style={{ maxWidth: 800, margin: "0 auto", padding: "32px 16px" }}>
+        <LanguageSwitcher />
+
+        {/* Hero Section */}
+        <section style={{ textAlign: "center", margin: "40px 0 24px" }}>
+          <h1 style={{ fontSize: 36, fontWeight: 700, marginBottom: 12 }}>
+            {t.hero}
+          </h1>
+          <p style={{ fontSize: 18, color: "#333", marginBottom: 16 }}>
+            {t.heroDesc}
+          </p>
+          <div style={{ display: "flex", justifyContent: "center", gap: 12 }}>
             <button
               onClick={() => setShowAbout(true)}
               style={{
-                fontSize: 17,
-                padding: "13px 36px",
-                borderRadius: 30,
-                background: "linear-gradient(90deg,#2956d4,#53b9f7 80%)",
+                fontSize: 16,
+                padding: "8px 24px",
+                borderRadius: 6,
+                background: "#2956d4",
                 color: "#fff",
                 border: "none",
-                boxShadow: "0 2px 10px 0 #2246c628",
                 cursor: "pointer",
-                fontWeight: 700,
-                transition: "filter 0.18s",
-                marginBottom: 6
               }}
-            >{t.about}</button>
+            >
+              {t.about}
+            </button>
             <button
-              onClick={() => contactRef.current?.scrollIntoView({ behavior: "smooth" })}
+              onClick={scrollToContact}
               style={{
-                fontSize: 17,
-                padding: "13px 36px",
-                borderRadius: 30,
-                background: "#fff",
-                color: "#2956d4",
-                border: "2px solid #2956d4",
+                fontSize: 16,
+                padding: "8px 24px",
+                borderRadius: 6,
+                background: "#2956d4",
+                color: "#fff",
+                border: "none",
                 cursor: "pointer",
-                fontWeight: 700,
-                boxShadow: "0 2px 10px 0 #2956d428",
-                marginBottom: 6
               }}
-            >{t.contactLabel}</button>
+            >
+              {t.contactLabel}
+            </button>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* 專業服務區塊 */}
-      <section style={cardStyle}>
-        <h2 style={{
-          fontSize: 23, fontWeight: 700, color: "#2956d4", marginBottom: 10, letterSpacing: 1
-        }}>
-          <span style={{ borderBottom: "2.5px solid #2956d4", paddingBottom: 1 }}>{t.services}</span>
-        </h2>
-        <div style={{
-          display: "flex", flexWrap: "wrap", gap: "18px 36px",
-          justifyContent: "flex-start", marginTop: 8
-        }}>
-          {t.serviceList.map((item, idx) => (
-            <div key={idx} style={{
-              background: "#f5f8fe", color: "#264183", borderRadius: 11,
-              padding: "13px 22px", fontSize: 16, fontWeight: 500,
-              boxShadow: "0 1px 8px 0 #2956d405", minWidth: 230
-            }}>{item}</div>
-          ))}
-        </div>
-      </section>
+        {/* Services Section */}
+        <section>
+          <h2
+            style={{
+              fontSize: 22,
+              fontWeight: 600,
+              margin: "24px 0 8px",
+              color: "#222",
+            }}
+          >
+            {t.services}
+          </h2>
+          <ul
+            style={{
+              margin: "0 0 0 24px",
+              color: "#444",
+              lineHeight: 1.6,
+              listStyleType: "disc",
+            }}
+          >
+            {t.serviceList.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
+        </section>
 
-      {/* 合作優勢區塊 */}
-      <section style={cardStyle}>
-        <h2 style={{
-          fontSize: 23, fontWeight: 700, color: "#53b9f7", marginBottom: 10, letterSpacing: 1
-        }}>
-          <span style={{ borderBottom: "2.5px solid #53b9f7", paddingBottom: 1 }}>{t.advantages}</span>
-        </h2>
-        <ul style={{
-          margin: "12px 0 0 20px", color: "#2956d4", fontSize: 16, lineHeight: 1.8
-        }}>
-          {t.advantageList.map((item, idx) => (
-            <li key={idx} style={{
-              marginBottom: 4, fontWeight: 500
-            }}>{item}</li>
-          ))}
-        </ul>
-      </section>
+        {/* Why Choose Us Section */}
+        <section>
+          <h2
+            style={{
+              fontSize: 22,
+              fontWeight: 600,
+              margin: "24px 0 8px",
+              color: "#222",
+            }}
+          >
+            {t.advantages}
+          </h2>
+          <ul
+            style={{
+              margin: "0 0 0 24px",
+              color: "#444",
+              lineHeight: 1.6,
+              listStyleType: "disc",
+            }}
+          >
+            {t.advantageList.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
+        </section>
 
-      {/* 精選專案區塊 */}
-      <section style={cardStyle}>
-        <h2 style={{
-          fontSize: 23, fontWeight: 700, color: "#1c3165", marginBottom: 10, letterSpacing: 1
-        }}>
-          <span style={{ borderBottom: "2.5px solid #1c3165", paddingBottom: 1 }}>{t.projects}</span>
-        </h2>
-        <div style={{
-          display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 18
-        }}>
-          {t.projectList.map((item, idx) => (
-            <div key={idx} style={{
-              background: "#e7f0fd", borderRadius: 11, padding: "17px 20px",
-              color: "#2246c6", fontSize: 16, fontWeight: 600,
-              boxShadow: "0 1px 6px 0 #2956d407"
-            }}>{item}</div>
-          ))}
-        </div>
-      </section>
+        {/* Highlighted Projects Section */}
+        <section>
+          <h2
+            style={{
+              fontSize: 22,
+              fontWeight: 600,
+              margin: "24px 0 8px",
+              color: "#222",
+            }}
+          >
+            {t.projects}
+          </h2>
+          <ul
+            style={{
+              margin: "0 0 0 24px",
+              color: "#444",
+              lineHeight: 1.6,
+              listStyleType: "disc",
+            }}
+          >
+            {t.projectList.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
+        </section>
 
-      {/* 聯絡資訊區塊 */}
-      <section ref={contactRef} style={{ ...cardStyle, background: "#f7f7fb" }}>
-        <h2 style={{
-          fontSize: 22, fontWeight: 700, color: "#2246c6", marginBottom: 14
-        }}>{t.contactSection}</h2>
-        <div style={{
-          display: "flex", flexWrap: "wrap", gap: "20px 44px",
-          justifyContent: "flex-start", alignItems: "flex-start"
-        }}>
-          {/* Email */}
-          <div style={{
-            display: "flex", alignItems: "center", gap: 6, minWidth: 230
-          }}>
-            <Mail size={20} style={{ color: "#2956d4" }} />
-            <span style={{ color: "#222", fontWeight: 600 }}>{t.email}：</span>
-            <a href="mailto:michelle@incubed-intl.com" style={{
-              color: "#2956d4", fontWeight: 600, textDecoration: "underline"
-            }}>michelle@incubed-intl.com</a>
-          </div>
-          {/* Line ID */}
-          <div style={{
-            display: "flex", alignItems: "center", gap: 6, minWidth: 180
-          }}>
-            <MessageCircle size={20} style={{ color: "#2956d4" }} />
-            <span style={{ color: "#222", fontWeight: 600 }}>{t.line}：</span>
-            <span style={{ color: "#2956d4", fontWeight: 600 }}>slr200k</span>
-          </div>
-          {/* Phone */}
-          <div style={{
-            display: "flex", alignItems: "center", gap: 6, minWidth: 180
-          }}>
-            <Phone size={20} style={{ color: "#2956d4" }} />
-            <span style={{ color: "#222", fontWeight: 600 }}>{t.whatsapp}：</span>
-            <span style={{ color: "#2956d4", fontWeight: 600 }}>+886-2-87919189</span>
-          </div>
-          {/* Address */}
-          <div style={{
-            display: "flex", alignItems: "center", gap: 6, minWidth: 220
-          }}>
-            <Building size={20} style={{ color: "#2956d4" }} />
-            <span style={{ color: "#222", fontWeight: 600 }}>{t.address}：</span>
-            <a href={googleMapsPlaceUrl}
-              target="_blank" rel="noopener noreferrer"
-              style={{ color: "#2956d4", fontWeight: 600, textDecoration: "underline" }}>
+        {/* Contact Section */}
+        <section ref={contactRef} style={{ textAlign: "center", margin: "40px 0 0" }}>
+          <h2
+            style={{
+              fontSize: 22,
+              fontWeight: 600,
+              marginBottom: 12,
+              color: "#222",
+            }}
+          >
+            {t.contactSection}
+          </h2>
+
+          {/* Email with Mail Icon */}
+          <p
+            style={{
+              color: "#444",
+              lineHeight: 1.6,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 6,
+            }}
+          >
+            <span
+              style={{
+                fontWeight: 500,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+              }}
+            >
+              {t.email}
+              <Mail size={16} />
+              :
+            </span>
+            <a href="mailto:michelle@incubed-intl.com" style={{ color: "#2956d4", marginLeft: 4 }}>
+              michelle@incubed-intl.com
+            </a>
+          </p>
+
+          {/* Line ID with MessageCircle Icon */}
+          <p
+            style={{
+              color: "#444",
+              lineHeight: 1.6,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 6,
+            }}
+          >
+            <span
+              style={{
+                fontWeight: 500,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+              }}
+            >
+              {t.line}
+              <MessageCircle size={16} />
+              :
+            </span>
+            <span style={{ color: "#2956d4", marginLeft: 4 }}>slr200k</span>
+          </p>
+
+          {/* Phone No. with Phone Icon */}
+          <p
+            style={{
+              color: "#444",
+              lineHeight: 1.6,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 6,
+            }}
+          >
+            <span
+              style={{
+                fontWeight: 500,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+              }}
+            >
+              {t.whatsapp}
+              <Phone size={16} />
+              :
+            </span>
+            <span style={{ color: "#2956d4", marginLeft: 4 }}>+886-2-87919189</span>
+          </p>
+
+          {/* Address with Building Icon */}
+          <p
+            style={{
+              color: "#444",
+              lineHeight: 1.6,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 6,
+            }}
+          >
+            <span
+              style={{
+                fontWeight: 500,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+              }}
+            >
+              {t.address}
+              <Building size={16} />
+              :
+            </span>
+            <a
+              href={googleMapsPlaceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#2956d4", marginLeft: 4, textDecoration: "underline" }}
+            >
               {t.addressDetail}
             </a>
-          </div>
-        </div>
-      </section>
+          </p>
+        </section>
+      </div>
 
-      {/* Footer */}
-      <footer style={{
-        width: "100%", maxHeight: 140, overflow: "hidden", marginTop: 35,
-        background: "linear-gradient(90deg,#2956d4 10%,#53b9f7 100%)"
-      }}>
+      {/* Footer Image */}
+      <div style={{ width: "100%", maxHeight: 200, overflow: "hidden", marginTop: 40 }}>
         <img
           src="/footer_circuit_strip.png"
           alt="footer"
-          style={{ width: "100%", objectFit: "cover", opacity: 0.93 }}
+          style={{ width: "100%", objectFit: "cover" }}
         />
-      </footer>
+      </div>
 
       {/* About Modal */}
-      <div style={{
-        transition: "opacity 0.25s",
-        position: "fixed", inset: 0, zIndex: 101,
-        background: showAbout ? "rgba(20,50,130,0.18)" : "rgba(20,50,130,0.01)",
-        backdropFilter: showAbout ? "blur(2.5px)" : "none",
-        ...modalAnim,
-        display: "flex", alignItems: "center", justifyContent: "center"
-      }}>
-        {showAbout && (
-          <div style={{
-            background: "#fff", borderRadius: 20,
-            padding: "40px 32px 28px", boxShadow: "0 6px 32px 0 #2246c650",
-            position: "relative", maxWidth: 680, width: "92vw"
-          }}>
-            <button onClick={() => setShowAbout(false)} style={{
-              position: "absolute", top: 16, right: 16, background: "none", border: "none", cursor: "pointer", color: "#2246c6", fontSize: 26
-            }}>
-              <X size={32} />
+      {showAbout && (
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            background: "rgba(0, 0, 0, 0.5)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 1001,
+          }}
+        >
+          <div
+            style={{
+              background: "#fff",
+              padding: 24,
+              borderRadius: 8,
+              maxWidth: 600,
+              width: "90%",
+              maxHeight: "80%",
+              overflowY: "auto",
+              position: "relative",
+            }}
+          >
+            <button
+              onClick={() => setShowAbout(false)}
+              style={{
+                position: "absolute",
+                top: 12,
+                right: 12,
+                background: "transparent",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              <X size={24} />
             </button>
-            <h2 style={{
-              fontSize: 28, fontWeight: 800, marginBottom: 18, color: "#2956d4"
-            }}>{t.about}</h2>
-            <p style={{ color: "#222", fontSize: 18, lineHeight: 1.8 }}>{t.aboutContent}</p>
+            <h2 style={{ marginBottom: 16, color: "#222" }}>{t.about}</h2>
+            <p style={{ color: "#444", lineHeight: 1.6 }}>{t.aboutContent}</p>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }
