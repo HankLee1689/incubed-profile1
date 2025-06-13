@@ -1,5 +1,5 @@
 // PersonalProfile.js
-console.log("debug push 20240614 23:59");
+
 import React, { useState, useRef } from "react";
 import { Mail, MessageCircle, Phone, Building, X, Globe } from "lucide-react";
 import { Star, Award, Layers } from "lucide-react"; // 服務/優勢/專案區塊icon
