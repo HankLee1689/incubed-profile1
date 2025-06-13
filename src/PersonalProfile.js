@@ -497,7 +497,6 @@ const LanguageSwitcher = () => (
   </h2>
 
   <div style={{ display: "flex", flexDirection: "column", rowGap: 18 }}>
-    {/* Email */}
     <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
       <span style={{ color: "#2299ee", fontSize: 26, marginRight: 4 }}>📧</span>
       <span style={{ minWidth: 82, color: "#22304a" }}>{t.email}</span>
@@ -513,7 +512,6 @@ const LanguageSwitcher = () => (
         michelle@incubed-intl.com
       </a>
     </div>
-    {/* Line */}
     <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
       <span style={{ color: "#2299ee", fontSize: 26, marginRight: 4 }}>💬</span>
       <span style={{ minWidth: 82, color: "#22304a" }}>{t.line}</span>
@@ -521,7 +519,6 @@ const LanguageSwitcher = () => (
         slr200k
       </span>
     </div>
-    {/* Phone */}
     <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
       <span style={{ color: "#2299ee", fontSize: 26, marginRight: 4 }}>📞</span>
       <span style={{ minWidth: 82, color: "#22304a" }}>{t.whatsapp}</span>
@@ -529,7 +526,6 @@ const LanguageSwitcher = () => (
         +886-2-87919189
       </span>
     </div>
-    {/* Address */}
     <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
       <span style={{ color: "#2299ee", fontSize: 26, marginRight: 4 }}>🏢</span>
       <span style={{ minWidth: 82, color: "#22304a" }}>{t.address}</span>
@@ -549,7 +545,6 @@ const LanguageSwitcher = () => (
     </div>
   </div>
 </section>
-
 
       </div>
 
