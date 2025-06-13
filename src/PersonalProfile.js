@@ -235,7 +235,7 @@ export default function PersonalProfile() {
 
 const LanguageSwitcher = () => (
   <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", marginBottom: 8, gap: 6 }}>
-    <Globe size={24} style={{ color: "#0068b5" }} />
+    <Globe size={24} style={{ color: "#2574e8" }} />
     <select
       value={lang}
       onChange={e => setLang(e.target.value)}
@@ -245,7 +245,7 @@ const LanguageSwitcher = () => (
         fontSize: 20,
         fontWeight: 700,
         padding: "8px 34px 8px 16px",
-        color: "#0068b5",
+        color: "#1d407a",
         background: "#fff url('data:image/svg+xml;utf8,<svg fill=\"%232974e7\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 10l5 5 5-5z\"/></svg>') no-repeat right 10px center/18px 18px",
         appearance: "none",
         minWidth: 78,
@@ -270,7 +270,6 @@ const LanguageSwitcher = () => (
         background: `#f7f7f7 url("/circuit-pattern.png") repeat`,
         minHeight: "100vh",
         fontFamily: "inherit",
-		color: "#0068b5",     
       }}
     >
       {/* Banner Image */}
@@ -287,76 +286,47 @@ const LanguageSwitcher = () => (
         <LanguageSwitcher />
 
         {/* Hero Section */}
-<section
-  style={{
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 36,
-    margin: "48px 0 40px",
-    flexWrap: "wrap", // RWD: 小螢幕自動直向
-    textAlign: "left"
-  }}
->
-  <h1
+        <section style={{ textAlign: "center", margin: "40px 0 24px" }}>
+          <h1 style={{ fontSize: 36, fontWeight: 700, marginBottom: 12 }}>
+            {t.hero}
+          </h1>
+          <p style={{ fontSize: 18, color: "#333", marginBottom: 16 }}>
+            {t.heroDesc}
+          </p>
+         <div style={{ display: "flex", justifyContent: "center", gap: 24 }}>
+  <button
+    onClick={() => setShowAbout(true)}
     style={{
-      fontSize: 36,
       fontWeight: 700,
-      margin: 0,
-      whiteSpace: "nowrap"
-    }}
-  >
-    {t.hero}
-  </h1>
-  <div
-    style={{
       fontSize: 18,
-      color: "#0068b5",
-      fontWeight: 600,
-      margin: 0,
-      whiteSpace: "nowrap"
+      padding: "12px 36px",
+      borderRadius: 40,
+      background: "linear-gradient(90deg, #2574e8, #6fd3fb)",
+      color: "#fff",
+      border: "none",
+      boxShadow: "0 2px 10px 0 #bde7fa44",
+      cursor: "pointer",
+      marginRight: 6,
+      transition: "filter 0.18s"
     }}
-  >
-    {t.heroDesc}
-  </div>
-  <div style={{ display: "flex", gap: 18 }}>
-    <button
-      onClick={() => setShowAbout(true)}
-      style={{
-        fontWeight: 700,
-        fontSize: 18,
-        padding: "12px 36px",
-        borderRadius: 40,
-        background: "linear-gradient(90deg, #2574e8, #6fd3fb)",
-        color: "#0068b5",
-        border: "none",
-        boxShadow: "0 2px 10px 0 #bde7fa44",
-        cursor: "pointer",
-        marginRight: 6,
-        transition: "filter 0.18s"
-      }}
-    >
-      {t.about}
-    </button>
-    <button
-      onClick={scrollToContact}
-      style={{
-        fontWeight: 700,
-        fontSize: 18,
-        padding: "12px 36px",
-        borderRadius: 40,
-        background: "#fff",
-        color: "#0068b5",
-        border: "2.5px solid #2995e7",
-        boxShadow: "0 2px 10px 0 #bde7fa44",
-        cursor: "pointer"
-      }}
-    >
-      {t.contactLabel}
-    </button>
-  </div>
-</section>
+  >{t.about}</button>
+  <button
+    onClick={scrollToContact}
+    style={{
+      fontWeight: 700,
+      fontSize: 18,
+      padding: "12px 36px",
+      borderRadius: 40,
+      background: "#fff",
+      color: "#2574e8",
+      border: "2.5px solid #2995e7",
+      boxShadow: "0 2px 10px 0 #bde7fa44",
+      cursor: "pointer"
+    }}
+  >{t.contactLabel}</button>
+</div>
 
+        </section>
 
         {/* Services Section */}
         <section>
@@ -365,7 +335,7 @@ const LanguageSwitcher = () => (
               fontSize: 22,
               fontWeight: 600,
               margin: "24px 0 8px",
-              color: "#0068b5",
+              color: "#222",
             }}
           >
             {t.services}
@@ -373,7 +343,7 @@ const LanguageSwitcher = () => (
           <ul
             style={{
               margin: "0 0 0 24px",
-              color: "#0068b5",
+              color: "#444",
               lineHeight: 1.6,
               listStyleType: "disc",
             }}
@@ -391,7 +361,7 @@ const LanguageSwitcher = () => (
               fontSize: 22,
               fontWeight: 600,
               margin: "24px 0 8px",
-              color: "##0068b5",
+              color: "#222",
             }}
           >
             {t.advantages}
@@ -399,7 +369,7 @@ const LanguageSwitcher = () => (
           <ul
             style={{
               margin: "0 0 0 24px",
-              color: "#0068b5",
+              color: "#444",
               lineHeight: 1.6,
               listStyleType: "disc",
             }}
@@ -417,7 +387,7 @@ const LanguageSwitcher = () => (
               fontSize: 22,
               fontWeight: 600,
               margin: "24px 0 8px",
-              color: "##0068b5",
+              color: "#222",
             }}
           >
             {t.projects}
@@ -425,7 +395,7 @@ const LanguageSwitcher = () => (
           <ul
             style={{
               margin: "0 0 0 24px",
-              color: "##0068b5",
+              color: "#444",
               lineHeight: 1.6,
               listStyleType: "disc",
             }}
@@ -446,43 +416,42 @@ const LanguageSwitcher = () => (
   maxWidth: 930,
   marginLeft: "auto",
   marginRight: "auto"
-  color: "#0068b5",           // <--- 新增這一行，整區都是藍色
 }}>
   <h2 style={{
-    fontSize: 25, fontWeight: 700, color: "#0068b5", marginBottom: 18, textAlign: "left"
+    fontSize: 25, fontWeight: 700, color: "#215fd8", marginBottom: 18, textAlign: "left"
   }}>{t.contactSection}</h2>
   <div style={{
     display: "flex",
     flexWrap: "wrap",
     gap: "22px 56px",
-    color: "#0068b5",
+    color: "#215fd8",
     fontWeight: 700,
     alignItems: "flex-start",
     fontSize: 19
   }}>
     <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-      <Mail size={21} style={{ color: "#0068b5" }} />
+      <Mail size={21} style={{ color: "#215fd8" }} />
       <span>{t.email}：</span>
-      <a href="mailto:michelle@incubed-intl.com" style={{ color: "#0068b5", textDecoration: "underline" }}>
+      <a href="mailto:michelle@incubed-intl.com" style={{ color: "#215fd8", textDecoration: "underline" }}>
         michelle@incubed-intl.com
       </a>
     </div>
     <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-      <MessageCircle size={21} style={{ color: "#0068b5" }} />
+      <MessageCircle size={21} style={{ color: "#215fd8" }} />
       <span>{t.line}：</span>
       <span>slr200k</span>
     </div>
     <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-      <Phone size={21} style={{ color: "#0068b5" }} />
+      <Phone size={21} style={{ color: "#215fd8" }} />
       <span>{t.whatsapp}：</span>
       <span>+886-2-87919189</span>
     </div>
     <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-      <Building size={21} style={{ color: "#0068b5" }} />
+      <Building size={21} style={{ color: "#215fd8" }} />
       <span>{t.address}：</span>
       <a href={googleMapsPlaceUrl}
         target="_blank" rel="noopener noreferrer"
-        style={{ color: "#0068b5", textDecoration: "underline" }}>
+        style={{ color: "#215fd8", textDecoration: "underline" }}>
         {t.addressDetail}
       </a>
     </div>
@@ -541,8 +510,8 @@ const LanguageSwitcher = () => (
             >
               <X size={24} />
             </button>
-            <h2 style={{ marginBottom: 16, color: "#0068b5" }}>{t.about}</h2>
-            <p style={{ color: "#0068b5", lineHeight: 1.6 }}>{t.aboutContent}</p>
+            <h2 style={{ marginBottom: 16, color: "#222" }}>{t.about}</h2>
+            <p style={{ color: "#444", lineHeight: 1.6 }}>{t.aboutContent}</p>
           </div>
         </div>
       )}
