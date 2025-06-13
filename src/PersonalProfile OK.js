@@ -327,39 +327,36 @@ export default function PersonalProfile() {
           <p style={{ fontSize: 18, color: "#333", marginBottom: 16 }}>
             {t.heroDesc}
           </p>
-         <div style={{ display: "flex", justifyContent: "center", gap: 24 }}>
-  <button
-    onClick={() => setShowAbout(true)}
-    style={{
-      fontWeight: 700,
-      fontSize: 18,
-      padding: "12px 36px",
-      borderRadius: 40,
-      background: "linear-gradient(90deg, #2574e8, #6fd3fb)",
-      color: "#fff",
-      border: "none",
-      boxShadow: "0 2px 10px 0 #bde7fa44",
-      cursor: "pointer",
-      marginRight: 6,
-      transition: "filter 0.18s"
-    }}
-  >{t.about}</button>
-  <button
-    onClick={scrollToContact}
-    style={{
-      fontWeight: 700,
-      fontSize: 18,
-      padding: "12px 36px",
-      borderRadius: 40,
-      background: "#fff",
-      color: "#2574e8",
-      border: "2.5px solid #2995e7",
-      boxShadow: "0 2px 10px 0 #bde7fa44",
-      cursor: "pointer"
-    }}
-  >{t.contactLabel}</button>
-</div>
-
+          <div style={{ display: "flex", justifyContent: "center", gap: 12 }}>
+            <button
+              onClick={() => setShowAbout(true)}
+              style={{
+                fontSize: 16,
+                padding: "8px 24px",
+                borderRadius: 6,
+                background: "#2956d4",
+                color: "#fff",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              {t.about}
+            </button>
+            <button
+              onClick={scrollToContact}
+              style={{
+                fontSize: 16,
+                padding: "8px 24px",
+                borderRadius: 6,
+                background: "#2956d4",
+                color: "#fff",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              {t.contactLabel}
+            </button>
+          </div>
         </section>
 
         {/* Services Section */}
@@ -441,57 +438,131 @@ export default function PersonalProfile() {
         </section>
 
         {/* Contact Section */}
-<section ref={contactRef} style={{
-  background: "#f8faff",
-  borderRadius: 18,
-  boxShadow: "0 2px 18px 0 #2995e71a",
-  margin: "36px 0 0",
-  padding: "36px 40px",
-  maxWidth: 930,
-  marginLeft: "auto",
-  marginRight: "auto"
-}}>
-  <h2 style={{
-    fontSize: 25, fontWeight: 700, color: "#215fd8", marginBottom: 18, textAlign: "left"
-  }}>{t.contactSection}</h2>
-  <div style={{
-    display: "flex",
-    flexWrap: "wrap",
-    gap: "22px 56px",
-    color: "#215fd8",
-    fontWeight: 700,
-    alignItems: "flex-start",
-    fontSize: 19
-  }}>
-    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-      <Mail size={21} style={{ color: "#215fd8" }} />
-      <span>{t.email}：</span>
-      <a href="mailto:michelle@incubed-intl.com" style={{ color: "#215fd8", textDecoration: "underline" }}>
-        michelle@incubed-intl.com
-      </a>
-    </div>
-    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-      <MessageCircle size={21} style={{ color: "#215fd8" }} />
-      <span>{t.line}：</span>
-      <span>slr200k</span>
-    </div>
-    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-      <Phone size={21} style={{ color: "#215fd8" }} />
-      <span>{t.whatsapp}：</span>
-      <span>+886-2-87919189</span>
-    </div>
-    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-      <Building size={21} style={{ color: "#215fd8" }} />
-      <span>{t.address}：</span>
-      <a href={googleMapsPlaceUrl}
-        target="_blank" rel="noopener noreferrer"
-        style={{ color: "#215fd8", textDecoration: "underline" }}>
-        {t.addressDetail}
-      </a>
-    </div>
-  </div>
-</section>
+        <section ref={contactRef} style={{ textAlign: "center", margin: "40px 0 0" }}>
+          <h2
+            style={{
+              fontSize: 22,
+              fontWeight: 600,
+              marginBottom: 12,
+              color: "#222",
+            }}
+          >
+            {t.contactSection}
+          </h2>
 
+          {/* Email with Mail Icon */}
+          <p
+            style={{
+              color: "#444",
+              lineHeight: 1.6,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 6,
+            }}
+          >
+            <span
+              style={{
+                fontWeight: 500,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+              }}
+            >
+              {t.email}
+              <Mail size={16} />
+              :
+            </span>
+            <a href="mailto:michelle@incubed-intl.com" style={{ color: "#2956d4", marginLeft: 4 }}>
+              michelle@incubed-intl.com
+            </a>
+          </p>
+
+          {/* Line ID with MessageCircle Icon */}
+          <p
+            style={{
+              color: "#444",
+              lineHeight: 1.6,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 6,
+            }}
+          >
+            <span
+              style={{
+                fontWeight: 500,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+              }}
+            >
+              {t.line}
+              <MessageCircle size={16} />
+              :
+            </span>
+            <span style={{ color: "#2956d4", marginLeft: 4 }}>slr200k</span>
+          </p>
+
+          {/* Phone No. with Phone Icon */}
+          <p
+            style={{
+              color: "#444",
+              lineHeight: 1.6,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 6,
+            }}
+          >
+            <span
+              style={{
+                fontWeight: 500,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+              }}
+            >
+              {t.whatsapp}
+              <Phone size={16} />
+              :
+            </span>
+            <span style={{ color: "#2956d4", marginLeft: 4 }}>+886-2-87919189</span>
+          </p>
+
+          {/* Address with Building Icon */}
+          <p
+            style={{
+              color: "#444",
+              lineHeight: 1.6,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 6,
+            }}
+          >
+            <span
+              style={{
+                fontWeight: 500,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+              }}
+            >
+              {t.address}
+              <Building size={16} />
+              :
+            </span>
+            <a
+              href={googleMapsPlaceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#2956d4", marginLeft: 4, textDecoration: "underline" }}
+            >
+              {t.addressDetail}
+            </a>
+          </p>
+        </section>
       </div>
 
       {/* Footer Image */}
