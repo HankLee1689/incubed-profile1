@@ -287,7 +287,7 @@ const LanguageSwitcher = () => (
 
         {/* Hero Section */}
         <section style={{ textAlign: "center", margin: "40px 0 24px" }}>
-          <h1 style={{ fontSize: 36, fontWeight: 700, marginBottom: 12 }}>
+          <h1 style={{ fontSize: 42, fontWeight: 700, marginBottom: 12 }}>
             {t.hero}
           </h1>
           <p style={{ fontSize: 18, color: "#0068b5", marginBottom: 16 }}>
