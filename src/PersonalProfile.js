@@ -414,7 +414,7 @@ const LanguageSwitcher = () => (
     borderRadius: 20,
     boxShadow: "0 2px 18px 0 #2995e711",
     margin: "44px 0 0 0",
-    padding: "33px 18px",
+    padding: "36px 15px",
     maxWidth: 420,
     marginLeft: "auto",
     marginRight: "auto"
