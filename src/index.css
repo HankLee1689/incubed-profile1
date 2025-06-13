@@ -1,15 +1,19 @@
 @font-face {
   font-family: 'Inter';
-  src: url('/fonts/Inter-VariableFont.ttf') format('truetype');
-  font-weight: 100 900; /* 可調整範圍 */
+  src: url('./fonts/Inter-VariableFont.ttf') format('truetype');
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Inter';
-  src: url('/fonts/Inter-Italic-VariableFont.ttf') format('truetype');
+  src: url('./fonts/Inter-Italic-VariableFont.ttf') format('truetype');
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
 }
+
 body { margin: 0; background: #f8fafc; color: #222; }
+body, h1, h2, h3, h4, h5, h6, ul, li, p, button, a, div, span {
+  font-family: 'Inter', 'Roboto', 'Arial', 'Helvetica Neue', Helvetica, sans-serif !important;
+}
