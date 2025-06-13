@@ -352,16 +352,25 @@ const LanguageSwitcher = () => (
 
         {/* Services Section */}
         <section>
-          <h2
-            style={{
-              fontSize: 22,
-              fontWeight: 600,
-              margin: "24px 0 8px",
-              color: "#222",
-            }}
-          >
-            {t.services}
-          </h2>
+         import { Star } from "lucide-react"; // 建議放在檔案頂部
+
+<h2
+  style={{
+    fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif',
+    fontSize: 32,
+    fontWeight: 800,
+    letterSpacing: 1,
+    color: "#0068b5",
+    margin: "40px 0 24px 0",
+    display: "flex",
+    alignItems: "center",
+    gap: 12
+  }}
+>
+  <Star size={32} style={{ color: "#53b9f7", flexShrink: 0 }} />
+  Our Services
+</h2>
+
           <ul
             style={{
               margin: "0 0 0 24px",
