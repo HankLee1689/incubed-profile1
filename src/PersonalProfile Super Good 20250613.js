@@ -453,10 +453,7 @@ const LanguageSwitcher = () => (
         {/* Contact Section */}
 <section
   style={{
-    background: `
-      linear-gradient(120deg, #f7fbffcc 90%, #e6f1fbcc 100%),
-      url("/circuit-pattern.png") bottom center/cover no-repeat
-    `,
+    background: "rgba(255,255,255,0.55)",
     borderRadius: 18,
     boxShadow: "0 4px 32px 0 #2c80e41a",
     margin: "56px 0 0",
@@ -466,7 +463,9 @@ const LanguageSwitcher = () => (
     marginRight: "auto",
     display: "flex",
     flexDirection: "column",
-    fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif'
+    fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif',
+    backdropFilter: "blur(16px)",
+    WebkitBackdropFilter: "blur(16px)"
   }}
 >
   <h2
