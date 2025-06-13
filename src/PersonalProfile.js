@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from "react";
 import { Mail, MessageCircle, Phone, Building, X, Globe } from "lucide-react";
+import { Star, Award, Layers } from "lucide-react"; // 服務/優勢/專案區塊icon
 
 const content = {
   en: {
@@ -352,16 +353,23 @@ const LanguageSwitcher = () => (
 
         {/* Services Section */}
         <section>
-          <h2
-            style={{
-              fontSize: 22,
-              fontWeight: 600,
-              margin: "24px 0 8px",
-              color: "#222",
-            }}
-          >
-            {t.services}
-          </h2>
+<h2
+  style={{
+    fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif',
+    fontSize: 32,
+    fontWeight: 800,
+    letterSpacing: 1,
+    color: "#0068b5",
+    margin: "40px 0 24px 0",
+    display: "flex",
+    alignItems: "center",
+    gap: 12
+  }}
+>
+  <Star size={32} style={{ color: "#53b9f7", flexShrink: 0 }} />
+  Our Services
+</h2>
+
           <ul
             style={{
               margin: "0 0 0 24px",
@@ -378,16 +386,23 @@ const LanguageSwitcher = () => (
 
         {/* Why Choose Us Section */}
         <section>
-          <h2
-            style={{
-              fontSize: 22,
-              fontWeight: 600,
-              margin: "24px 0 8px",
-              color: "#222",
-            }}
-          >
-            {t.advantages}
-          </h2>
+         <h2
+  style={{
+    fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif',
+    fontSize: 32,
+    fontWeight: 800,
+    letterSpacing: 1,
+    color: "#0068b5",
+    margin: "40px 0 24px 0",
+    display: "flex",
+    alignItems: "center",
+    gap: 12
+  }}
+>
+  <Award size={32} style={{ color: "#53b9f7", flexShrink: 0 }} />
+  Why Choose Us
+</h2>
+
           <ul
             style={{
               margin: "0 0 0 24px",
@@ -404,16 +419,23 @@ const LanguageSwitcher = () => (
 
         {/* Highlighted Projects Section */}
         <section>
-          <h2
-            style={{
-              fontSize: 22,
-              fontWeight: 600,
-              margin: "24px 0 8px",
-              color: "#222",
-            }}
-          >
-            {t.projects}
-          </h2>
+         <h2
+  style={{
+    fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif',
+    fontSize: 32,
+    fontWeight: 800,
+    letterSpacing: 1,
+    color: "#0068b5",
+    margin: "40px 0 24px 0",
+    display: "flex",
+    alignItems: "center",
+    gap: 12
+  }}
+>
+  <Layers size={32} style={{ color: "#53b9f7", flexShrink: 0 }} />
+  Highlighted Projects
+</h2>
+
           <ul
             style={{
               margin: "0 0 0 24px",
