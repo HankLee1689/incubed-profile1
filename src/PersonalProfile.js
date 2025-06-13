@@ -451,7 +451,61 @@ const LanguageSwitcher = () => (
         </section>
 
         {/* Contact Section */}
-{/* Contact Section */}
+// ----- Translation Content Snippet -----
+const content = {
+  en: {
+    // … other keys …
+    contactSection: "Get in Touch",
+    contactLabel: "Contact us",
+    email: "Email",
+    line: "Line ID",
+    whatsapp: "Phone No.",
+    address: "Address",
+    addressDetail: "2F-3, No. 94 Baozhong Rd, Xindian Dist, New Taipei City",
+  },
+  jp: {
+    // … other keys …
+    contactSection: "お問い合わせ",
+    contactLabel: "お問い合わせ",
+    email: "メール",
+    line: "Line ID",
+    whatsapp: "電話番号",
+    address: "住所",
+    addressDetail: "新北市新店區寶中路94号2階之3",
+  },
+  es: {
+    // … other keys …
+    contactSection: "Póngase en Contacto",
+    contactLabel: "Contáctenos",
+    email: "Correo Electrónico",
+    line: "ID de Line",
+    whatsapp: "Teléfono",
+    address: "Dirección",
+    addressDetail: "2F-3, No. 94 Baozhong Rd, Distrito Xindian, Ciudad de Nuevo Taipéi",
+  },
+  de: {
+    // … other keys …
+    contactSection: "Kontaktieren Sie uns",
+    contactLabel: "Kontaktieren Sie uns",
+    email: "E-Mail",
+    line: "Line ID",
+    whatsapp: "Telefon",
+    address: "Adresse",
+    addressDetail: "2F-3, No. 94 Baozhong Rd, Xindian Dist, Neu-Taipeh Stadt",
+  },
+  zh: {
+    // … other keys …
+    contactSection: "聯絡方式",
+    contactLabel: "聯絡我們",
+    email: "電子郵件",
+    line: "Line ID",
+    whatsapp: "電話號碼",
+    address: "地址",
+    addressDetail: "新北市新店區寶中路94號2樓之3",
+  },
+};
+
+// ----- Contact Section -----
 <section
   ref={contactRef}
   style={{
