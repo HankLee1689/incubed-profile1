@@ -365,7 +365,7 @@ const LanguageSwitcher = () => (
               fontSize: 22,
               fontWeight: 600,
               margin: "24px 0 8px",
-              color: "#222",
+              color: "#0068b5",
             }}
           >
             {t.services}
@@ -373,7 +373,7 @@ const LanguageSwitcher = () => (
           <ul
             style={{
               margin: "0 0 0 24px",
-              color: "#444",
+              color: "#0068b5",
               lineHeight: 1.6,
               listStyleType: "disc",
             }}
@@ -391,7 +391,7 @@ const LanguageSwitcher = () => (
               fontSize: 22,
               fontWeight: 600,
               margin: "24px 0 8px",
-              color: "#222",
+              color: "##0068b5",
             }}
           >
             {t.advantages}
@@ -399,7 +399,7 @@ const LanguageSwitcher = () => (
           <ul
             style={{
               margin: "0 0 0 24px",
-              color: "#444",
+              color: "#0068b5",
               lineHeight: 1.6,
               listStyleType: "disc",
             }}
@@ -417,7 +417,7 @@ const LanguageSwitcher = () => (
               fontSize: 22,
               fontWeight: 600,
               margin: "24px 0 8px",
-              color: "#222",
+              color: "##0068b5",
             }}
           >
             {t.projects}
@@ -425,7 +425,7 @@ const LanguageSwitcher = () => (
           <ul
             style={{
               margin: "0 0 0 24px",
-              color: "#444",
+              color: "##0068b5",
               lineHeight: 1.6,
               listStyleType: "disc",
             }}
@@ -446,6 +446,7 @@ const LanguageSwitcher = () => (
   maxWidth: 930,
   marginLeft: "auto",
   marginRight: "auto"
+  color: "#0068b5",           // <--- 新增這一行，整區都是藍色
 }}>
   <h2 style={{
     fontSize: 25, fontWeight: 700, color: "#215fd8", marginBottom: 18, textAlign: "left"
