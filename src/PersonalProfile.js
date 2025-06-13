@@ -233,70 +233,34 @@ export default function PersonalProfile() {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const LanguageSwitcher = () => (
-    <div style={{ display: "flex", justifyContent: "flex-end", gap: 8 }}>
-      <button
-        style={{
-          padding: "4px 12px",
-          borderRadius: 4,
-          border: lang === "en" ? "2px solid #222" : "1px solid #ccc",
-          background: lang === "en" ? "#f7f7f7" : "#fff",
-          cursor: "pointer",
-        }}
-        onClick={() => setLang("en")}
-      >
-        EN
-      </button>
-      <button
-        style={{
-          padding: "4px 12px",
-          borderRadius: 4,
-          border: lang === "jp" ? "2px solid #222" : "1px solid #ccc",
-          background: lang === "jp" ? "#f7f7f7" : "#fff",
-          cursor: "pointer",
-        }}
-        onClick={() => setLang("jp")}
-      >
-        日本語
-      </button>
-      <button
-        style={{
-          padding: "4px 12px",
-          borderRadius: 4,
-          border: lang === "es" ? "2px solid #222" : "1px solid #ccc",
-          background: lang === "es" ? "#f7f7f7" : "#fff",
-          cursor: "pointer",
-        }}
-        onClick={() => setLang("es")}
-      >
-        Español
-      </button>
-      <button
-        style={{
-          padding: "4px 12px",
-          borderRadius: 4,
-          border: lang === "de" ? "2px solid #222" : "1px solid #ccc",
-          background: lang === "de" ? "#f7f7f7" : "#fff",
-          cursor: "pointer",
-        }}
-        onClick={() => setLang("de")}
-      >
-        Deutsch
-      </button>
-      <button
-        style={{
-          padding: "4px 12px",
-          borderRadius: 4,
-          border: lang === "zh" ? "2px solid #222" : "1px solid #ccc",
-          background: lang === "zh" ? "#f7f7f7" : "#fff",
-          cursor: "pointer",
-        }}
-        onClick={() => setLang("zh")}
-      >
-        中文
-      </button>
-    </div>
-  );
+const LanguageSwitcher = () => (
+  <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 8 }}>
+    <select
+      value={lang}
+      onChange={e => setLang(e.target.value)}
+      style={{
+        borderRadius: 14,
+        border: "2px solid #2995e7",
+        fontSize: 20,
+        fontWeight: 700,
+        padding: "8px 34px 8px 16px",
+        color: "#1d407a",
+        background: "#fff url('data:image/svg+xml;utf8,<svg fill=\"%232974e7\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 10l5 5 5-5z\"/></svg>') no-repeat right 10px center/18px 18px",
+        appearance: "none",
+        minWidth: 78,
+        outline: "none",
+        cursor: "pointer"
+      }}
+    >
+      <option value="en">EN</option>
+      <option value="jp">日本語</option>
+      <option value="es">Español</option>
+      <option value="de">Deutsch</option>
+      <option value="zh">中文</option>
+    </select>
+  </div>
+);
+
 
   return (
     <div
