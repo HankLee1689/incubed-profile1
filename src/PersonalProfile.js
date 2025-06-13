@@ -440,42 +440,52 @@ const LanguageSwitcher = () => (
   background: "#f8faff",
   borderRadius: 18,
   boxShadow: "0 2px 18px 0 #2995e71a",
-  margin: "56px 0 0",
+  margin: "36px 0 0",
   padding: "36px 40px",
   maxWidth: 930,
   marginLeft: "auto",
   marginRight: "auto"
 }}>
   <h2 style={{
-    fontSize: 30,
-    fontWeight: 800,
-    letterSpacing: 1,
-    margin: "38px 0 26px 0",
-    display: "inline-block",
-    background: "linear-gradient(90deg, #2574e8 60%, #53b9f7 100%)",
-    WebkitBackgroundClip: "text",
-    backgroundClip: "text",
-    color: "transparent",
-    position: "relative"
+    fontSize: 25, fontWeight: 700, color: "#215fd8", marginBottom: 18, textAlign: "left"
+  }}>{t.contactSection}</h2>
+  <div style={{
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "22px 56px",
+    color: "#215fd8",
+    fontWeight: 700,
+    alignItems: "flex-start",
+    fontSize: 19
   }}>
-    <span style={{ position: "relative", zIndex: 1 }}>{t.contactSection}</span>
-    <span style={{
-      position: "absolute",
-      left: 0,
-      bottom: -7,
-      width: "100%",
-      height: 10,
-      background: "linear-gradient(90deg, #2574e8 40%, #53b9f7 100%)",
-      borderRadius: 7,
-      opacity: 0.19,
-      zIndex: 0
-    }} />
-  </h2>
-  <div>
-    {/* ...你原本的聯絡內容不動... */}
+    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+      <Mail size={21} style={{ color: "#215fd8" }} />
+      <span>{t.email}：</span>
+      <a href="mailto:michelle@incubed-intl.com" style={{ color: "#215fd8", textDecoration: "underline" }}>
+        michelle@incubed-intl.com
+      </a>
+    </div>
+    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+      <MessageCircle size={21} style={{ color: "#215fd8" }} />
+      <span>{t.line}：</span>
+      <span>slr200k</span>
+    </div>
+    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+      <Phone size={21} style={{ color: "#215fd8" }} />
+      <span>{t.whatsapp}：</span>
+      <span>+886-2-87919189</span>
+    </div>
+    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+      <Building size={21} style={{ color: "#215fd8" }} />
+      <span>{t.address}：</span>
+      <a href={googleMapsPlaceUrl}
+        target="_blank" rel="noopener noreferrer"
+        style={{ color: "#215fd8", textDecoration: "underline" }}>
+        {t.addressDetail}
+      </a>
+    </div>
   </div>
 </section>
-
 
       </div>
 
