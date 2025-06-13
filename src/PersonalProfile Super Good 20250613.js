@@ -453,7 +453,10 @@ const LanguageSwitcher = () => (
         {/* Contact Section */}
 <section
   style={{
-    background: "linear-gradient(120deg, #f7fbff 88%, #e6f1fb 100%)",
+    background: `
+      linear-gradient(120deg, #f7fbffcc 90%, #e6f1fbcc 100%),
+      url("/circuit-pattern.png") bottom center/cover no-repeat
+    `,
     borderRadius: 18,
     boxShadow: "0 4px 32px 0 #2c80e41a",
     margin: "56px 0 0",
@@ -462,10 +465,10 @@ const LanguageSwitcher = () => (
     marginLeft: "auto",
     marginRight: "auto",
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif'
   }}
 >
-  {/* 主標題＋主色左色條 */}
   <h2
     style={{
       display: "flex",
@@ -489,83 +492,87 @@ const LanguageSwitcher = () => (
     />
     聯絡方式
   </h2>
-  <div style={{
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-    rowGap: 16,
-    columnGap: 32,
-    alignItems: "center",
-    fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif',
-    color: "#1663ad",
-    fontSize: 17.2
-  }}>
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr",
+      rowGap: 18,
+      columnGap: 32,
+      alignItems: "center"
+    }}
+  >
     {/* Email */}
-    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
       <span style={{
-        color: "#2299ee",
-        fontSize: 20,
-        marginRight: 2
+        color: "#2299ee", fontSize: 26, marginRight: 4
       }}>📧</span>
-      <span style={{ minWidth: 82, color: "#336" }}>電子郵件</span>
+      <span style={{ minWidth: 82, color: "#22304a" }}>電子郵件</span>
       <a href="mailto:michelle@incubed-intl.com" style={{
         color: "#0068b5",
         fontWeight: 700,
         textDecoration: "underline",
-        marginLeft: 5
+        marginLeft: 8
       }}>
         michelle@incubed-intl.com
       </a>
     </div>
     {/* Line */}
-    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
       <span style={{
-        color: "#2299ee",
-        fontSize: 20,
-        marginRight: 2
+        color: "#2299ee", fontSize: 26, marginRight: 4
       }}>💬</span>
-      <span style={{ minWidth: 82, color: "#336" }}>Line ID</span>
+      <span style={{ minWidth: 82, color: "#22304a" }}>Line ID</span>
       <span style={{
         color: "#1976d2",
         fontWeight: 700,
-        marginLeft: 5
+        marginLeft: 8
       }}>slr200k</span>
     </div>
     {/* Phone */}
-    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
       <span style={{
-        color: "#2299ee",
-        fontSize: 20,
-        marginRight: 2
+        color: "#2299ee", fontSize: 26, marginRight: 4
       }}>📞</span>
-      <span style={{ minWidth: 82, color: "#336" }}>電話號碼</span>
+      <span style={{ minWidth: 82, color: "#22304a" }}>電話號碼</span>
       <span style={{
         color: "#1976d2",
         fontWeight: 700,
-        marginLeft: 5
+        marginLeft: 8
       }}>+886-2-87919189</span>
     </div>
     {/* Address */}
-    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
       <span style={{
-        color: "#2299ee",
-        fontSize: 20,
-        marginRight: 2
+        color: "#2299ee", fontSize: 26, marginRight: 4
       }}>🏢</span>
-      <span style={{ minWidth: 82, color: "#336" }}>地址</span>
-      <a href="https://www.google.com/maps/place/新北市新店區寶中路94號2樓之3"
-        target="_blank" rel="noopener noreferrer"
+      <span style={{ minWidth: 82, color: "#22304a" }}>地址</span>
+      <a
+        href="https://www.google.com/maps/place/新北市新店區寶中路94號2樓之3"
+        target="_blank"
+        rel="noopener noreferrer"
         style={{
           color: "#0068b5",
           fontWeight: 700,
           textDecoration: "underline",
-          marginLeft: 5
-        }}>
+          marginLeft: 8
+        }}
+      >
         新北市新店區寶中路94號2樓之3
       </a>
     </div>
   </div>
-</section>
 
+  {/* RWD 行動裝置自動單欄 */}
+  <style>
+    {`
+      @media (max-width: 600px) {
+        section[style*="max-width: 930px"] > div {
+          grid-template-columns: 1fr !important;
+        }
+      }
+    `}
+  </style>
+</section>
 
 
       </div>
