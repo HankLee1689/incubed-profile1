@@ -2,7 +2,6 @@
 
 import React, { useState, useRef } from "react";
 import { Mail, MessageCircle, Phone, Building, X, Globe } from "lucide-react";
-import { Star, Award, Layers } from "lucide-react"; // 服務/優勢/專案區塊icon
 
 const content = {
   en: {
@@ -270,7 +269,7 @@ const LanguageSwitcher = () => (
       style={{
         background: `#f7f7f7 url("/circuit-pattern.png") repeat`,
         minHeight: "100vh",
-        fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif"',
+        fontFamily: "inherit",
       }}
     >
       {/* Banner Image */}
@@ -288,31 +287,9 @@ const LanguageSwitcher = () => (
 
         {/* Hero Section */}
         <section style={{ textAlign: "center", margin: "40px 0 24px" }}>
-<h1
-  style={{
-    fontSize: 42,
-    fontWeight: 800,
-    margin: 0,
-    background: "linear-gradient(90deg, #0068b5 10%, #53b9f7 90%)",
-    color: "transparent",
-    WebkitBackgroundClip: "text",
-    backgroundClip: "text",
-    letterSpacing: "2px",
-    transition: "letter-spacing 0.35s cubic-bezier(0.55,0,0.1,1), filter 0.25s",
-    cursor: "pointer"
-  }}
-  onMouseOver={e => {
-    e.currentTarget.style.letterSpacing = "7px";
-    e.currentTarget.style.filter = "drop-shadow(0 0 12px #0068b5aa)";
-  }}
-  onMouseOut={e => {
-    e.currentTarget.style.letterSpacing = "2px";
-    e.currentTarget.style.filter = "none";
-  }}
->
-  {t.hero}
-</h1>
-
+          <h1 style={{ fontSize: 42, fontWeight: 700, marginBottom: 12 }}>
+            {t.hero}
+          </h1>
           <p style={{ fontSize: 18, color: "#0068b5", marginBottom: 16 }}>
             {t.heroDesc}
           </p>
@@ -353,23 +330,16 @@ const LanguageSwitcher = () => (
 
         {/* Services Section */}
         <section>
-<h2
-  style={{
-    fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif',
-    fontSize: 32,
-    fontWeight: 800,
-    letterSpacing: 1,
-    color: "#0068b5",
-    margin: "40px 0 24px 0",
-    display: "flex",
-    alignItems: "center",
-    gap: 12
-  }}
->
-  <Star size={32} style={{ color: "#53b9f7", flexShrink: 0 }} />
-  Our Services
-</h2>
-
+          <h2
+            style={{
+              fontSize: 22,
+              fontWeight: 600,
+              margin: "24px 0 8px",
+              color: "#222",
+            }}
+          >
+            {t.services}
+          </h2>
           <ul
             style={{
               margin: "0 0 0 24px",
@@ -386,23 +356,16 @@ const LanguageSwitcher = () => (
 
         {/* Why Choose Us Section */}
         <section>
-         <h2
-  style={{
-    fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif',
-    fontSize: 32,
-    fontWeight: 800,
-    letterSpacing: 1,
-    color: "#0068b5",
-    margin: "40px 0 24px 0",
-    display: "flex",
-    alignItems: "center",
-    gap: 12
-  }}
->
-  <Award size={32} style={{ color: "#53b9f7", flexShrink: 0 }} />
-  Why Choose Us
-</h2>
-
+          <h2
+            style={{
+              fontSize: 22,
+              fontWeight: 600,
+              margin: "24px 0 8px",
+              color: "#222",
+            }}
+          >
+            {t.advantages}
+          </h2>
           <ul
             style={{
               margin: "0 0 0 24px",
@@ -419,23 +382,16 @@ const LanguageSwitcher = () => (
 
         {/* Highlighted Projects Section */}
         <section>
-         <h2
-  style={{
-    fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif',
-    fontSize: 32,
-    fontWeight: 800,
-    letterSpacing: 1,
-    color: "#0068b5",
-    margin: "40px 0 24px 0",
-    display: "flex",
-    alignItems: "center",
-    gap: 12
-  }}
->
-  <Layers size={32} style={{ color: "#53b9f7", flexShrink: 0 }} />
-  Highlighted Projects
-</h2>
-
+          <h2
+            style={{
+              fontSize: 22,
+              fontWeight: 600,
+              margin: "24px 0 8px",
+              color: "#222",
+            }}
+          >
+            {t.projects}
+          </h2>
           <ul
             style={{
               margin: "0 0 0 24px",
@@ -451,119 +407,56 @@ const LanguageSwitcher = () => (
         </section>
 
         {/* Contact Section */}
-{/* Contact Section */}
-<section
-  ref={contactRef}
-  style={{
-    background: "rgba(255,255,255,0.82)",
-    borderRadius: 20,
-    boxShadow: "0 6px 40px 0 rgba(32,120,220,0.11)",
-    margin: "56px 0 0",
-    padding: "38px 46px 32px 36px",
-    maxWidth: 930,
-    marginLeft: "auto",
-    marginRight: "auto",
+<section ref={contactRef} style={{
+  background: "#f8faff",
+  borderRadius: 18,
+  boxShadow: "0 2px 18px 0 #2995e71a",
+  margin: "36px 0 0",
+  padding: "36px 40px",
+  maxWidth: 930,
+  marginLeft: "auto",
+  marginRight: "auto"
+}}>
+  <h2 style={{
+    fontSize: 25, fontWeight: 700, color: "#0068b5", marginBottom: 18, textAlign: "left"
+  }}>{t.contactSection}</h2>
+  <div style={{
     display: "flex",
-    flexDirection: "column",
-    fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif',
-    backdropFilter: "blur(24px)",
-    WebkitBackdropFilter: "blur(24px)",
-    border: "1px solid rgba(255,255,255,0.21)",
-    position: "relative"
-  }}
->
-  <h2
-    style={{
-      display: "flex",
-      alignItems: "center",
-      fontSize: 24,
-      fontWeight: 900,
-      color: "#1976d2",
-      marginBottom: 28,
-      letterSpacing: 0.3
-    }}
-  >
-    <span
-      style={{
-        display: "inline-block",
-        width: 6,
-        height: 30,
-        borderRadius: 8,
-        background: "linear-gradient(180deg, #2299ee 0%, #015eb8 100%)",
-        marginRight: 16
-      }}
-    />
-    {t.contactSection}
-  </h2>
-  <div
-    style={{
-      display: "flex",
-      flexDirection: "column",
-      rowGap: 18
-    }}
-  >
-    {/* Email */}
-    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-      <span style={{
-        color: "#2299ee", fontSize: 26, marginRight: 4
-      }}>📧</span>
-      <span style={{ minWidth: 82, color: "#22304a" }}>{t.email}</span>
-      <a href="mailto:michelle@incubed-intl.com" style={{
-        color: "#0068b5",
-        fontWeight: 700,
-        textDecoration: "underline",
-        marginLeft: 8
-      }}>
+    flexWrap: "wrap",
+    gap: "22px 56px",
+    color: "#0068b5",
+    fontWeight: 700,
+    alignItems: "flex-start",
+    fontSize: 19
+  }}>
+    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+      <Mail size={21} style={{ color: "#0068b5" }} />
+      <span>{t.email}：</span>
+      <a href="mailto:michelle@incubed-intl.com" style={{ color: "#0068b5", textDecoration: "underline" }}>
         michelle@incubed-intl.com
       </a>
     </div>
-    {/* Line */}
-    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-      <span style={{
-        color: "#2299ee", fontSize: 26, marginRight: 4
-      }}>💬</span>
-      <span style={{ minWidth: 82, color: "#22304a" }}>{t.line}</span>
-      <span style={{
-        color: "#1976d2",
-        fontWeight: 700,
-        marginLeft: 8
-      }}>slr200k</span>
+    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+      <MessageCircle size={21} style={{ color: "#0068b5" }} />
+      <span>{t.line}：</span>
+      <span>slr200k</span>
     </div>
-    {/* Phone */}
-    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-      <span style={{
-        color: "#2299ee", fontSize: 26, marginRight: 4
-      }}>📞</span>
-      <span style={{ minWidth: 82, color: "#22304a" }}>{t.whatsapp}</span>
-      <span style={{
-        color: "#1976d2",
-        fontWeight: 700,
-        marginLeft: 8
-      }}>+886-2-87919189</span>
+    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+      <Phone size={21} style={{ color: "#0068b5" }} />
+      <span>{t.whatsapp}：</span>
+      <span>+886-2-87919189</span>
     </div>
-    {/* Address */}
-    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-      <span style={{
-        color: "#2299ee", fontSize: 26, marginRight: 4
-      }}>🏢</span>
-      <span style={{ minWidth: 82, color: "#22304a" }}>{t.address}</span>
-      <a
-        href="https://www.google.com/maps/place/新北市新店區寶中路94號2樓之3"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          color: "#0068b5",
-          fontWeight: 700,
-          textDecoration: "underline",
-          marginLeft: 8
-        }}
-      >
+    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+      <Building size={21} style={{ color: "#0068b5" }} />
+      <span>{t.address}：</span>
+      <a href={googleMapsPlaceUrl}
+        target="_blank" rel="noopener noreferrer"
+        style={{ color: "#0068b5", textDecoration: "underline" }}>
         {t.addressDetail}
       </a>
     </div>
   </div>
 </section>
-
 
       </div>
 
@@ -617,38 +510,8 @@ const LanguageSwitcher = () => (
             >
               <X size={24} />
             </button>
-                        <h2
-              style={{
-                fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif',
-                fontSize: 28,
-                fontWeight: 900,
-                color: "#0068b5", // Intel 藍
-                letterSpacing: "0.5px",
-                marginBottom: 16,
-                display: "flex",
-                alignItems: "center",
-                gap: 12
-              }}
-            >
-              <span style={{
-                display: "inline-block",
-                fontSize: 23,
-                marginRight: 4,
-                verticalAlign: "middle"
-              }}>★</span>
-              {t.about}
-            </h2>
-            <p style={{
-              fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif',
-              color: "#344052",
-              fontSize: 17,
-              fontWeight: 400,
-              lineHeight: 1.72,
-              letterSpacing: 0.02
-            }}>
-              {t.aboutContent}
-            </p>
-
+            <h2 style={{ marginBottom: 16, color: "#222" }}>{t.about}</h2>
+            <p style={{ color: "#444", lineHeight: 1.6 }}>{t.aboutContent}</p>
           </div>
         </div>
       )}
