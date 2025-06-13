@@ -453,14 +453,6 @@ const LanguageSwitcher = () => (
 {/* Contact Section */}
 {/* Contact Section：Apple 玻璃感 + 反光 + 聯絡資訊 */}
 // 假設你有 lang 狀態, 例如 const [lang, setLang] = useState("en")
-const t = {
-  contactTitle: lang === "en" ? "Get in Touch" : "聯絡方式",
-  email: lang === "en" ? "Email" : "電子郵件",
-  phone: lang === "en" ? "Phone Number" : "電話號碼",
-  line: lang === "en" ? "Line ID" : "Line ID",
-  address: lang === "en" ? "Address" : "地址"
-}
-
 {/* 假設你上方已經有 const t = content[lang]; */}
 
 <section
