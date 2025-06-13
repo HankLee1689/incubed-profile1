@@ -289,7 +289,7 @@ const LanguageSwitcher = () => (
         <section style={{ textAlign: "center", margin: "40px 0 24px" }}>
 <h1
   style={{
-    fontSize: 48,
+    fontSize: 42,
     fontWeight: 800,
     margin: 0,
     background: "linear-gradient(90deg, #0068b5 10%, #53b9f7 90%)",
