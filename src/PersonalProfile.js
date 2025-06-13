@@ -290,7 +290,7 @@ const LanguageSwitcher = () => (
           <h1 style={{ fontSize: 36, fontWeight: 700, marginBottom: 12 }}>
             {t.hero}
           </h1>
-          <p style={{ fontSize: 18, color: "#333", marginBottom: 16 }}>
+          <p style={{ fontSize: 18, color: "#0068b5", marginBottom: 16 }}>
             {t.heroDesc}
           </p>
          <div style={{ display: "flex", justifyContent: "center", gap: 24 }}>
@@ -418,40 +418,40 @@ const LanguageSwitcher = () => (
   marginRight: "auto"
 }}>
   <h2 style={{
-    fontSize: 25, fontWeight: 700, color: "#215fd8", marginBottom: 18, textAlign: "left"
+    fontSize: 25, fontWeight: 700, color: "#0068b5", marginBottom: 18, textAlign: "left"
   }}>{t.contactSection}</h2>
   <div style={{
     display: "flex",
     flexWrap: "wrap",
     gap: "22px 56px",
-    color: "#215fd8",
+    color: "#0068b5",
     fontWeight: 700,
     alignItems: "flex-start",
     fontSize: 19
   }}>
     <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-      <Mail size={21} style={{ color: "#215fd8" }} />
+      <Mail size={21} style={{ color: "#0068b5" }} />
       <span>{t.email}：</span>
-      <a href="mailto:michelle@incubed-intl.com" style={{ color: "#215fd8", textDecoration: "underline" }}>
+      <a href="mailto:michelle@incubed-intl.com" style={{ color: "#0068b5", textDecoration: "underline" }}>
         michelle@incubed-intl.com
       </a>
     </div>
     <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-      <MessageCircle size={21} style={{ color: "#215fd8" }} />
+      <MessageCircle size={21} style={{ color: "#0068b5" }} />
       <span>{t.line}：</span>
       <span>slr200k</span>
     </div>
     <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-      <Phone size={21} style={{ color: "#215fd8" }} />
+      <Phone size={21} style={{ color: "#0068b5" }} />
       <span>{t.whatsapp}：</span>
       <span>+886-2-87919189</span>
     </div>
     <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-      <Building size={21} style={{ color: "#215fd8" }} />
+      <Building size={21} style={{ color: "#0068b5" }} />
       <span>{t.address}：</span>
       <a href={googleMapsPlaceUrl}
         target="_blank" rel="noopener noreferrer"
-        style={{ color: "#215fd8", textDecoration: "underline" }}>
+        style={{ color: "#0068b5", textDecoration: "underline" }}>
         {t.addressDetail}
       </a>
     </div>
