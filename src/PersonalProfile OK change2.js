@@ -286,76 +286,47 @@ const LanguageSwitcher = () => (
         <LanguageSwitcher />
 
         {/* Hero Section */}
-<section
-  style={{
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 36,
-    margin: "48px 0 40px",
-    flexWrap: "wrap", // RWD: 小螢幕自動直向
-    textAlign: "left"
-  }}
->
-  <h1
+        <section style={{ textAlign: "center", margin: "40px 0 24px" }}>
+          <h1 style={{ fontSize: 36, fontWeight: 700, marginBottom: 12 }}>
+            {t.hero}
+          </h1>
+          <p style={{ fontSize: 18, color: "#333", marginBottom: 16 }}>
+            {t.heroDesc}
+          </p>
+         <div style={{ display: "flex", justifyContent: "center", gap: 24 }}>
+  <button
+    onClick={() => setShowAbout(true)}
     style={{
-      fontSize: 36,
       fontWeight: 700,
-      margin: 0,
-      whiteSpace: "nowrap"
-    }}
-  >
-    {t.hero}
-  </h1>
-  <div
-    style={{
       fontSize: 18,
-      color: "#2246c6",
-      fontWeight: 600,
-      margin: 0,
-      whiteSpace: "nowrap"
+      padding: "12px 36px",
+      borderRadius: 40,
+      background: "linear-gradient(90deg, #2574e8, #6fd3fb)",
+      color: "#fff",
+      border: "none",
+      boxShadow: "0 2px 10px 0 #bde7fa44",
+      cursor: "pointer",
+      marginRight: 6,
+      transition: "filter 0.18s"
     }}
-  >
-    {t.heroDesc}
-  </div>
-  <div style={{ display: "flex", gap: 18 }}>
-    <button
-      onClick={() => setShowAbout(true)}
-      style={{
-        fontWeight: 700,
-        fontSize: 18,
-        padding: "12px 36px",
-        borderRadius: 40,
-        background: "linear-gradient(90deg, #2574e8, #6fd3fb)",
-        color: "#fff",
-        border: "none",
-        boxShadow: "0 2px 10px 0 #bde7fa44",
-        cursor: "pointer",
-        marginRight: 6,
-        transition: "filter 0.18s"
-      }}
-    >
-      {t.about}
-    </button>
-    <button
-      onClick={scrollToContact}
-      style={{
-        fontWeight: 700,
-        fontSize: 18,
-        padding: "12px 36px",
-        borderRadius: 40,
-        background: "#fff",
-        color: "#2574e8",
-        border: "2.5px solid #2995e7",
-        boxShadow: "0 2px 10px 0 #bde7fa44",
-        cursor: "pointer"
-      }}
-    >
-      {t.contactLabel}
-    </button>
-  </div>
-</section>
+  >{t.about}</button>
+  <button
+    onClick={scrollToContact}
+    style={{
+      fontWeight: 700,
+      fontSize: 18,
+      padding: "12px 36px",
+      borderRadius: 40,
+      background: "#fff",
+      color: "#2574e8",
+      border: "2.5px solid #2995e7",
+      boxShadow: "0 2px 10px 0 #bde7fa44",
+      cursor: "pointer"
+    }}
+  >{t.contactLabel}</button>
+</div>
 
+        </section>
 
         {/* Services Section */}
         <section>
