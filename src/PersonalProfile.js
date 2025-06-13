@@ -269,7 +269,7 @@ const LanguageSwitcher = () => (
       style={{
         background: `#f7f7f7 url("/circuit-pattern.png") repeat`,
         minHeight: "100vh",
-        fontFamily: "inherit",
+        fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif"',
       }}
     >
       {/* Banner Image */}
