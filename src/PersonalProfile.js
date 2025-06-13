@@ -289,19 +289,28 @@ const LanguageSwitcher = () => (
         <section style={{ textAlign: "center", margin: "40px 0 24px" }}>
 <h1
   style={{
-    fontSize: "clamp(2.2rem, 6vw, 3.8rem)",
+    fontSize: 42,
     fontWeight: 800,
     margin: 0,
-    color: "#0068b5",
-    textAlign: "center",
-    maxWidth: "100vw",       // 最寬到瀏覽器寬度
-    display: "block",
-    lineHeight: 1.13
+    background: "linear-gradient(90deg, #0068b5 10%, #53b9f7 90%)",
+    color: "transparent",
+    WebkitBackgroundClip: "text",
+    backgroundClip: "text",
+    letterSpacing: "2px",
+    transition: "letter-spacing 0.35s cubic-bezier(0.55,0,0.1,1), filter 0.25s",
+    cursor: "pointer"
+  }}
+  onMouseOver={e => {
+    e.currentTarget.style.letterSpacing = "7px";
+    e.currentTarget.style.filter = "drop-shadow(0 0 12px #0068b5aa)";
+  }}
+  onMouseOut={e => {
+    e.currentTarget.style.letterSpacing = "2px";
+    e.currentTarget.style.filter = "none";
   }}
 >
-  Empowering Next-Gen Embedded Design
+  {t.hero}
 </h1>
-
 
           <p style={{ fontSize: 18, color: "#0068b5", marginBottom: 16 }}>
             {t.heroDesc}
