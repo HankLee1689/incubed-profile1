@@ -450,128 +450,150 @@ const LanguageSwitcher = () => (
           </ul>
         </section>
 
-        {/* Contact Section */}
+{/* Contact Section */}
+{/* Contact Section：Apple 玻璃感 + 反光 + 聯絡資訊 */}
 <section
   ref={contactRef}
   style={{
-    background: "#f8faff",
+    background: `
+      linear-gradient(180deg, rgba(255,255,255,0.77) 0%, rgba(255,255,255,0.42) 70%, rgba(241,250,255,0.18) 100%),
+      url("/circuit-pattern.png") bottom center/cover no-repeat
+    `,
     borderRadius: 20,
-    boxShadow: "0 2px 18px 0 #2995e711",
-    margin: "44px 0 0 0",
-    padding: "26px 18px",
-    maxWidth: 600,
+    boxShadow: "0 6px 40px 0 rgba(32,120,220,0.11), 0 1.5px 4px 0 rgba(130,150,180,0.07)",
+    margin: "56px 0 0",
+    padding: "38px 46px 32px 36px",
+    maxWidth: 930,
     marginLeft: "auto",
-    marginRight: "auto"
-  }}
->
-  <h2
-    style={{
-      fontSize: 22,
-      fontWeight: 700,
-      color: "#0068b5",
-      marginBottom: 16,
-      borderLeft: "5px solid #0068b5",
-      paddingLeft: 12
-    }}
-  >
-    {t.contactSection}
-  </h2>
-  <div style={{
+    marginRight: "auto",
     display: "flex",
     flexDirection: "column",
-    gap: "16px"
-  }}>
-    <div style={{
-      display: "flex",
-      alignItems: "center",
-      gap: 9
-    }}>
-      <Mail size={20} style={{ color: "#0068b5" }} />
-      <span style={{
-        color: "#7e9bc0",
-        fontWeight: 500,
-        fontSize: 15,
-        minWidth: 66,
-        display: "inline-block"
-      }}>{t.email}</span>
-      <a
-        href="mailto:michelle@incubed-intl.com"
+    fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif',
+    backdropFilter: "blur(28px) saturate(1.15)",
+    WebkitBackdropFilter: "blur(28px) saturate(1.15)",
+    border: "1px solid rgba(255,255,255,0.21)",
+    position: "relative",
+    overflow: "hidden"
+  }}
+>
+  {/* Apple玻璃反光層 */}
+  <div style={{
+    position: "absolute",
+    top: 0, left: 0, right: 0, height: 44,
+    background: "linear-gradient(180deg,rgba(255,255,255,0.46) 0%,rgba(255,255,255,0.09) 98%)",
+    zIndex: 1,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    pointerEvents: "none"
+  }} />
+  {/* 內容本體 z-index:2 防止被反光遮到 */}
+  <div style={{ position: "relative", zIndex: 2 }}>
+    <h2
+      style={{
+        display: "flex",
+        alignItems: "center",
+        fontSize: 24,
+        fontWeight: 900,
+        color: "#1976d2",
+        marginBottom: 28,
+        letterSpacing: 0.3
+      }}
+    >
+      <span
         style={{
+          display: "inline-block",
+          width: 6,
+          height: 30,
+          borderRadius: 8,
+          background: "linear-gradient(180deg, #2299ee 0%, #015eb8 100%)",
+          marginRight: 16
+        }}
+      />
+      聯絡方式
+    </h2>
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr",
+        rowGap: 18,
+        columnGap: 32,
+        alignItems: "center"
+      }}
+    >
+      {/* Email */}
+      <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+        <span style={{
+          color: "#2299ee", fontSize: 26, marginRight: 4
+        }}>📧</span>
+        <span style={{ minWidth: 82, color: "#22304a" }}>電子郵件</span>
+        <a href="mailto:michelle@incubed-intl.com" style={{
           color: "#0068b5",
           fontWeight: 700,
           textDecoration: "underline",
-          fontSize: 16
-        }}
-      >
-        michelle@incubed-intl.com
-      </a>
-    </div>
-    <div style={{
-      display: "flex",
-      alignItems: "center",
-      gap: 9
-    }}>
-      <MessageCircle size={20} style={{ color: "#0068b5" }} />
-      <span style={{
-        color: "#7e9bc0",
-        fontWeight: 500,
-        fontSize: 15,
-        minWidth: 66,
-        display: "inline-block"
-      }}>{t.line}</span>
-      <span style={{
-        color: "#0068b5",
-        fontWeight: 700,
-        fontSize: 16
-      }}>slr200k</span>
-    </div>
-    <div style={{
-      display: "flex",
-      alignItems: "center",
-      gap: 9
-    }}>
-      <Phone size={20} style={{ color: "#0068b5" }} />
-      <span style={{
-        color: "#7e9bc0",
-        fontWeight: 500,
-        fontSize: 15,
-        minWidth: 66,
-        display: "inline-block"
-      }}>{t.whatsapp}</span>
-      <span style={{
-        color: "#0068b5",
-        fontWeight: 700,
-        fontSize: 16
-      }}>+886-2-87919189</span>
-    </div>
-    <div style={{
-      display: "flex",
-      alignItems: "center",
-      gap: 9
-    }}>
-      <Building size={20} style={{ color: "#0068b5" }} />
-      <span style={{
-        color: "#7e9bc0",
-        fontWeight: 500,
-        fontSize: 15,
-        minWidth: 66,
-        display: "inline-block"
-      }}>{t.address}</span>
-      <a
-        href={googleMapsPlaceUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          color: "#0068b5",
+          marginLeft: 8
+        }}>
+          michelle@incubed-intl.com
+        </a>
+      </div>
+      {/* Line */}
+      <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+        <span style={{
+          color: "#2299ee", fontSize: 26, marginRight: 4
+        }}>💬</span>
+        <span style={{ minWidth: 82, color: "#22304a" }}>Line ID</span>
+        <span style={{
+          color: "#1976d2",
           fontWeight: 700,
-          textDecoration: "underline",
-          fontSize: 16
-        }}
-      >
-        {t.addressDetail}
-      </a>
+          marginLeft: 8
+        }}>slr200k</span>
+      </div>
+      {/* Phone */}
+      <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+        <span style={{
+          color: "#2299ee", fontSize: 26, marginRight: 4
+        }}>📞</span>
+        <span style={{ minWidth: 82, color: "#22304a" }}>電話號碼</span>
+        <span style={{
+          color: "#1976d2",
+          fontWeight: 700,
+          marginLeft: 8
+        }}>+886-2-87919189</span>
+      </div>
+      {/* Address */}
+      <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+        <span style={{
+          color: "#2299ee", fontSize: 26, marginRight: 4
+        }}>🏢</span>
+        <span style={{ minWidth: 82, color: "#22304a" }}>地址</span>
+        <a
+          href="https://www.google.com/maps/place/新北市新店區寶中路94號2樓之3"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: "#0068b5",
+            fontWeight: 700,
+            textDecoration: "underline",
+            marginLeft: 8
+          }}
+        >
+          新北市新店區寶中路94號2樓之3
+        </a>
+      </div>
     </div>
   </div>
+  {/* RWD：手機自動單欄 */}
+  <style>
+    {`
+      @media (max-width: 600px) {
+        section[style*="max-width: 930px"] > div > div {
+          grid-template-columns: 1fr !important;
+        }
+        section[style*="max-width: 930px"] {
+          padding: 26px 8vw 22px 5vw !important;
+        }
+      }
+    `}
+  </style>
 </section>
 
 
