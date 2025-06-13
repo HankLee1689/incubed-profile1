@@ -453,7 +453,7 @@ const LanguageSwitcher = () => (
         {/* Contact Section */}
 <section
   style={{
-    background: "linear-gradient(120deg,rgba(255,255,255,0.62) 60%,rgba(241,250,255,0.48) 100%)"
+    background: "linear-gradient(120deg,rgba(255,255,255,0.62) 60%,rgba(241,250,255,0.48) 100%)",
     borderRadius: 18,
     boxShadow: "0 4px 32px 0 #2c80e41a",
     margin: "56px 0 0",
