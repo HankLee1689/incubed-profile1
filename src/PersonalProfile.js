@@ -514,7 +514,7 @@ const LanguageSwitcher = () => (
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: "1fr 1fr",
+        gridTemplateColumns: "1fr",
         rowGap: 18,
         columnGap: 32,
         alignItems: "center"
