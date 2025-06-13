@@ -461,6 +461,8 @@ const t = {
   address: lang === "en" ? "Address" : "地址"
 }
 
+{/* 假設你上方已經有 const t = content[lang]; */}
+
 <section
   style={{
     background: "rgba(255,255,255,0.82)",
@@ -501,7 +503,7 @@ const t = {
         marginRight: 16
       }}
     />
-    {t.contactTitle}
+    {t.contactSection}
   </h2>
   <div
     style={{
@@ -566,7 +568,7 @@ const t = {
           marginLeft: 8
         }}
       >
-        新北市新店區寶中路94號2樓之3
+        {t.addressDetail}
       </a>
     </div>
   </div>
