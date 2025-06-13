@@ -450,114 +450,122 @@ const LanguageSwitcher = () => (
           </ul>
         </section>
 
-{/* Contact Section */}
-{/* Contact Section：Apple 玻璃感 + 反光 + 聯絡資訊 */}
-// 假設你有 lang 狀態, 例如 const [lang, setLang] = useState("en")
-{/* 假設你上方已經有 const t = content[lang]; */}
-
+        {/* Contact Section */}
 <section
+  ref={contactRef}
   style={{
-    background: "rgba(255,255,255,0.82)",
+    background: "#f8faff",
     borderRadius: 20,
-    boxShadow: "0 6px 40px 0 rgba(32,120,220,0.11)",
-    margin: "56px 0 0",
-    padding: "38px 46px 32px 36px",
-    maxWidth: 930,
+    boxShadow: "0 2px 18px 0 #2995e711",
+    margin: "44px 0 0 0",
+    padding: "26px 18px",
+    maxWidth: 600,
     marginLeft: "auto",
-    marginRight: "auto",
-    display: "flex",
-    flexDirection: "column",
-    fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif',
-    backdropFilter: "blur(24px)",
-    WebkitBackdropFilter: "blur(24px)",
-    border: "1px solid rgba(255,255,255,0.21)",
-    position: "relative"
+    marginRight: "auto"
   }}
 >
   <h2
     style={{
-      display: "flex",
-      alignItems: "center",
-      fontSize: 24,
-      fontWeight: 900,
-      color: "#1976d2",
-      marginBottom: 28,
-      letterSpacing: 0.3
+      fontSize: 22,
+      fontWeight: 700,
+      color: "#0068b5",
+      marginBottom: 16,
+      borderLeft: "5px solid #0068b5",
+      paddingLeft: 12
     }}
   >
-    <span
-      style={{
-        display: "inline-block",
-        width: 6,
-        height: 30,
-        borderRadius: 8,
-        background: "linear-gradient(180deg, #2299ee 0%, #015eb8 100%)",
-        marginRight: 16
-      }}
-    />
     {t.contactSection}
   </h2>
-  <div
-    style={{
+  <div style={{
+    display: "flex",
+    flexDirection: "column",
+    gap: "16px"
+  }}>
+    <div style={{
       display: "flex",
-      flexDirection: "column",
-      rowGap: 18
-    }}
-  >
-    {/* Email */}
-    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+      alignItems: "center",
+      gap: 9
+    }}>
+      <Mail size={20} style={{ color: "#0068b5" }} />
       <span style={{
-        color: "#2299ee", fontSize: 26, marginRight: 4
-      }}>📧</span>
-      <span style={{ minWidth: 82, color: "#22304a" }}>{t.email}</span>
-      <a href="mailto:michelle@incubed-intl.com" style={{
-        color: "#0068b5",
-        fontWeight: 700,
-        textDecoration: "underline",
-        marginLeft: 8
-      }}>
+        color: "#7e9bc0",
+        fontWeight: 500,
+        fontSize: 15,
+        minWidth: 66,
+        display: "inline-block"
+      }}>{t.email}</span>
+      <a
+        href="mailto:michelle@incubed-intl.com"
+        style={{
+          color: "#0068b5",
+          fontWeight: 700,
+          textDecoration: "underline",
+          fontSize: 16
+        }}
+      >
         michelle@incubed-intl.com
       </a>
     </div>
-    {/* Line */}
-    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+    <div style={{
+      display: "flex",
+      alignItems: "center",
+      gap: 9
+    }}>
+      <MessageCircle size={20} style={{ color: "#0068b5" }} />
       <span style={{
-        color: "#2299ee", fontSize: 26, marginRight: 4
-      }}>💬</span>
-      <span style={{ minWidth: 82, color: "#22304a" }}>{t.line}</span>
+        color: "#7e9bc0",
+        fontWeight: 500,
+        fontSize: 15,
+        minWidth: 66,
+        display: "inline-block"
+      }}>{t.line}</span>
       <span style={{
-        color: "#1976d2",
+        color: "#0068b5",
         fontWeight: 700,
-        marginLeft: 8
+        fontSize: 16
       }}>slr200k</span>
     </div>
-    {/* Phone */}
-    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+    <div style={{
+      display: "flex",
+      alignItems: "center",
+      gap: 9
+    }}>
+      <Phone size={20} style={{ color: "#0068b5" }} />
       <span style={{
-        color: "#2299ee", fontSize: 26, marginRight: 4
-      }}>📞</span>
-      <span style={{ minWidth: 82, color: "#22304a" }}>{t.phone}</span>
+        color: "#7e9bc0",
+        fontWeight: 500,
+        fontSize: 15,
+        minWidth: 66,
+        display: "inline-block"
+      }}>{t.whatsapp}</span>
       <span style={{
-        color: "#1976d2",
+        color: "#0068b5",
         fontWeight: 700,
-        marginLeft: 8
+        fontSize: 16
       }}>+886-2-87919189</span>
     </div>
-    {/* Address */}
-    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+    <div style={{
+      display: "flex",
+      alignItems: "center",
+      gap: 9
+    }}>
+      <Building size={20} style={{ color: "#0068b5" }} />
       <span style={{
-        color: "#2299ee", fontSize: 26, marginRight: 4
-      }}>🏢</span>
-      <span style={{ minWidth: 82, color: "#22304a" }}>{t.address}</span>
+        color: "#7e9bc0",
+        fontWeight: 500,
+        fontSize: 15,
+        minWidth: 66,
+        display: "inline-block"
+      }}>{t.address}</span>
       <a
-        href="https://www.google.com/maps/place/新北市新店區寶中路94號2樓之3"
+        href={googleMapsPlaceUrl}
         target="_blank"
         rel="noopener noreferrer"
         style={{
           color: "#0068b5",
           fontWeight: 700,
           textDecoration: "underline",
-          marginLeft: 8
+          fontSize: 16
         }}
       >
         {t.addressDetail}
@@ -565,6 +573,7 @@ const LanguageSwitcher = () => (
     </div>
   </div>
 </section>
+
 
       </div>
 
