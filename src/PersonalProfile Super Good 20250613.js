@@ -451,7 +451,9 @@ const LanguageSwitcher = () => (
         </section>
 
 {/* Contact Section */}
+{/* Contact Section：Apple 玻璃感 + 反光 + 聯絡資訊 */}
 <section
+  ref={contactRef}
   style={{
     background: `
       linear-gradient(180deg, rgba(255,255,255,0.77) 0%, rgba(255,255,255,0.42) 70%, rgba(241,250,255,0.18) 100%),
@@ -593,8 +595,6 @@ const LanguageSwitcher = () => (
     `}
   </style>
 </section>
-
-
 
 
       </div>
