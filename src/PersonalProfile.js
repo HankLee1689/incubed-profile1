@@ -228,7 +228,7 @@ export default function PersonalProfile() {
   const [showAbout, setShowAbout] = useState(false);
   const contactRef = useRef(null);
 
-
+  const t = content[lang];
 
   const scrollToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -451,181 +451,131 @@ const LanguageSwitcher = () => (
         </section>
 
         {/* Contact Section */}
-		  const t = content[lang];
-// ----- Translation Content Snippet -----
-const content = {
-  en: {
-    // … other keys …
-    contactSection: "Get in Touch",
-    contactLabel: "Contact us",
-    email: "Email",
-    line: "Line ID",
-    whatsapp: "Phone No.",
-    address: "Address",
-    addressDetail: "2F-3, No. 94 Baozhong Rd, Xindian Dist, New Taipei City",
-  },
-  jp: {
-    // … other keys …
-    contactSection: "お問い合わせ",
-    contactLabel: "お問い合わせ",
-    email: "メール",
-    line: "Line ID",
-    whatsapp: "電話番号",
-    address: "住所",
-    addressDetail: "新北市新店區寶中路94号2階之3",
-  },
-  es: {
-    // … other keys …
-    contactSection: "Póngase en Contacto",
-    contactLabel: "Contáctenos",
-    email: "Correo Electrónico",
-    line: "ID de Line",
-    whatsapp: "Teléfono",
-    address: "Dirección",
-    addressDetail: "2F-3, No. 94 Baozhong Rd, Distrito Xindian, Ciudad de Nuevo Taipéi",
-  },
-  de: {
-    // … other keys …
-    contactSection: "Kontaktieren Sie uns",
-    contactLabel: "Kontaktieren Sie uns",
-    email: "E-Mail",
-    line: "Line ID",
-    whatsapp: "Telefon",
-    address: "Adresse",
-    addressDetail: "2F-3, No. 94 Baozhong Rd, Xindian Dist, Neu-Taipeh Stadt",
-  },
-  zh: {
-    // … other keys …
-    contactSection: "聯絡方式",
-    contactLabel: "聯絡我們",
-    email: "電子郵件",
-    line: "Line ID",
-    whatsapp: "電話號碼",
-    address: "地址",
-    addressDetail: "新北市新店區寶中路94號2樓之3",
-  },
-};
+        <section ref={contactRef} style={{ textAlign: "center", margin: "40px 0 0" }}>
+          <h2
+            style={{
+              fontSize: 22,
+              fontWeight: 600,
+              marginBottom: 12,
+              color: "#222",
+            }}
+          >
+            {t.contactSection}
+          </h2>
 
-// ----- Contact Section -----
-<section
-  ref={contactRef}
-  style={{
-    background: "rgba(255,255,255,0.82)",
-    borderRadius: 20,
-    boxShadow: "0 6px 40px 0 rgba(32,120,220,0.11)",
-    margin: "56px 0 0",
-    padding: "38px 46px 32px 36px",
-    maxWidth: 930,
-    marginLeft: "auto",
-    marginRight: "auto",
-    display: "flex",
-    flexDirection: "column",
-    fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif',
-    backdropFilter: "blur(24px)",
-    WebkitBackdropFilter: "blur(24px)",
-    border: "1px solid rgba(255,255,255,0.21)",
-    position: "relative"
-  }}
->
-  {/* 標題：使用 contactSection */}
-  <h2
-    style={{
-      display: "flex",
-      alignItems: "center",
-      fontSize: 24,
-      fontWeight: 900,
-      color: "#1976d2",
-      marginBottom: 28,
-      letterSpacing: 0.3
-    }}
-  >
-    <span
-      style={{
-        display: "inline-block",
-        width: 6,
-        height: 30,
-        borderRadius: 8,
-        background: "linear-gradient(180deg, #2299ee 0%, #015eb8 100%)",
-        marginRight: 16
-      }}
-    />
-    {t.contactSection}
-  </h2>
+          {/* Email with Mail Icon */}
+          <p
+            style={{
+              color: "#444",
+              lineHeight: 1.6,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 6,
+            }}
+          >
+            <span
+              style={{
+                fontWeight: 500,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+              }}
+            >
+              {t.email}
+              <Mail size={16} />
+              :
+            </span>
+            <a href="mailto:michelle@incubed-intl.com" style={{ color: "#2956d4", marginLeft: 4 }}>
+              michelle@incubed-intl.com
+            </a>
+          </p>
 
-  <div style={{ display: "flex", flexDirection: "column", rowGap: 18 }}>
-    {/* 電子郵件 */}
-    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-      <span style={{ color: "#2299ee", fontSize: 26, marginRight: 4 }}>📧</span>
-      <span style={{ minWidth: 82, color: "#22304a" }}>{t.email}</span>
-      <a
-        href="mailto:michelle@incubed-intl.com"
-        style={{
-          color: "#0068b5",
-          fontWeight: 700,
-          textDecoration: "underline",
-          marginLeft: 8
-        }}
-      >
-        michelle@incubed-intl.com
-      </a>
-    </div>
-    {/* Line */}
-    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-      <span style={{ color: "#2299ee", fontSize: 26, marginRight: 4 }}>💬</span>
-      <span style={{ minWidth: 82, color: "#22304a" }}>{t.line}</span>
-      <span style={{ color: "#1976d2", fontWeight: 700, marginLeft: 8 }}>
-        slr200k
-      </span>
-    </div>
-    {/* 電話 */}
-    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-      <span style={{ color: "#2299ee", fontSize: 26, marginRight: 4 }}>📞</span>
-      <span style={{ minWidth: 82, color: "#22304a" }}>{t.whatsapp}</span>
-      <span style={{ color: "#1976d2", fontWeight: 700, marginLeft: 8 }}>
-        +886-2-87919189
-      </span>
-    </div>
-    {/* 地址 */}
-    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-      <span style={{ color: "#2299ee", fontSize: 26, marginRight: 4 }}>🏢</span>
-      <span style={{ minWidth: 82, color: "#22304a" }}>{t.address}</span>
-      <a
-        href="https://www.google.com/maps/place/新北市新店區寶中路94號2樓之3"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          color: "#0068b5",
-          fontWeight: 700,
-          textDecoration: "underline",
-          marginLeft: 8
-        }}
-      >
-        {t.addressDetail}
-      </a>
-    </div>
-  </div>
+          {/* Line ID with MessageCircle Icon */}
+          <p
+            style={{
+              color: "#444",
+              lineHeight: 1.6,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 6,
+            }}
+          >
+            <span
+              style={{
+                fontWeight: 500,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+              }}
+            >
+              {t.line}
+              <MessageCircle size={16} />
+              :
+            </span>
+            <span style={{ color: "#2956d4", marginLeft: 4 }}>slr200k</span>
+          </p>
 
-  {/* 按鈕：使用 contactLabel */}
-  <button
-    onClick={scrollToContact}
-    style={{
-      marginTop: 32,
-      fontWeight: 700,
-      fontSize: 18,
-      padding: "12px 36px",
-      borderRadius: 40,
-      background: "#fff",
-      color: "#2574e8",
-      border: "2.5px solid #2995e7",
-      boxShadow: "0 2px 10px 0 #bde7fa44",
-      cursor: "pointer",
-      alignSelf: "start"
-    }}
-  >
-    {t.contactLabel}
-  </button>
-</section>
+          {/* Phone No. with Phone Icon */}
+          <p
+            style={{
+              color: "#444",
+              lineHeight: 1.6,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 6,
+            }}
+          >
+            <span
+              style={{
+                fontWeight: 500,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+              }}
+            >
+              {t.whatsapp}
+              <Phone size={16} />
+              :
+            </span>
+            <span style={{ color: "#2956d4", marginLeft: 4 }}>+886-2-87919189</span>
+          </p>
 
+          {/* Address with Building Icon */}
+          <p
+            style={{
+              color: "#444",
+              lineHeight: 1.6,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 6,
+            }}
+          >
+            <span
+              style={{
+                fontWeight: 500,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+              }}
+            >
+              {t.address}
+              <Building size={16} />
+              :
+            </span>
+            <a
+              href={googleMapsPlaceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#2956d4", marginLeft: 4, textDecoration: "underline" }}
+            >
+              {t.addressDetail}
+            </a>
+          </p>
+        </section>
 
       </div>
 
