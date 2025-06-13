@@ -595,6 +595,26 @@ const LanguageSwitcher = () => (
     `}
   </style>
 </section>
+<section
+  style={{
+    background: "rgba(255,255,255,0.18)",
+    borderRadius: 20,
+    boxShadow: "0 6px 40px 0 rgba(32,120,220,0.11), 0 1.5px 4px 0 rgba(130,150,180,0.07)",
+    margin: "56px 0 0",
+    padding: "38px 46px 32px 36px",
+    maxWidth: 930,
+    marginLeft: "auto",
+    marginRight: "auto",
+    backdropFilter: "blur(32px)",
+    WebkitBackdropFilter: "blur(32px)",
+    border: "1px solid rgba(255,255,255,0.21)",
+    position: "relative"
+  }}
+>
+  <div style={{ fontSize: 22, color: "#014ea8" }}>
+    這是玻璃感測試卡片！應該要看到後面有模糊的東西，卡片本身有透明和陰影
+  </div>
+</section>
 
 
       </div>
