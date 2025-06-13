@@ -452,17 +452,25 @@ const LanguageSwitcher = () => (
 
         {/* Contact Section */}
 <section
-  ref={contactRef}
   style={{
-    background: "#f8faff",
-    borderRadius: 20,
-    boxShadow: "0 2px 18px 0 #2995e711",
-    margin: "44px 0 0 0",
-    padding: "26px 18px",
-    maxWidth: 600,
+    background: `
+      linear-gradient(120deg, #f7fbffcc 90%, #e6f1fbcc 100%),
+      url("/circuit-pattern.png") bottom center/cover no-repeat
+    `,
+    borderRadius: 18,
+    boxShadow: "0 4px 32px 0 #2c80e41a",
+    margin: "56px 0 0",
+    padding: "38px 46px 32px 36px",
+    maxWidth: 930,
     marginLeft: "auto",
-    marginRight: "auto"
+    marginRight: "auto",
+    display: "flex",
+    flexDirection: "column"
   }}
+>
+  {/* ...聯絡資訊內容... */}
+</section>
+
 >
   <h2
     style={{
@@ -627,8 +635,38 @@ const LanguageSwitcher = () => (
             >
               <X size={24} />
             </button>
-            <h2 style={{ marginBottom: 16, color: "#222" }}>{t.about}</h2>
-            <p style={{ color: "#444", lineHeight: 1.6 }}>{t.aboutContent}</p>
+                        <h2
+              style={{
+                fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif',
+                fontSize: 28,
+                fontWeight: 900,
+                color: "#0068b5", // Intel 藍
+                letterSpacing: "0.5px",
+                marginBottom: 16,
+                display: "flex",
+                alignItems: "center",
+                gap: 12
+              }}
+            >
+              <span style={{
+                display: "inline-block",
+                fontSize: 23,
+                marginRight: 4,
+                verticalAlign: "middle"
+              }}>★</span>
+              {t.about}
+            </h2>
+            <p style={{
+              fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif',
+              color: "#344052",
+              fontSize: 17,
+              fontWeight: 400,
+              lineHeight: 1.72,
+              letterSpacing: 0.02
+            }}>
+              {t.aboutContent}
+            </p>
+
           </div>
         </div>
       )}
