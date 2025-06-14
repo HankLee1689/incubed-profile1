@@ -41,7 +41,7 @@ const content = {
 	  headerMotto: ["Innovative", "Intelligence", "Integration", "Efficient", "Reliable"],
     hero: "Empowering Next-Gen Embedded Design",
     heroDesc: "Your Partner for Next-Gen Embedded Innovation",
-    contactLabel: "Contact us",
+    contactLabel: "Product Portfolio",
     about: "About IN Cubed",
 aboutContent: `IN Cubed International Co., Ltd. specializes in high-reliability, mass-production–ready embedded and AI hardware.
 Our team has managed mass production of over 20 million units across hundreds of product lines, with decades of experience (including General Manager/CTO of a listed company).
@@ -85,7 +85,7 @@ Our projects power global EV charging, industrial AIoT, and more—trusted by ti
 	   headerMotto: ["創新", "智慧", "整合", "高效", "可靠"],
     hero: "打造次世代嵌入式設計的核心夥伴",
     heroDesc: "您下一代嵌入式創新的夥伴",
-    contactLabel: "聯絡我們",
+    contactLabel: "產品組合",
     about: "關於我們",
    aboutContent: `穎特力欣股份有限公司專注於高可靠度、可量產的嵌入式與AI硬體設計。
 團隊量產經驗超過2,000萬片，管理機種超過數百款，並擁有數十年（含上市公司總經理/CTO）研發實戰經驗。
@@ -130,7 +130,7 @@ Our projects power global EV charging, industrial AIoT, and more—trusted by ti
 	  headerMotto: ["革新", "知能", "統合", "効率", "信頼"], 
     hero: "次世代組込み設計を強力にサポート",
     heroDesc: "次世代組込みイノベーションのパートナー",
-    contactLabel: "お問い合わせ",
+    contactLabel: "製品ポートフォリオ",
     about: "IN Cubed について",
  aboutContent: `IN Cubed International Co., Ltd.は、高信頼性かつ量産対応の組込みおよびAIハードウェアを専門としています。
 チームは累計2,000万台以上・数百機種の量産管理実績があり、上場企業の総経理/CTOを含む数十年の経験を持ちます。
@@ -176,7 +176,7 @@ Our projects power global EV charging, industrial AIoT, and more—trusted by ti
 	   headerMotto: ["Innovador", "Inteligencia", "Integración", "Eficiente", "Confiable"],
     hero: "Potenciando el Diseño Embebido de Próxima Generación",
     heroDesc: "Su Socio para la Innovación Embebida de Próxima Generación",
-    contactLabel: "Contáctenos",
+    contactLabel: "Portafolio de productos",
     about: "Acerca de IN Cubed",
 	 aboutContent: `IN Cubed International Co., Ltd. se especializa en hardware embebido y de IA de alta confiabilidad, listo para producción en masa.
 Nuestro equipo ha gestionado la producción masiva de más de 20 millones de unidades en cientos de líneas de productos, y cuenta con décadas de experiencia (incluyendo Director General/CTO de una empresa cotizada).
@@ -222,7 +222,7 @@ Nuestros proyectos impulsan la carga global de vehículos eléctricos, la IA ind
 	   headerMotto: ["Innovativ", "Intelligenz", "Integration", "Effizient", "Zuverlässig"], 
     hero: "Stärkung des Next-Gen Embedded Designs",
     heroDesc: "Ihr Partner für Next-Gen Embedded Innovation",
-    contactLabel: "Kontaktieren Sie uns",
+    contactLabel: "Produktportfolio",
     about: "Über IN Cubed",
    aboutContent: `Die IN Cubed International Co., Ltd. ist auf hochzuverlässige, serienreife Embedded- und KI-Hardware spezialisiert.
 Unser Team verfügt über Erfahrung in der Serienfertigung von mehr als 20 Millionen Einheiten und dem Management von Hunderten von Produktlinien – mit jahrzehntelanger Erfahrung, einschließlich Generaldirektor/CTO eines börsennotierten Unternehmens.
@@ -597,25 +597,11 @@ const LanguageSwitcher = () => {
     listStyleType: "disc",
   }}
 >
-  {t.advantageList.map((item, idx) => (
-    <li
-      key={idx}
-      style={
-        // 只針對包含 ISO 9001 那一條高亮可點
-        item.includes("ISO 9001")
-          ? { cursor: "pointer", color: "#2574e8", fontWeight: 600, textDecoration: "underline" }
-          : {}
-      }
-      onClick={
-        item.includes("ISO 9001")
-          ? () => setShowCertModal(true)
-          : undefined
-      }
-    >
-      {item}
-    </li>
+  {t.serviceList.map((item, idx) => (
+    <li key={idx}>{item}</li>
   ))}
 </ul>
+
 
         </section>
 
@@ -640,17 +626,32 @@ const LanguageSwitcher = () => {
 
 
           <ul
-            style={{
-              margin: "0 0 0 24px",
-              color: "#444",
-              lineHeight: 1.6,
-              listStyleType: "disc",
-            }}
-          >
-            {t.advantageList.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
+  style={{
+    margin: "0 0 0 24px",
+    color: "#444",
+    lineHeight: 1.6,
+    listStyleType: "disc",
+  }}
+>
+  {t.advantageList.map((item, idx) => (
+    <li
+      key={idx}
+      style={
+        item.includes("ISO 9001")
+          ? { cursor: "pointer", color: "#2574e8", fontWeight: 600, textDecoration: "underline" }
+          : {}
+      }
+      onClick={
+        item.includes("ISO 9001")
+          ? () => setShowCertModal(true)
+          : undefined
+      }
+    >
+      {item}
+    </li>
+  ))}
+</ul>
+
         </section>
 
         {/* Highlighted Projects Section */}
@@ -958,6 +959,7 @@ const LanguageSwitcher = () => {
             justifyContent: "center",
             zIndex: 1001,
           }}
+		  			onClick={() => setShowAbout(false)}    // ★★★ 新增這裡
         >
           <div
             style={{
@@ -970,6 +972,7 @@ const LanguageSwitcher = () => {
               overflowY: "auto",
               position: "relative",
             }}
+			     onClick={e => e.stopPropagation()}    // ★★★ 新增這裡
           >
             <button
               onClick={() => setShowAbout(false)}
@@ -996,6 +999,7 @@ const LanguageSwitcher = () => {
                 alignItems: "center",
                 gap: 12
               }}
+
             >
               <span style={{
                 display: "inline-block",
