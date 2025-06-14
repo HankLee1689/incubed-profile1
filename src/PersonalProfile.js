@@ -1,10 +1,44 @@
 // PersonalProfile.js
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Star, Zap, Award, X, Mail, Phone, Home, MessageCircle, Globe, Building, Layers } from "lucide-react";
+
+
+// 動畫 LOGO 元件
+function AnimatedLogo() {
+  const logoRef = useRef(null);
+
+  useEffect(() => {
+    const logo = logoRef.current;
+    if (logo) {
+      logo.style.opacity = 0;
+      logo.style.transform = "scale(0.7)";
+      setTimeout(() => {
+        logo.style.transition = "opacity 1.2s cubic-bezier(.75,0,.3,1), transform 0.8s cubic-bezier(.75,0,.3,1)";
+        logo.style.opacity = 1;
+        logo.style.transform = "scale(1)";
+      }, 100);
+    }
+  }, []);
+
+  return (
+    <img
+      ref={logoRef}
+      src="/logo 2.png"
+      alt="IN³ CUBED Logo"
+      style={{
+        height: 62,
+        objectFit: "contain",
+        display: "block"
+      }}
+    />
+  );
+}
+
 
 const content = {
   en: {
+	  headerMotto: ["Innovative", "Intelligence", "Integration", "Efficient", "Reliable"],
     hero: "Empowering Next-Gen Embedded Design",
     heroDesc: "Your Partner for Next-Gen Embedded Innovation",
     contactLabel: "Contact us",
@@ -48,6 +82,7 @@ Our projects power global EV charging, industrial AIoT, and more—trusted by ti
     addressDetail: "2F-3, No. 94 Baozhong Rd, Xindian Dist, New Taipei City",
   },
   zh: {
+	   headerMotto: ["創新", "智慧", "整合", "高效", "可靠"],
     hero: "打造次世代嵌入式設計的核心夥伴",
     heroDesc: "您下一代嵌入式創新的夥伴",
     contactLabel: "聯絡我們",
@@ -92,6 +127,7 @@ Our projects power global EV charging, industrial AIoT, and more—trusted by ti
     addressDetail: "新北市新店區寶中路94號2樓之3",
   },
   jp: {
+	  headerMotto: ["革新", "知能", "統合", "効率", "信頼"], 
     hero: "次世代組込み設計を強力にサポート",
     heroDesc: "次世代組込みイノベーションのパートナー",
     contactLabel: "お問い合わせ",
@@ -137,6 +173,7 @@ Our projects power global EV charging, industrial AIoT, and more—trusted by ti
     addressDetail: "新北市新店区寶中路94号2階之3",
   },
   es: {
+	   headerMotto: ["Innovador", "Inteligencia", "Integración", "Eficiente", "Confiable"],
     hero: "Potenciando el Diseño Embebido de Próxima Generación",
     heroDesc: "Su Socio para la Innovación Embebida de Próxima Generación",
     contactLabel: "Contáctenos",
@@ -182,6 +219,7 @@ Nuestros proyectos impulsan la carga global de vehículos eléctricos, la IA ind
     addressDetail: "2F-3, No. 94 Baozhong Rd, Distrito Xindian, Ciudad de Nuevo Taipéi",
   },
   de: {
+	   headerMotto: ["Innovativ", "Intelligenz", "Integration", "Effizient", "Zuverlässig"], 
     hero: "Stärkung des Next-Gen Embedded Designs",
     heroDesc: "Ihr Partner für Next-Gen Embedded Innovation",
     contactLabel: "Kontaktieren Sie uns",
@@ -302,15 +340,114 @@ const LanguageSwitcher = () => (
         <LanguageSwitcher />
 	
       {/* Banner Image */}
-      <div style={{ width: "100%", maxHeight: 250, overflow: "hidden" }}>
+     {/* <div style={{ width: "100%", maxHeight: 250, overflow: "hidden" }}>
         <img
           src="/circuit-banner-ai.jpg"
           alt="banner"
           style={{ width: "100%", objectFit: "cover" }}
         />
       </div>
-
+*/}
       {/* Main Content */}
+{/* 首列 Logo + 標語（橫向排列） */}
+{/* Header Flex Row - Logo+標語(A) 和語言切換(B) 同水平齊平 */}
+<div
+  style={{
+    width: "100%",
+    background: "#fff",
+    paddingTop: 18,
+    paddingBottom: 10,
+    display: "flex",
+    justifyContent: "center"
+  }}
+>
+  <div
+    style={{
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 36,
+      maxWidth: 1200,
+      width: "100%",
+      flexWrap: "wrap", // 手機自動換行
+      justifyContent: "center"
+    }}
+  >
+    {/* LOGO */}
+    <AnimatedLogo />
+
+    {/* 標語 */}
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        alignItems: "center",
+        gap: 12,
+        fontSize: 23,
+        fontWeight: 800,
+        color: "#1976d2",
+        textAlign: "center",
+        justifyContent: "center"
+      }}
+    >
+      {t.headerMotto.map((word, idx) => (
+        <span
+          key={word}
+          style={{
+            display: "inline-block",
+            transition: "transform 0.23s, color 0.19s, text-shadow 0.18s",
+            fontWeight: 800,
+            color: "#1976d2",
+            cursor: "pointer",
+            margin: idx !== 0 ? "0 0 0 2px" : "0"
+          }}
+          onMouseEnter={e => {
+            e.currentTarget.style.transform = "scale(1.18)";
+            e.currentTarget.style.color = "#2299ee";
+            e.currentTarget.style.textShadow = "0 6px 18px #bde7fa99";
+          }}
+          onMouseLeave={e => {
+            e.currentTarget.style.transform = "scale(1)";
+            e.currentTarget.style.color = "#1976d2";
+            e.currentTarget.style.textShadow = "none";
+          }}
+        >
+          {word}
+          {idx !== t.headerMotto.length - 1 && (
+            <span
+              style={{
+                fontSize: 26,
+                color: "#0068b5",
+                fontWeight: 900,
+                margin: "0 12px",
+                verticalAlign: "middle"
+              }}
+            >
+              ●
+            </span>
+          )}
+        </span>
+      ))}
+    </div>
+    {/* 語言切換 */}
+    <div>
+      <LanguageSwitcher />
+    </div>
+  </div>
+
+
+
+  {/* ==== B區塊：語言切換元件 ==== */}
+  <div>
+    <LanguageSwitcher />
+  </div>
+</div>
+
+
+
+
+
+
       <div style={{ maxWidth: 800, margin: "0 auto", padding: "32px 16px" }}>
 
         {/* Hero Section */}
@@ -508,11 +645,11 @@ const LanguageSwitcher = () => (
     borderRadius: 32,
     boxShadow: "0 8px 40px 0 rgba(80,150,255,0.12)",
     margin: "64px 0 0",
-    paddingTop: "30px",
-    paddingBottom: "48px",
+    paddingTop: "18px",
+    paddingBottom: "33px",
     paddingLeft: "60px",
     paddingRight: "60px",
-    maxWidth: 960,
+    maxWidth: 600,
     marginLeft: "auto",
     marginRight: "auto",
     display: "flex",
@@ -553,7 +690,7 @@ const LanguageSwitcher = () => (
     style={{
       display: "flex",
       flexDirection: "column",
-      rowGap: 18
+      rowGap: 9
     }}
   >
     {/* Email */}
@@ -620,35 +757,58 @@ const LanguageSwitcher = () => (
 
       </div>
 
-      {/* Footer Image */}
-      <div style={{ width: "100%", maxHeight: 200, overflow: "hidden", marginTop: 40 }}>
-        <img
-          src="/footer_circuit_strip.png"
-          alt="footer"
-          style={{ width: "100%", objectFit: "cover" }}
-        />
-      </div>
-	  <footer style={{
-  background: "#0c1b2a",
-  color: "#bcc3d1",
-  fontSize: 14,
-  padding: "22px 0 12px 0",
-  textAlign: "center",
-  borderTop: "1.5px solid #28374c",
-  marginTop: 0
-}}>
-  <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 18, flexWrap: "wrap" }}>
-    {/* Logo: 沒 SVG 圖檔就用 emoji 代替 */}
-    <span style={{ fontSize: 27, marginRight: 6 }}>🟦</span>
+     {/* Footer Image */}
+{/*<div style={{ width: "100%", maxHeight: 200, overflow: "hidden", marginTop: 40 }}>
+  <img
+    src="/footer_circuit_strip.png"
+    alt="footer"
+    style={{ width: "100%", objectFit: "cover" }}
+  />
+</div>
+*/}
+<footer
+  style={{
+    background: "#0c1b2a",
+    color: "#bcc3d1",
+    fontSize: 14,
+    padding: "20px 12px",
+    borderTop: "1.5px solid #28374c"
+  }}
+>
+  <div
+    style={{
+      display: "flex",
+      flexWrap: "wrap",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: 16,
+      marginBottom: 6
+    }}
+  >
+    {/* LOGO with company name inside the image */}
+    <img
+      src="/logo-footer.png"
+      alt="IN³ Cubed Logo"
+      style={{
+        height: 48,
+        objectFit: "contain",
+        filter: "brightness(1.1)"
+      }}
+    />
+
     <span style={{ fontWeight: 600 }}>IN Cubed International Co., Ltd.</span>
     <span>穎特力欣股份有限公司</span>
     <span>統一編號：96799025</span>
     <span>© 2024 All rights reserved.</span>
   </div>
-  <div style={{ fontSize: 13, marginTop: 6, opacity: 0.78 }}>
+
+  <div style={{ fontSize: 13, textAlign: "center", opacity: 0.78 }}>
     Address: 2F.-3, No. 94, Baozhong Rd., Xindian Dist., New Taipei City, Taiwan
   </div>
 </footer>
+
+
+
 
 
       {/* About Modal */}

@@ -2,7 +2,27 @@
 
 import React, { useState, useRef } from "react";
 import { Star, Zap, Award, X, Mail, Phone, Home, MessageCircle, Globe, Building, Layers } from "lucide-react";
+// ⭐️【新增】放在這行下面！
+// 動畫 LOGO 元件
 
+
+function LoadingBar({ loading }) {
+  return (
+    <div
+      style={{
+        height: 3,
+        width: loading ? "100%" : 0,
+        background: "linear-gradient(90deg,#2299ee 15%,#1976d2 90%)",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        zIndex: 2001,
+        transition: "width 0.38s cubic-bezier(.9,.2,.3,1)"
+      }}
+    />
+  );
+}
+function AnimatedLogo() {
 const content = {
   en: {
     hero: "Empowering Next-Gen Embedded Design",
@@ -237,6 +257,15 @@ export default function PersonalProfile() {
   const [showAbout, setShowAbout] = useState(false);
   const [showCertModal, setShowCertModal] = useState(false);
 
+  // ⭐️ 新增
+  const [dark, setDark] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const t = setTimeout(() => setLoading(false), 1200);
+    return () => clearTimeout(t);
+  }, []);
+
   const contactRef = useRef(null);
 
   const t = content[lang];
@@ -244,6 +273,8 @@ export default function PersonalProfile() {
   const scrollToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+
 
 const LanguageSwitcher = () => (
   <div style={{
@@ -262,6 +293,24 @@ const LanguageSwitcher = () => (
     border: "1.2px solid #dbebfc",
     fontWeight: 700
   }}>
+    {/* ⭐️ 新增 dark mode 按鈕 */}
+    <button
+      onClick={() => setDark(d => !d)}
+      style={{
+        background: dark ? "#242d44" : "#fff",
+        color: dark ? "#e4ecfa" : "#1976d2",
+        border: "2px solid #1976d2",
+        borderRadius: 12,
+        padding: "6px 22px",
+        cursor: "pointer",
+        fontWeight: 800,
+        marginRight: 10,
+        boxShadow: "0 2px 10px 0 rgba(0,50,200,0.08)",
+        transition: "background 0.3s, color 0.3s",
+      }}
+    >
+      {dark ? "☀️ Light" : "🌙 Dark"}
+    </button>
     <Globe size={24} style={{ color: "#2574e8" }} />
     <select
       value={lang}
@@ -291,14 +340,49 @@ const LanguageSwitcher = () => (
 
 
 
-  return (
-    <div
-      style={{
-        background: `#f7f7f7 url("/circuit-pattern.png") repeat`,
-        minHeight: "100vh",
-        fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif"',
-      }}
-    >
+    return (
+    <>
+      <LoadingBar loading={loading} />
+      <div
+        style={{
+          background: dark ? "#131824" : `#f7f7f7 url("/circuit-pattern.png") repeat`,
+          color: dark ? "#e4ecfa" : "#172541",
+          minHeight: "100vh",
+          fontFamily: '"Inter", "Roboto", "Arial", "Helvetica Neue", Helvetica, sans-serif"',
+          transition: "background 0.3s, color 0.3s"
+        }}
+      >
+        <LanguageSwitcher />
+        {/* ...下方內容 ... */}
+      </div>
+    </>
+  );
+
+
+	<div style={{
+  display: "flex",
+  justifyContent: "flex-end",
+  alignItems: "center",
+  marginRight: 40,
+  marginTop: 12
+}}>
+  <button
+    onClick={() => setDark(d => !d)}
+    style={{
+      background: dark ? "#242d44" : "#fff",
+      color: dark ? "#e4ecfa" : "#1976d2",
+      border: "2px solid #1976d2",
+      borderRadius: 12,
+      padding: "6px 22px",
+      cursor: "pointer",
+      fontWeight: 800,
+      marginLeft: 18,
+      boxShadow: "0 2px 10px 0 rgba(0,50,200,0.08)",
+      transition: "background 0.3s, color 0.3s"
+    }}
+  >
+    {dark ? "☀️ Light" : "🌙 Dark"}
+  </button>
         <LanguageSwitcher />
 	
       {/* Banner Image */}
