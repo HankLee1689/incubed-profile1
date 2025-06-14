@@ -1,0 +1,11 @@
+﻿A. 修改 src\PersonalProfile.js 後, 在 local看到模擬網頁
+⇨ Local test : Command 下執行 :  npm start 
+
+B. 上傳 .js 到 vercel
+1. 執行 IN3WEB\push.bat
+
+2. Command 下執行 :  vercel login 
+=> 先login進入 vercel或手動登錄 david_h@incubed-intl.com 
+
+3. Command 下執行 :  vercel --prod 
+=>  --prod 代表部署到 Production 主站 

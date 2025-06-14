@@ -283,49 +283,110 @@ export default function PersonalProfile() {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-const LanguageSwitcher = () => (
-  <div style={{
-    position: "fixed",
-    top: 32,
-    right: 36,
-    zIndex: 2000,
-    background: "rgba(255,255,255,0.95)",
-    borderRadius: 20,
-    boxShadow: "0 2px 16px 0 rgba(0,80,200,0.08)",
-    display: "flex",
-    justifyContent: "flex-end",
-    alignItems: "center",
-    padding: "8px 22px 8px 16px",
-    gap: 10,
-    border: "1.2px solid #dbebfc",
-    fontWeight: 700
-  }}>
-    <Globe size={24} style={{ color: "#2574e8" }} />
-    <select
-      value={lang}
-      onChange={e => setLang(e.target.value)}
-      style={{
-        borderRadius: 14,
-        border: "2px solid #2995e7",
-        fontSize: 18,
+const LanguageSwitcher = () => {
+  const [dragging, setDragging] = useState(false)
+  const [start, setStart] = useState({ x: 0, y: 0 })
+  const [position, setPosition] = useState({ top: 32, left: window.innerWidth - 130 })
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    handleResize()
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
+
+  const handleTouchStart = (e) => {
+    setDragging(true)
+    setStart({ x: e.touches[0].clientX, y: e.touches[0].clientY })
+  }
+
+  const handleTouchMove = (e) => {
+    if (!dragging) return
+    const deltaX = e.touches[0].clientX - start.x
+    const deltaY = e.touches[0].clientY - start.y
+    setPosition(prev => ({
+      top: Math.max(0, prev.top + deltaY),
+      left: Math.max(0, prev.left + deltaX)
+    }))
+    setStart({ x: e.touches[0].clientX, y: e.touches[0].clientY })
+  }
+
+  const handleTouchEnd = () => {
+    setDragging(false)
+  }
+
+  const wrapperStyle = isMobile
+    ? {
+        position: "fixed",
+        top: position.top,
+        left: position.left,
+        zIndex: 2000,
+        borderRadius: 20,
+        boxShadow: "0 2px 16px 0 rgba(0,80,200,0.08)",
+        display: "flex",
+        justifyContent: "flex-end",
+        alignItems: "center",
+        padding: "8px 22px 8px 16px",
+        gap: 10,
+        border: "1.2px solid #dbebfc",
         fontWeight: 700,
-        padding: "7px 26px 7px 10px",
-        color: "#1d407a",
-        background: "#fff url('data:image/svg+xml;utf8,<svg fill=\"%232974e7\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 10l5 5 5-5z\"/></svg>') no-repeat right 10px center/18px 18px",
-        appearance: "none",
-        minWidth: 74,
-        outline: "none",
-        cursor: "pointer"
-      }}
+        background: "rgba(255,255,255,0.95)"
+      }
+    : {
+        position: "fixed",
+        top: 32,
+        right: 36,
+        zIndex: 2000,
+        background: "rgba(255,255,255,0.95)",
+        borderRadius: 20,
+        boxShadow: "0 2px 16px 0 rgba(0,80,200,0.08)",
+        display: "flex",
+        justifyContent: "flex-end",
+        alignItems: "center",
+        padding: "8px 22px 8px 16px",
+        gap: 10,
+        border: "1.2px solid #dbebfc",
+        fontWeight: 700
+      }
+
+  return (
+    <div
+      style={wrapperStyle}
+      onTouchStart={isMobile ? handleTouchStart : undefined}
+      onTouchMove={isMobile ? handleTouchMove : undefined}
+      onTouchEnd={isMobile ? handleTouchEnd : undefined}
     >
-      <option value="en">English</option>
-      <option value="jp">日本語</option>
-      <option value="es">Español</option>
-      <option value="de">Deutsch</option>
-      <option value="zh">中文</option>
-    </select>
-  </div>
-);
+      <Globe size={24} style={{ color: "#2574e8" }} />
+      <select
+        value={lang}
+        onChange={e => setLang(e.target.value)}
+        style={{
+          borderRadius: 14,
+          border: "2px solid #2995e7",
+          fontSize: 18,
+          fontWeight: 700,
+          padding: "7px 26px 7px 10px",
+          color: "#1d407a",
+          background: "#fff url('data:image/svg+xml;utf8,<svg fill=\"%232974e7\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 10l5 5 5-5z\"/></svg>') no-repeat right 10px center/18px 18px",
+          appearance: "none",
+          minWidth: 74,
+          outline: "none",
+          cursor: "pointer"
+        }}
+      >
+        <option value="en">English</option>
+        <option value="jp">日本語</option>
+        <option value="es">Español</option>
+        <option value="de">Deutsch</option>
+        <option value="zh">中文</option>
+      </select>
+    </div>
+  )
+}
+;
 
 
 
