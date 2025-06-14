@@ -489,19 +489,12 @@ const LanguageSwitcher = () => {
           )}
         </span>
       ))}
-    </div>
-    {/* 語言切換 */}
-    <div>
-      <LanguageSwitcher />
+
+
     </div>
   </div>
 
 
-
-  {/* ==== B區塊：語言切換元件 ==== */}
-  <div>
-    <LanguageSwitcher />
-  </div>
 </div>
 
 
