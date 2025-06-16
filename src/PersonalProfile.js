@@ -272,12 +272,24 @@ const googleMapsPlaceUrl =
 
 export default function PersonalProfile() {
   const [lang, setLang] = useState("en");
+  
   const [showAbout, setShowAbout] = useState(false);
   const [showCertModal, setShowCertModal] = useState(false);
 
   const contactRef = useRef(null);
 
   const t = content[lang];
+    const [visibleWords, setVisibleWords] = useState([]);
+
+  useEffect(() => {
+    setVisibleWords([]); // 切換語言時重設
+    t.headerMotto.forEach((_, i) => {
+      setTimeout(() => {
+        setVisibleWords(prev => [...prev, i]);
+      }, 1200 + i * 800); // 第一個延遲 1.2 秒，每個間隔 0.8 秒
+    });
+  }, [t.headerMotto]);
+
 
   const scrollToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -451,44 +463,47 @@ const LanguageSwitcher = () => {
         justifyContent: "center"
       }}
     >
-      {t.headerMotto.map((word, idx) => (
-        <span
-          key={word}
-          style={{
-            display: "inline-block",
-            transition: "transform 0.23s, color 0.19s, text-shadow 0.18s",
-            fontWeight: 800,
-            color: "#1976d2",
-            cursor: "pointer",
-            margin: idx !== 0 ? "0 0 0 2px" : "0"
-          }}
-          onMouseEnter={e => {
-            e.currentTarget.style.transform = "scale(1.18)";
-            e.currentTarget.style.color = "#2299ee";
-            e.currentTarget.style.textShadow = "0 6px 18px #bde7fa99";
-          }}
-          onMouseLeave={e => {
-            e.currentTarget.style.transform = "scale(1)";
-            e.currentTarget.style.color = "#1976d2";
-            e.currentTarget.style.textShadow = "none";
-          }}
-        >
-          {word}
-          {idx !== t.headerMotto.length - 1 && (
-            <span
-              style={{
-                fontSize: 26,
-                color: "#0068b5",
-                fontWeight: 900,
-                margin: "0 12px",
-                verticalAlign: "middle"
-              }}
-            >
-              ●
-            </span>
-          )}
-        </span>
-      ))}
+{t.headerMotto.map((word, idx) => (
+  <span
+    key={word}
+    style={{
+      display: "inline-block",
+      opacity: visibleWords.includes(idx) ? 1 : 0,
+      transform: visibleWords.includes(idx) ? "translateY(0)" : "translateY(10px)",
+      transition: "opacity 0.6s ease, transform 0.6s ease",
+      fontWeight: 800,
+      color: "#1976d2",
+      cursor: "pointer",
+      margin: idx !== 0 ? "0 0 0 2px" : "0"
+    }}
+    onMouseEnter={e => {
+      e.currentTarget.style.transform = "scale(1.18)";
+      e.currentTarget.style.color = "#2299ee";
+      e.currentTarget.style.textShadow = "0 6px 18px #bde7fa99";
+    }}
+    onMouseLeave={e => {
+      e.currentTarget.style.transform = "scale(1)";
+      e.currentTarget.style.color = "#1976d2";
+      e.currentTarget.style.textShadow = "none";
+    }}
+  >
+    {word}
+    {idx !== t.headerMotto.length - 1 && (
+      <span
+        style={{
+          fontSize: 26,
+          color: "#0068b5",
+          fontWeight: 900,
+          margin: "0 12px",
+          verticalAlign: "middle"
+        }}
+      >
+        ●
+      </span>
+    )}
+  </span>
+))}
+
 
 
     </div>
